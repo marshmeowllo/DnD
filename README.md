@@ -3,5 +3,5 @@
 run:
 
 ```bash
-streamlit run main.py rth**
+streamlit run main.py**
 ```
