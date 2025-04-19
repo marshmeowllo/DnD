@@ -1,4 +1,7 @@
 # Astral Projection
+## Spell Name
+Astral Projection
+
 From Player's Handbook, page 215.
 ## Description
 *9th-level necromancy*
@@ -40,6 +43,9 @@ Divine Soul
 Theurgy
 
 # Blade of Disaster
+## Spell Name
+Blade of Disaster
+
 From Tasha's Cauldron of Everything, page 106; and Icewind Dale: Rime of the Frostmaiden, page 318.
 ## Description
 *9th-level conjuration*
@@ -74,6 +80,9 @@ Wizard
 Arcana Domain
 
 # Foresight
+## Spell Name
+Foresight
+
 From Player's Handbook, page 244.
 ## Description
 *9th-level divination*
@@ -107,6 +116,9 @@ Wizard
 Arcana Domain
 
 # Gate
+## Spell Name
+Gate
+
 From Player's Handbook, page 244.
 ## Description
 *9th-level conjuration*
@@ -146,6 +158,9 @@ Divine Soul
 Theurgy
 
 # Imprisonment
+## Spell Name
+Imprisonment
+
 From Player's Handbook, page 252.
 ## Description
 *9th-level abjuration*
@@ -207,6 +222,9 @@ Wizard
 Arcana Domain
 
 # Invulnerability
+## Spell Name
+Invulnerability
+
 From Xanathar's Guide to Everything, page 160.
 ## Description
 *9th-level abjuration*
@@ -236,6 +254,9 @@ Wizard
 Arcana Domain
 
 # Mass Heal
+## Spell Name
+Mass Heal
+
 From Player's Handbook, page 258.
 ## Description
 *9th-level evocation*
@@ -267,6 +288,9 @@ Divine Soul
 Theurgy
 
 # Mass Polymorph
+## Spell Name
+Mass Polymorph
+
 From Xanathar's Guide to Everything, page 160.
 ## Description
 *9th-level transmutation*
@@ -302,6 +326,9 @@ Wizard
 Arcana Domain
 
 # Meteor Swarm
+## Spell Name
+Meteor Swarm
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/9/99/Meteor.png/revision/latest/scale-to-width-down/225?cb=20221130233621)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/9/99/Meteor.png/revision/latest/scale-to-width-down/225?cb=20221130233621)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/9/99/Meteor.png/revision/latest/scale-to-width-down/225?cb=20221130233621)
@@ -337,6 +364,9 @@ Wizard
 Arcana Domain
 
 # Power Word Heal
+## Spell Name
+Power Word Heal
+
 From Player's Handbook, page 266.
 ## Description
 *9th-level evocation*
@@ -374,6 +404,9 @@ Divine Soul
 Theurgy
 
 # Power Word Kill
+## Spell Name
+Power Word Kill
+
 From Player's Handbook, page 266.
 ## Description
 *9th-level enchantment*
@@ -406,6 +439,9 @@ Wizard
 Arcana Domain
 
 # Prismatic Wall
+## Spell Name
+Prismatic Wall
+
 From Player's Handbook, page 267
 ## Description
 *9th-level abjuration*
@@ -474,6 +510,9 @@ Wizard
 Arcana Domain
 
 # Psychic Scream
+## Spell Name
+Psychic Scream
+
 From Xanathar's Guide to Everything, page 163.
 ## Description
 *9th-level enchantment*
@@ -509,6 +548,9 @@ Wizard
 Arcana Domain
 
 # Ravenous Void
+## Spell Name
+Ravenous Void
+
 From Explorer's Guide to Wildemount, page 188.
 ## Description
 *9th-level evocation*
@@ -537,6 +579,9 @@ restrained
 Graviturgy Magic
 
 # Shapechange
+## Spell Name
+Shapechange
+
 From Player's Handbook, page 274.
 ## Description
 *9th-level transmutation*
@@ -573,6 +618,9 @@ Wizard
 Arcana Domain
 
 # Storm of Vengeance
+## Spell Name
+Storm of Vengeance
+
 From Player's Handbook, page 279.
 ## Description
 *9th-level conjuration*
@@ -611,6 +659,9 @@ Each round you maintain concentration on this spell, the storm produces differen
 Druid
 
 # Time Ravage
+## Spell Name
+Time Ravage
+
 From Explorer's Guide to Wildemount, page 189.
 ## Description
 *9th-level necromancy*
@@ -638,6 +689,9 @@ Greater Restoration
 Chronurgy Magic
 
 # Time Stop
+## Spell Name
+Time Stop
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/6/64/Timestop.png/revision/latest/scale-to-width-down/236?cb=20221129103156)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/6/64/Timestop.png/revision/latest/scale-to-width-down/236?cb=20221129103156)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/6/64/Timestop.png/revision/latest/scale-to-width-down/236?cb=20221129103156)
@@ -673,6 +727,9 @@ Wizard
 Arcana Domain
 
 # True Polymorph
+## Spell Name
+True Polymorph
+
 From Player's Handbook, page 283.
 ## Description
 *9th-level transmutation*
@@ -735,6 +792,9 @@ Wizard
 Arcana Domain
 
 # True Resurrection
+## Spell Name
+True Resurrection
+
 From Player's Handbook, page 284.
 ## Description
 *9th-level necromancy*
@@ -769,6 +829,9 @@ Divine Soul
 Theurgy
 
 # Weird
+## Spell Name
+Weird
+
 From Player's Handbook, page 288.
 ## Description
 *9th-level illusion*
@@ -800,6 +863,9 @@ Wizard
 Arcana Domain
 
 # Wish
+## Spell Name
+Wish
+
 From Player's Handbook, page 288.
 ## Description
 ![](https://static.wikia.nocookie.net/dnd-5e/images/7/78/Wish_Spell.png/revision/latest/scale-to-width-down/265?cb=20221208110521)

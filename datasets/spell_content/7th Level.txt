@@ -1,4 +1,7 @@
 # Conjure Celestial
+## Spell Name
+Conjure Celestial
+
 From Player's Handbook, page 225.
 ## Description
 *7th-level conjuration*
@@ -34,6 +37,9 @@ Divine Soul
 Theurgy
 
 # Create Magen
+## Spell Name
+Create Magen
+
 From Icewind Dale: Rime of the Frost Maiden, page 318.
 ## Description
 *7th-level transmutation*
@@ -69,6 +75,9 @@ Wizard
 Arcana Domain
 
 # Crown of Stars
+## Spell Name
+Crown of Stars
+
 From Xanathar's Guide to Everything, page 152.
 ## Description
 *7th-level evocation*
@@ -103,6 +112,9 @@ Wizard
 Arcana Domain
 
 # Delayed Blast Fireball
+## Spell Name
+Delayed Blast Fireball
+
 From Player's Handbook, page 230.
 ## Description
 *7th-level evocation*
@@ -138,6 +150,9 @@ Wizard
 Arcana Domain
 
 # Divine Word
+## Spell Name
+Divine Word
+
 From Player's Handbook, page 234.
 ## Description
 *7th-level evocation*
@@ -189,6 +204,9 @@ Divine Soul
 Theurgy
 
 # Draconic Transformation
+## Spell Name
+Draconic Transformation
+
 From Fizban's Treasury of Dragons, page 19.
 ## Description
 *7th-level transmutation*
@@ -227,6 +245,9 @@ Wizard
 Arcana Domain
 
 # Dream of the Blue Veil
+## Spell Name
+Dream of the Blue Veil
+
 From Tasha's Cauldron of Everything, page 106.
 ## Description
 *7th-level conjuration*
@@ -260,6 +281,9 @@ Warlock
 Arcana Domain
 
 # Etherealness
+## Spell Name
+Etherealness
+
 From Player's Handbook, page 238.
 ## Description
 *7th-level transmutation*
@@ -307,6 +331,9 @@ Divine Soul
 Theurgy
 
 # Finger of Death
+## Spell Name
+Finger of Death
+
 From Player's Handbook, page 241.
 ## Description
 *7th-level necromancy*
@@ -340,6 +367,9 @@ Wizard
 Arcana Domain
 
 # Fire Storm
+## Spell Name
+Fire Storm
+
 From Player's Handbook, page 242.
 ## Description
 *7th-level evocation*
@@ -374,6 +404,9 @@ Divine Soul
 Theurgy
 
 # Forcecage
+## Spell Name
+Forcecage
+
 From Player's Handbook, page 243.
 ## Description
 *7th-level evocation*
@@ -411,6 +444,9 @@ Wizard
 Arcana Domain
 
 # Mirage Arcane
+## Spell Name
+Mirage Arcane
+
 From Player's Handbook, page 260.
 ## Description
 *7th-level illusion*
@@ -445,6 +481,9 @@ Wizard
 Arcana Domain
 
 # Mordenkainen's Magnificent Mansion
+## Spell Name
+Mordenkainen's Magnificent Mansion
+
 From Player's Handbook, page 261.
 ## Description
 *7th-level conjuration*
@@ -481,6 +520,9 @@ Arcana Domain
 Greater Dragonmark
 
 # Mordenkainen's Sword
+## Spell Name
+Mordenkainen's Sword
+
 From Player's Handbook, page 262.
 ## Description
 *7th-level evocation*
@@ -512,6 +554,9 @@ Wizard
 Arcana Domain
 
 # Plane Shift
+## Spell Name
+Plane Shift
+
 From Player's Handbook, page 266.
 ## Description
 *7th-level conjuration*
@@ -551,6 +596,9 @@ Divine Soul
 Theurgy
 
 # Power Word Pain
+## Spell Name
+Power Word Pain
+
 From Xanathar's Guide to Everything, page 163.
 ## Description
 *7th-level enchantment*
@@ -585,6 +633,9 @@ Wizard
 Arcana Domain
 
 # Prismatic Spray
+## Spell Name
+Prismatic Spray
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/9/93/Prismatic_spray.png/revision/latest/scale-to-width-down/262?cb=20221129113146)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/9/93/Prismatic_spray.png/revision/latest/scale-to-width-down/262?cb=20221129113146)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/9/93/Prismatic_spray.png/revision/latest/scale-to-width-down/262?cb=20221129113146)
@@ -647,6 +698,9 @@ Wizard
 Arcana Domain
 
 # Project Image
+## Spell Name
+Project Image
+
 From Player's Handbook, page 270.
 ## Description
 *7th-level illusion*
@@ -682,6 +736,9 @@ Wizard
 Arcana Domain
 
 # Regenerate
+## Spell Name
+Regenerate
+
 From Player's Handbook, page 271.
 ## Description
 *7th-level transmutation*
@@ -716,6 +773,9 @@ Divine Soul
 Theurgy
 
 # Resurrection
+## Spell Name
+Resurrection
+
 From Player's Handbook, page 272.
 ## Description
 *7th-level necromancy*
@@ -752,6 +812,9 @@ Divine Soul
 Theurgy
 
 # Reverse Gravity
+## Spell Name
+Reverse Gravity
+
 From Player's Handbook, page 272.
 ## Description
 *7th-level transmutation*
@@ -785,6 +848,9 @@ Wizard
 Arcana Domain
 
 # Sequester
+## Spell Name
+Sequester
+
 From Player's Handbook, page 274.
 ## Description
 *7th-level transmutation*
@@ -818,6 +884,9 @@ Wizard
 Arcana Domain
 
 # Simulacrum
+## Spell Name
+Simulacrum
+
 From Player's Handbook, page 276.
 ## Description
 *7th-level illusion*
@@ -850,6 +919,9 @@ Wizard
 Arcana Domain
 
 # Symbol
+## Spell Name
+Symbol
+
 From Player's Handbook, page 280.
 ## Description
 *7th-level abjuration*
@@ -918,6 +990,9 @@ Divine Soul
 Theurgy
 
 # Teleport
+## Spell Name
+Teleport
+
 From Player's Handbook, page 281.
 ## Description
 *7th-level conjuration*
@@ -1050,6 +1125,9 @@ Wizard
 Arcana Domain
 
 # Temple of the Gods
+## Spell Name
+Temple of the Gods
+
 From Xanathar's Guide to Everything, page 167.
 ## Description
 *7th-level conjuration*
@@ -1092,6 +1170,9 @@ Divine Soul
 Theurgy
 
 # Tether Essence
+## Spell Name
+Tether Essence
+
 From Explorer's Guide to Wildemount, page 189.
 ## Description
 *7th-level necromancy*
@@ -1119,6 +1200,9 @@ Chronurgy Magic
 Graviturgy Magic
 
 # Whirlwind
+## Spell Name
+Whirlwind
+
 From Xanathar's Guide to Everything, page 171; and Elemental Evil Player's Companion, page 24.
 ## Description
 *7th-level evocation*

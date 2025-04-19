@@ -1,4 +1,7 @@
 # Abi-Dalzim's Horrid Wilting
+## Spell Name
+Abi-Dalzim's Horrid Wilting
+
 From Xanathar's Guide to Everything, page 150; and Elemental Evil Player's Companion, page 15.
 ## Description
 *8th-level necromancy*
@@ -30,6 +33,9 @@ Wizard
 Arcana Domain
 
 # Animal Shapes
+## Spell Name
+Animal Shapes
+
 From Player's Handbook, page 212.
 ## Description
 *8th-level transmutation*
@@ -57,6 +63,9 @@ The target's gear melds into the new form. The target can't activate, wield, or 
 Druid
 
 # Antimagic Field
+## Spell Name
+Antimagic Field
+
 From Player's Handbook, page 213.
 ## Description
 *8th-level abjuration*
@@ -121,6 +130,9 @@ Divine Soul
 Theurgy
 
 # Antipathy/Sympathy
+## Spell Name
+Antipathy/Sympathy
+
 From Player's Handbook, page 214.
 ## Description
 *8th-level enchantment*
@@ -167,6 +179,9 @@ Wizard
 Arcana Domain
 
 # Clone
+## Spell Name
+Clone
+
 From Player's Handbook, page 222.
 ## Description
 *8th-level necromancy*
@@ -197,6 +212,9 @@ Wizard
 Arcana Domain
 
 # Control Weather
+## Spell Name
+Control Weather
+
 From Player's Handbook, page 228.
 ## Description
 *8th-level transmutation*
@@ -394,6 +412,9 @@ Divine Soul
 Theurgy
 
 # Dark Star
+## Spell Name
+Dark Star
+
 From Explorer's Guide to Wildemount, page 186.
 ## Description
 *8th-level evocation*
@@ -422,6 +443,9 @@ Any creature that enters the spell's area for the first time on a turn or starts
 Graviturgy Magic
 
 # Demiplane
+## Spell Name
+Demiplane
+
 From Player's Handbook, page 231.
 ## Description
 *8th-level conjuration*
@@ -454,6 +478,9 @@ Wizard
 Arcana Domain
 
 # Dominate Monster
+## Spell Name
+Dominate Monster
+
 From Player's Handbook, page 235.
 ## Description
 *8th-level enchantment*
@@ -491,6 +518,9 @@ Wizard
 Arcana Domain
 
 # Earthquake
+## Spell Name
+Earthquake
+
 From Player's Handbook, page 236.
 ## Description
 *8th-level evocation*
@@ -535,6 +565,9 @@ Divine Soul
 Theurgy
 
 # Feeblemind
+## Spell Name
+Feeblemind
+
 From Player's Handbook, page 239.
 ## Description
 *8th-level enchantment*
@@ -573,6 +606,9 @@ Wizard
 Arcana Domain
 
 # Glibness
+## Spell Name
+Glibness
+
 From Player's Handbook, page 245.
 ## Description
 *8th-level transmutation*
@@ -598,6 +634,9 @@ Bard
 Warlock
 
 # Holy Aura
+## Spell Name
+Holy Aura
+
 From Player's Handbook, page 251.
 ## Description
 *8th-level abjuration*
@@ -630,6 +669,9 @@ Divine Soul
 Theurgy
 
 # Illusory Dragon
+## Spell Name
+Illusory Dragon
+
 From Xanathar's Guide to Everything, page 157.
 ## Description
 *8th-level illusion*
@@ -663,6 +705,9 @@ Wizard
 Arcana Domain
 
 # Incendiary Cloud
+## Spell Name
+Incendiary Cloud
+
 From Player's Handbook, page 253.
 ## Description
 *8th-level conjuration*
@@ -696,6 +741,9 @@ Wizard
 Arcana Domain
 
 # Maddening Darkness
+## Spell Name
+Maddening Darkness
+
 From Xanathar's Guide to Everything, page 160.
 ## Description
 *8th-level evocation*
@@ -727,6 +775,9 @@ Wizard
 Arcana Domain
 
 # Maze
+## Spell Name
+Maze
+
 From Player's Handbook, page 258.
 ## Description
 *8th-level conjuration*
@@ -760,6 +811,9 @@ Wizard
 Arcana Domain
 
 # Mighty Fortress
+## Spell Name
+Mighty Fortress
+
 From Xanathar's Guide to Everything, page 161.
 ## Description
 *8th-level evocation*
@@ -795,6 +849,9 @@ Wizard
 Arcana Domain
 
 # Mind Blank
+## Spell Name
+Mind Blank
+
 From Player's Handbook, page 259.
 ## Description
 *8th-level abjuration*
@@ -828,6 +885,9 @@ Wizard
 Arcana Domain
 
 # Power Word Stun
+## Spell Name
+Power Word Stun
+
 From Player's Handbook, page 267.
 ## Description
 *8th-level enchantment*
@@ -862,6 +922,9 @@ Wizard
 Arcana Domain
 
 # Reality Break
+## Spell Name
+Reality Break
+
 From Explorer's Guide to Wildemount, page 189.
 ## Description
 *8th-level conjuration*
@@ -939,6 +1002,9 @@ blinded
 Chronurgy Magic
 
 # Sunburst
+## Spell Name
+Sunburst
+
 From Player's Handbook, page 279.
 ## Description
 *8th-level evocation*
@@ -978,6 +1044,9 @@ Divine Soul
 Theurgy
 
 # Telepathy
+## Spell Name
+Telepathy
+
 From Player's Handbook, page 281.
 ## Description
 *8th-level evocation*
@@ -1008,6 +1077,9 @@ Wizard
 Arcana Domain
 
 # Tsunami
+## Spell Name
+Tsunami
+
 From Player's Handbook, page 284.
 ## Description
 *8th-level conjuration*

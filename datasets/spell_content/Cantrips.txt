@@ -1,4 +1,7 @@
 # Acid Splash
+## Spell Name
+Acid Splash
+
 From Player's Handbook, page 211.
 ## Description
 *Conjuration cantrip*
@@ -55,6 +58,9 @@ Artificer Initiate
 Magic Initiate
 
 # Blade Ward
+## Spell Name
+Blade Ward
+
 From Player's Handbook, page 218.
 ## Description
 *Abjuration cantrip*
@@ -108,6 +114,9 @@ Aberrant Dragonmark
 Magic Initiate
 
 # Booming Blade
+## Spell Name
+Booming Blade
+
 From Tasha's Cauldron of Everything, page 106; and Sword Coast Adventurer's Guide, page 143.
 ## Description
 *Evocation cantrip*
@@ -161,6 +170,9 @@ Magic Initiate
 Spell Sniper
 
 # Chill Touch
+## Spell Name
+Chill Touch
+
 From Player's Handbook, page 221.
 ## Description
 *Necromancy cantrip*
@@ -221,6 +233,9 @@ Spell Sniper
 Strixhaven Initiate
 
 # Control Flames
+## Spell Name
+Control Flames
+
 From Elemental Evil Player's Companion, page 16; and Xanathar's Guide to Everything, page 152.
 ## Description
 *Transmutation cantrip*
@@ -292,6 +307,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Create Bonfire
+## Spell Name
+Create Bonfire
+
 From Xanathar's Guide to Everything, page 152; and Elemental Evil Player's Companion, page 16.
 ## Description
 *Conjuration cantrip*
@@ -359,6 +377,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Dancing Lights
+## Spell Name
+Dancing Lights
+
 From Player's Handbook, page 230.
 ## Description
 *Evocation cantrip*
@@ -419,6 +440,9 @@ Artificer Initiate
 Magic Initiate
 
 # Druidcraft
+## Spell Name
+Druidcraft
+
 From Player's Handbook, page 236.
 ## Description
 *Transmutation cantrip*
@@ -484,6 +508,9 @@ Strixhaven Initiate
 Wood Elf Magic
 
 # Eldritch Blast
+## Spell Name
+Eldritch Blast
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/e/e7/Blast.png/revision/latest/scale-to-width-down/292?cb=20221129104510)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/e/e7/Blast.png/revision/latest/scale-to-width-down/292?cb=20221129104510)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/e/e7/Blast.png/revision/latest/scale-to-width-down/292?cb=20221129104510)
@@ -522,6 +549,9 @@ Spell Sniper
 Warforged
 
 # Encode Thoughts
+## Spell Name
+Encode Thoughts
+
 From Guildmasters' Guide to Ravnica, page 47.
 ## Description
 *Enchantment cantrip*
@@ -550,6 +580,9 @@ Casting this spell while holding a thought strand allows you to instantly receiv
 Dimir Operative
 
 # Fire Bolt
+## Spell Name
+Fire Bolt
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/0/0f/Firebolt.png/revision/latest/scale-to-width-down/223?cb=20221129090255)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/0/0f/Firebolt.png/revision/latest/scale-to-width-down/223?cb=20221129090255)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/0/0f/Firebolt.png/revision/latest/scale-to-width-down/223?cb=20221129090255)
@@ -616,6 +649,9 @@ Spell Sniper
 Strixhaven Initiate
 
 # Friends
+## Spell Name
+Friends
+
 From Player's Handbook, page 244.
 ## Description
 *Enchantment cantrip*
@@ -681,6 +717,9 @@ Aberrant Dragonmark
 Magic Initiate
 
 # Frostbite
+## Spell Name
+Frostbite
+
 From Xanathar's Guide to Everything, page 156; and Elemental Evil Player's Companion, page 18.
 ## Description
 *Evocation cantrip*
@@ -747,6 +786,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Green-Flame Blade
+## Spell Name
+Green-Flame Blade
+
 From Tasha's Cauldron of Everything, page 107; and Sword Coast Adventurer's Guide, page 143.
 ## Description
 *Evocation cantrip*
@@ -800,6 +842,9 @@ Magic Initiate
 Spell Sniper
 
 # Guidance
+## Spell Name
+Guidance
+
 From Player's Handbook, page 248.
 ## Description
 *Divination cantrip*
@@ -867,6 +912,9 @@ Strixhaven Initiate
 Wood Elf Magic
 
 # Gust
+## Spell Name
+Gust
+
 From Xanathar's Guide to Everything, page 157; Elemental Evil Player's Companion, page 19; and Wayfinder's Guide to Eberron, page 107.
 ## Description
 *Transmutation cantrip*
@@ -936,6 +984,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Infestation
+## Spell Name
+Infestation
+
 From Xanathar's Guide To Everything, page 158.
 ## Description
 *Conjuration cantrip*
@@ -1000,6 +1051,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Light
+## Spell Name
+Light
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/2/2e/Light_Spell.png/revision/latest/scale-to-width-down/230?cb=20221129104551)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/2/2e/Light_Spell.png/revision/latest/scale-to-width-down/230?cb=20221129104551)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/2/2e/Light_Spell.png/revision/latest/scale-to-width-down/230?cb=20221129104551)
@@ -1074,6 +1128,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Lightning Lure
+## Spell Name
+Lightning Lure
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/1/11/Lure.png/revision/latest/scale-to-width-down/241?cb=20221129104823)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/1/11/Lure.png/revision/latest/scale-to-width-down/241?cb=20221129104823)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/1/11/Lure.png/revision/latest/scale-to-width-down/241?cb=20221129104823)
@@ -1130,6 +1187,9 @@ Artificer Initiate
 Magic Initiate
 
 # Mage Hand
+## Spell Name
+Mage Hand
+
 From Player's Handbook, page 256.
 ## Description
 *Conjuration cantrip*
@@ -1198,6 +1258,9 @@ Strixhaven Initiate
 Telekinetic
 
 # Magic Stone
+## Spell Name
+Magic Stone
+
 From Xanathar's Guide to Everything, page 160; and Elemental Evil Player's Companion, page 20.
 ## Description
 *Transmutation cantrip*
@@ -1250,6 +1313,9 @@ Spell Sniper
 Wood Elf Magic
 
 # Mending
+## Spell Name
+Mending
+
 From Player's Handbook, page 259.
 ## Description
 *Transmutation cantrip*
@@ -1324,6 +1390,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Message
+## Spell Name
+Message
+
 From Player's Handbook, page 259.
 ## Description
 *Transmutation cantrip*
@@ -1385,6 +1454,9 @@ Artificer Initiate
 Magic Initiate
 
 # Mind Sliver
+## Spell Name
+Mind Sliver
+
 From Tasha's Cauldron of Everything, page 108.
 ## Description
 *Enchantment cantrip*
@@ -1437,6 +1509,9 @@ Aberrant Dragonmark
 Magic Initiate
 
 # Minor Illusion
+## Spell Name
+Minor Illusion
+
 From Player's Handbook, page 260.
 ## Description
 *Illusion cantrip*
@@ -1501,6 +1576,9 @@ Aberrant Dragonmark
 Magic Initiate
 
 # Mold Earth
+## Spell Name
+Mold Earth
+
 From Xanathar's Guide to Everything, page 162; and Elemental Evil Player's Companion, page 21.
 ## Description
 *Transmutation cantrip*
@@ -1570,6 +1648,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Poison Spray
+## Spell Name
+Poison Spray
+
 From Player's Handbook, page 266.
 ## Description
 *Conjuration cantrip*
@@ -1637,6 +1718,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Prestidigitation
+## Spell Name
+Prestidigitation
+
 From Player's Handbook, page 267.
 ## Description
 *Transmutation cantrip*
@@ -1708,6 +1792,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Primal Savagery
+## Spell Name
+Primal Savagery
+
 From Xanathar's Guide to Everything, page 163.
 ## Description
 *Transmutation cantrip*
@@ -1757,6 +1844,9 @@ Spell Sniper
 Wood Elf Magic
 
 # Produce Flame
+## Spell Name
+Produce Flame
+
 From Player's Handbook, page 269.
 ## Description
 *Conjuration cantrip*
@@ -1813,6 +1903,9 @@ Spell Sniper
 Wood Elf Magic
 
 # Ray of Frost
+## Spell Name
+Ray of Frost
+
 From Player's Handbook, page 271.
 ## Description
 *Evocation cantrip*
@@ -1869,6 +1962,9 @@ Spell Sniper
 Strixhaven Initiate
 
 # Resistance
+## Spell Name
+Resistance
+
 From Player's Handbook, page 272.
 ## Description
 *Abjuration cantrip*
@@ -1926,6 +2022,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Sacred Flame
+## Spell Name
+Sacred Flame
+
 From Player's Handbook, page 272.
 ## Description
 *Evocation cantrip*
@@ -1983,6 +2082,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Sapping Sting
+## Spell Name
+Sapping Sting
+
 From Explorer's Guide to Wildemount, page 189.
 ## Description
 ![](https://static.wikia.nocookie.net/dnd-5e/images/d/d6/Sapping_sting.png/revision/latest/scale-to-width-down/227?cb=20221208104728)
@@ -2018,6 +2120,9 @@ Chronurgy Magic
 Graviturgy Magic
 
 # Shape Water
+## Spell Name
+Shape Water
+
 From Xanathar's Guide to Everything, page 164; and Elemental Evil Player's Companion, page 21.
 ## Description
 *Transmutation cantrip*
@@ -2090,6 +2195,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Shillelagh
+## Spell Name
+Shillelagh
+
 From Player's Handbook, page 275.
 ## Description
 *Transmutation cantrip*
@@ -2139,6 +2247,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Shocking Grasp
+## Spell Name
+Shocking Grasp
+
 From Player's Handbook, page 275.
 ## Description
 *Evocation cantrip*
@@ -2198,6 +2309,9 @@ Magic Initiate
 Spell Sniper
 
 # Spare the Dying
+## Spell Name
+Spare the Dying
+
 From Player's Handbook, page 277.
 ## Description
 *Necromancy cantrip*
@@ -2258,6 +2372,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Sword Burst
+## Spell Name
+Sword Burst
+
 From Tasha's Cauldron of Everything, page 115; and Sword Coast Adventurer's Guide, page 143.
 ## Description
 *Conjuration cantrip*
@@ -2310,6 +2427,9 @@ Artificer Initiate
 Magic Initiate
 
 # Thaumaturgy
+## Spell Name
+Thaumaturgy
+
 From Player's Handbook, page 282.
 ## Description
 *Transmutation cantrip*
@@ -2374,6 +2494,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Thorn Whip
+## Spell Name
+Thorn Whip
+
 From Player's Handbook, page 282.
 ## Description
 *Transmutation cantrip*
@@ -2425,6 +2548,9 @@ Spell Sniper
 Wood Elf Magic
 
 # Thunderclap
+## Spell Name
+Thunderclap
+
 From Xanathar's Guide to Everything, page 168; and Elemental Evil Player's Companion, page 22.
 ## Description
 *Evocation cantrip*
@@ -2493,6 +2619,9 @@ Magic Initiate
 Wood Elf Magic
 
 # Toll the Dead
+## Spell Name
+Toll the Dead
+
 From Xanathar's Guide to Everything, page 169.
 ## Description
 *Necromancy cantrip*
@@ -2552,6 +2681,9 @@ Valenar (Wood) Elf
 Magic Initiate
 
 # True Strike
+## Spell Name
+True Strike
+
 From Player's Handbook, page 284.
 ## Description
 *Divination cantrip*
@@ -2606,6 +2738,9 @@ Aberrant Dragonmark
 Magic Initiate
 
 # Vicious Mockery
+## Spell Name
+Vicious Mockery
+
 From Player's Handbook, page 285.
 ## Description
 *Enchantment cantrip*
@@ -2652,6 +2787,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Word of Radiance
+## Spell Name
+Word of Radiance
+
 From Xanathar's Guide to Everything, page 171.
 ## Description
 *Evocation cantrip*

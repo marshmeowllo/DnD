@@ -1,4 +1,7 @@
 # Arcane Gate
+## Spell Name
+Arcane Gate
+
 From Player's Handbook, page 214.
 ## Description
 *6th-level conjuration*
@@ -32,6 +35,9 @@ Wizard
 Arcana Domain
 
 # Blade Barrier
+## Spell Name
+Blade Barrier
+
 From Player's Handbook, page 218.
 ## Description
 *6th-level evocation*
@@ -64,6 +70,9 @@ Divine Soul
 Theurgy
 
 # Bones of the Earth
+## Spell Name
+Bones of the Earth
+
 From Xanathar's Guide to Everything, page 150; and Elemental Evil Player's Companion, page 15.
 ## Description
 *6th-level transmutation*
@@ -93,6 +102,9 @@ restrained
 Druid
 
 # Chain Lightning
+## Spell Name
+Chain Lightning
+
 From Player's Handbook, page 221.
 ## Description
 *6th-level evocation*
@@ -126,6 +138,9 @@ Wizard
 Arcana Domain
 
 # Circle of Death
+## Spell Name
+Circle of Death
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/3/36/Circle_of_death.png/revision/latest/scale-to-width-down/217?cb=20221129112620)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/3/36/Circle_of_death.png/revision/latest/scale-to-width-down/217?cb=20221129112620)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/3/36/Circle_of_death.png/revision/latest/scale-to-width-down/217?cb=20221129112620)
@@ -163,6 +178,9 @@ Wizard
 Arcana Domain
 
 # Conjure Fey
+## Spell Name
+Conjure Fey
+
 From Player's Handbook, page 226.
 ## Description
 *6th-level conjuration*
@@ -193,6 +211,9 @@ Druid
 Warlock
 
 # Contingency
+## Spell Name
+Contingency
+
 From Player's Handbook, page 227.
 ## Description
 *6th-level evocation*
@@ -225,6 +246,9 @@ Wizard
 Arcana Domain
 
 # Create Homunculus
+## Spell Name
+Create Homunculus
+
 From Xanathar's Guide to Everything, page 152.
 ## Description
 *6th-level transmutation*
@@ -257,6 +281,9 @@ Wizard
 Arcana Domain
 
 # Create Undead
+## Spell Name
+Create Undead
+
 From Player's Handbook, page 229.
 ## Description
 *6th-level necromancy*
@@ -297,6 +324,9 @@ Divine Soul
 Theurgy
 
 # Disintegrate
+## Spell Name
+Disintegrate
+
 From Player's Handbook, page 233.
 ## Description
 *6th-level transmutation*
@@ -334,6 +364,9 @@ Wizard
 Arcana Domain
 
 # Drawmij's Instant Summons
+## Spell Name
+Drawmij's Instant Summons
+
 From Player's Handbook, page 235.
 ## Description
 *6th-level conjuration (ritual)*
@@ -367,6 +400,9 @@ Wizard
 Arcana Domain
 
 # Druid Grove
+## Spell Name
+Druid Grove
+
 From Xanathar's Guide to Everything, page 154.
 ## Description
 *6th-level abjuration*
@@ -425,6 +461,9 @@ Wind Wall
 Druid
 
 # Eyebite
+## Spell Name
+Eyebite
+
 From Player's Handbook, page 238.
 ## Description
 *6th-level necromancy*
@@ -468,6 +507,9 @@ Wizard
 Arcana Domain
 
 # Find the Path
+## Spell Name
+Find the Path
+
 From Player's Handbook, page 240.
 ## Description
 *6th-level divination*
@@ -506,6 +548,9 @@ Theurgy
 Greater Dragonmark
 
 # Fizban's Platinum Shield
+## Spell Name
+Fizban's Platinum Shield
+
 From Fizban's Treasury of Dragons, page 20.
 ## Description
 *6th-level abjuration*
@@ -543,6 +588,9 @@ Wizard
 Arcana Domain
 
 # Flesh to Stone
+## Spell Name
+Flesh to Stone
+
 From Player's Handbook, page 243.
 ## Description
 *6th-level transmutation*
@@ -580,6 +628,9 @@ Wizard
 Arcana Domain
 
 # Forbiddance
+## Spell Name
+Forbiddance
+
 From Player's Handbook, page 243.
 ## Description
 *6th-level abjuration (ritual)*
@@ -616,6 +667,9 @@ Divine Soul
 Theurgy
 
 # Gravity Fissure
+## Spell Name
+Gravity Fissure
+
 From Explorer's Guide to Wildemount, page 187.
 ## Description
 *6th-level evocation*
@@ -644,6 +698,9 @@ Each creature within 10 feet of the line but not in it must succeed on a Constit
 Graviturgy Magic
 
 # Globe of Invulnerability
+## Spell Name
+Globe of Invulnerability
+
 From Player's Handbook, page 245.
 ## Description
 *6th-level abjuration*
@@ -677,6 +734,9 @@ Wizard
 Arcana Domain
 
 # Guards and Wards
+## Spell Name
+Guards and Wards
+
 From Player's Handbook, page 248.
 ## Description
 *6th-level abjuration*
@@ -752,6 +812,9 @@ Wizard
 Arcana Domain
 
 # Harm
+## Spell Name
+Harm
+
 From Player's Handbook, page 249.
 ## Description
 *6th-level necromancy*
@@ -783,6 +846,9 @@ Divine Soul
 Theurgy
 
 # Heal
+## Spell Name
+Heal
+
 From Player's Handbook, page 250.
 ## Description
 *6th-level evocation*
@@ -819,6 +885,9 @@ Divine Soul
 Theurgy
 
 # Heroes' Feast
+## Spell Name
+Heroes' Feast
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/1/10/Heroes%27_Feast.png/revision/latest/scale-to-width-down/258?cb=20221129123029)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/1/10/Heroes%27_Feast.png/revision/latest/scale-to-width-down/258?cb=20221129123029)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/1/10/Heroes%27_Feast.png/revision/latest/scale-to-width-down/258?cb=20221129123029)
@@ -857,6 +926,9 @@ Divine Soul
 Theurgy
 
 # Investiture of Flame
+## Spell Name
+Investiture of Flame
+
 From Xanathar's Guide to Everything, page 159; and Elemental Evil Player's Companion, page 19.
 ## Description
 *6th-level transmutation*
@@ -895,6 +967,9 @@ Wizard
 Arcana Domain
 
 # Investiture of Ice
+## Spell Name
+Investiture of Ice
+
 From Xanathar's Guide to Everything, page 159; and Elemental Evil Player's Companion, page 19.
 ## Description
 *6th-level transmutation*
@@ -935,6 +1010,9 @@ Wizard
 Arcana Domain
 
 # Investiture of Stone
+## Spell Name
+Investiture of Stone
+
 From Xanathar's Guide to Everything, page 159; and Elemental Evil Player's Companion, page 19.
 ## Description
 *6th-level transmutation*
@@ -973,6 +1051,9 @@ Wizard
 Arcana Domain
 
 # Investiture of Wind
+## Spell Name
+Investiture of Wind
+
 From Xanathar's Guide to Everything, page 159; and Elemental Evil Player's Companion, page 19.
 ## Description
 *6th-level transmutation*
@@ -1011,6 +1092,9 @@ Wizard
 Arcana Domain
 
 # Magic Jar
+## Spell Name
+Magic Jar
+
 From Player's Handbook, page 257.
 ## Description
 *6th-level necromancy*
@@ -1046,6 +1130,9 @@ Wizard
 Arcana Domain
 
 # Mass Suggestion
+## Spell Name
+Mass Suggestion
+
 From Player's Handbook, page 258.
 ## Description
 *6th-level enchantment*
@@ -1083,6 +1170,9 @@ Wizard
 Arcana Domain
 
 # Mental Prison
+## Spell Name
+Mental Prison
+
 From Xanathar's Guide to Everything, page 161.
 ## Description
 *6th-level illusion*
@@ -1115,6 +1205,9 @@ Wizard
 Arcana Domain
 
 # Move Earth
+## Spell Name
+Move Earth
+
 From Player's Handbook, page 263.
 ## Description
 *6th-level transmutation*
@@ -1150,6 +1243,9 @@ Wizard
 Arcana Domain
 
 # Otiluke's Freezing Sphere
+## Spell Name
+Otiluke's Freezing Sphere
+
 From Player's Handbook, page 263.
 ## Description
 *6th-level evocation*
@@ -1184,6 +1280,9 @@ Wizard
 Arcana Domain
 
 # Otto's Irresistible Dance
+## Spell Name
+Otto's Irresistible Dance
+
 From Player's Handbook, page 264.
 ## Description
 *6th-level enchantment*
@@ -1215,6 +1314,9 @@ Wizard
 Arcana Domain
 
 # Planar Ally
+## Spell Name
+Planar Ally
+
 From Player's Handbook, page 265.
 ## Description
 *6th-level conjuration*
@@ -1251,6 +1353,9 @@ Divine Soul
 Theurgy
 
 # Primordial Ward
+## Spell Name
+Primordial Ward
+
 From Xanathar's Guide to Everything, page 163; and Elemental Evil Player's Companion, page 21.
 ## Description
 *6th-level abjuration*
@@ -1276,6 +1381,9 @@ When you take damage of one of those types, you can use your reaction to gain im
 Druid
 
 # Programmed Illusion
+## Spell Name
+Programmed Illusion
+
 From Player's Handbook, page 269.
 ## Description
 *6th-level illusion*
@@ -1309,6 +1417,9 @@ Wizard
 Arcana Domain
 
 # Scatter
+## Spell Name
+Scatter
+
 From Xanathar's Guide to Everything, page 164.
 ## Description
 *6th-level conjuration*
@@ -1340,6 +1451,9 @@ Wizard
 Arcana Domain
 
 # Soul Cage
+## Spell Name
+Soul Cage
+
 From Xanathar's Guide to Everything, page 165.
 ## Description
 *6th-level necromancy*
@@ -1385,6 +1499,9 @@ Wizard
 Arcana Domain
 
 # Summon Fiend
+## Spell Name
+Summon Fiend
+
 From Tasha's Cauldron of Everything, page 112.
 ## Description
 *6th-level conjuration*
@@ -1419,6 +1536,9 @@ Wizard
 Arcana Domain
 
 # Sunbeam
+## Spell Name
+Sunbeam
+
 From Player's Handbook, page 279.
 ## Description
 *6th-level evocation*
@@ -1458,6 +1578,9 @@ Divine Soul
 Theurgy
 
 # Tasha's Otherworldly Guise
+## Spell Name
+Tasha's Otherworldly Guise
+
 From Tasha's Cauldron of Everything, page 116.
 ## Description
 *6th-level transmutation*
@@ -1501,6 +1624,9 @@ Wizard
 Arcana Domain
 
 # Tenser's Transformation
+## Spell Name
+Tenser's Transformation
+
 From Xanathar's Guide to Everything, page 165.
 ## Description
 *6th-level transmutation*
@@ -1543,6 +1669,9 @@ Wizard
 Arcana Domain
 
 # Transport via Plants
+## Spell Name
+Transport via Plants
+
 From Player's Handbook, page 283.
 ## Description
 *6th-level conjuration*
@@ -1567,6 +1696,9 @@ This spell creates a magical link between a Large or larger inanimate plant with
 Druid
 
 # True Seeing
+## Spell Name
+True Seeing
+
 From Player's Handbook, page 284.
 ## Description
 *6th-level divination*
@@ -1609,6 +1741,9 @@ Theurgy
 Greater Dragonmark
 
 # Wall of Ice
+## Spell Name
+Wall of Ice
+
 From Player's Handbook, page 285.
 ## Description
 *6th-level evocation*
@@ -1642,6 +1777,9 @@ Wizard
 Arcana Domain
 
 # Wall of Thorns
+## Spell Name
+Wall of Thorns
+
 From Player's Handbook, page 287.
 ## Description
 *6th-level conjuration*
@@ -1670,6 +1808,9 @@ A creature can move through the wall, albeit slowly and painfully. For every 1 f
 Druid
 
 # Wind Walk
+## Spell Name
+Wind Walk
+
 From Player's Handbook, page 288.
 ## Description
 *6th-level transmutation*
@@ -1695,6 +1836,9 @@ If a creature is in cloud form and flying when the effect ends, the creature des
 Druid
 
 # Word of Recall
+## Spell Name
+Word of Recall
+
 From Player's Handbook, page 289.
 ## Description
 *6th-level conjuration*
