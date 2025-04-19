@@ -1,4 +1,7 @@
 # Arcane Eye
+## Spell Name
+Arcane Eye
+
 From Player's Handbook, page 214.
 ## Description
 *4th-level divination*
@@ -63,6 +66,9 @@ Dimir Operative
 Lorehold Student
 
 # Aura of Life
+## Spell Name
+Aura of Life
+
 From Player's Handbook, page 216.
 ## Description
 *4th-level abjuration*
@@ -112,6 +118,9 @@ Mark of Healing Halfling
 Selesnya Initiate
 
 # Aura of Purity
+## Spell Name
+Aura of Purity
+
 From Player's Handbook, page 216.
 ## Description
 *4th-level abjuration*
@@ -161,6 +170,9 @@ Theurgy
 Mark of Healing Halfling
 
 # Banishment
+## Spell Name
+Banishment
+
 From Player's Handbook, page 217.
 ## Description
 *4th-level abjuration*
@@ -216,6 +228,9 @@ Divine Soul
 Theurgy
 
 # Blight
+## Spell Name
+Blight
+
 From Player's Handbook, page 219.
 ## Description
 *4th-level necromancy*
@@ -274,6 +289,9 @@ Orzhov Representative
 Witherbloom Student
 
 # Charm Monster
+## Spell Name
+Charm Monster
+
 From Xanathar's Guide to Everything, page 151.
 ## Description
 *4th-level enchantment*
@@ -313,6 +331,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Compulsion
+## Spell Name
+Compulsion
+
 From Player's Handbook, page 224.
 ## Description
 *4th-level enchantment*
@@ -354,6 +375,9 @@ Azorius Functionary
 Silverquill Student
 
 # Confusion
+## Spell Name
+Confusion
+
 From Player's Handbook, page 224.
 ## Description
 *4th-level enchantment*
@@ -451,6 +475,9 @@ Rakdos Cultist
 Silverquill Student
 
 # Conjure Minor Elementals
+## Spell Name
+Conjure Minor Elementals
+
 From Player's Handbook, page 226.
 ## Description
 *4th-level conjuration*
@@ -505,6 +532,9 @@ Izzet Engineer
 Selesnya Initiate
 
 # Conjure Woodland Beings
+## Spell Name
+Conjure Woodland Beings
+
 From Player's Handbook, page 226.
 ## Description
 *4th-level conjuration*
@@ -543,6 +573,9 @@ Druid
 Ranger
 
 # Control Water
+## Spell Name
+Control Water
+
 From Player's Handbook, page 227.
 ## Description
 *4th-level transmutation*
@@ -625,6 +658,9 @@ Quandrix Student
 Greater Dragonmark
 
 # Death Ward
+## Spell Name
+Death Ward
+
 From Player's Handbook, page 230.
 ## Description
 *4th-level abjuration*
@@ -683,6 +719,9 @@ Orzhov Representative
 Witherbloom Student
 
 # Dimension Door
+## Spell Name
+Dimension Door
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/f/f4/Dimesiondoor.png/revision/latest/scale-to-width-down/274?cb=20221129104125)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/f/f4/Dimesiondoor.png/revision/latest/scale-to-width-down/274?cb=20221129104125)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/f/f4/Dimesiondoor.png/revision/latest/scale-to-width-down/274?cb=20221129104125)
@@ -735,6 +774,9 @@ Arcane Trickster
 Mark of Passage Human
 
 # Divination
+## Spell Name
+Divination
+
 From Player's Handbook, page 234.
 ## Description
 *4th-level divination (ritual)*
@@ -791,6 +833,9 @@ Azorius Functionary
 Izzet Engineer
 
 # Dominate Beast
+## Spell Name
+Dominate Beast
+
 From Player's Handbook, page 234.
 ## Description
 *4th-level enchantment*
@@ -848,6 +893,9 @@ Gruul Anarch
 Greater Dragonmark
 
 # Elemental Bane
+## Spell Name
+Elemental Bane
+
 From Xanathar's Guide to Everything, page 155; and Elemental Evil Player's Companion, page 17.
 ## Description
 *4th-level transmutation*
@@ -886,6 +934,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Evard's Black Tentacles
+## Spell Name
+Evard's Black Tentacles
+
 From Player's Handbook, page 238.
 ## Description
 *4th-level conjuration*
@@ -926,6 +977,9 @@ The Fathomless
 The Great Old One
 
 # Fabricate
+## Spell Name
+Fabricate
+
 From Player's Handbook, page 239.
 ## Description
 *4th-level transmutation*
@@ -972,6 +1026,9 @@ Mark of Making Human
 Greater Dragonmark
 
 # Find Greater Steed
+## Spell Name
+Find Greater Steed
+
 From Xanathar's Guide to Everything, page 156.
 ## Description
 *4th-level conjuration*
@@ -1008,6 +1065,9 @@ Whenever the mount disappears, it leaves behind any objects it was wearing or ca
 Paladin
 
 # Fire Shield
+## Spell Name
+Fire Shield
+
 From Player's Handbook, page 242.
 ## Description
 *4th-level evocation*
@@ -1053,6 +1113,9 @@ The Fiend
 The Genie (Efreeti)
 
 # Freedom of Movement
+## Spell Name
+Freedom of Movement
+
 From Player's Handbook, page 244.
 ## Description
 *4th-level abjuration*
@@ -1127,6 +1190,9 @@ Quandrix Student
 Simic Scientist
 
 # Galder's Speedy Courier
+## Spell Name
+Galder's Speedy Courier
+
 From Lost Laboratory of Kwalish, page 57.
 ## Description
 *4th-level conjuration*
@@ -1163,6 +1229,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Giant Insect
+## Spell Name
+Giant Insect
+
 From Player's Handbook, page 245.
 ## Description
 *4th-level transmutation*
@@ -1203,6 +1272,9 @@ Primeval Guardian
 Golgari Agent
 
 # Grasping Vine
+## Spell Name
+Grasping Vine
+
 From Player's Handbook, page 246.
 ## Description
 *4th-level conjuration*
@@ -1238,6 +1310,9 @@ Nature Domain
 Golgari Agent
 
 # Gravity Sinkhole
+## Spell Name
+Gravity Sinkhole
+
 From Explorer's Guide to Wildemount, page 187.
 ## Description
 *4th-level evocation*
@@ -1265,6 +1340,9 @@ A 20-foot-radius sphere of crushing force forms at a point you can see within ra
 Graviturgy Magic
 
 # Greater Invisibility
+## Spell Name
+Greater Invisibility
+
 From Player's Handbook, page 246.
 ## Description
 *4th-level illusion*
@@ -1319,6 +1397,9 @@ The Undead
 Mark of Shadow Elf
 
 # Guardian of Faith
+## Spell Name
+Guardian of Faith
+
 From Player's Handbook, page 246.
 ## Description
 *4th-level conjuration*
@@ -1369,6 +1450,9 @@ Theurgy
 Mark of Sentinel Human
 
 # Guardian of Nature
+## Spell Name
+Guardian of Nature
+
 From Xanathar's Guide to Everything, page 157.
 ## Description
 *4th-level transmutation*
@@ -1432,6 +1516,9 @@ Druid
 Ranger
 
 # Hallucinatory Terrain
+## Spell Name
+Hallucinatory Terrain
+
 From Player's Handbook, page 249.
 ## Description
 *4th-level illusion*
@@ -1473,6 +1560,9 @@ Arcane Trickster
 Mark of Shadow Elf
 
 # Ice Storm
+## Spell Name
+Ice Storm
+
 From Player's Handbook, page 249.
 ## Description
 *4th-level evocation*
@@ -1519,6 +1609,9 @@ Arcane Trickster
 The Raven Queen
 
 # Leomund's Secret Chest
+## Spell Name
+Leomund's Secret Chest
+
 From Player's Handbook, page 254.
 ## Description
 *4th-level conjuration*
@@ -1567,6 +1660,9 @@ Orzhov Representative
 Greater Dragonmark
 
 # Locate Creature
+## Spell Name
+Locate Creature
+
 From Player's Handbook, page 256.
 ## Description
 *4th-level divination*
@@ -1631,6 +1727,9 @@ Human
 Greater Dragonmark
 
 # Mordenkainen's Faithful Hound
+## Spell Name
+Mordenkainen's Faithful Hound
+
 From Player's Handbook, page 261.
 ## Description
 *4th-level conjuration*
@@ -1669,6 +1768,9 @@ Arcane Trickster
 Mark of Warding Dwarf
 
 # Mordenkainen's Private Sanctum
+## Spell Name
+Mordenkainen's Private Sanctum
+
 From Player's Handbook, page 262.
 ## Description
 *4th-level abjuration*
@@ -1724,6 +1826,9 @@ Clockwork Soul
 Mark of Hospitality Halfling
 
 # Otiluke's Resilient Sphere
+## Spell Name
+Otiluke's Resilient Sphere
+
 From Player's Handbook, page 264.
 ## Description
 *4th-level evocation*
@@ -1770,6 +1875,9 @@ Arcane Trickster
 Izzet Engineer
 
 # Phantasmal Killer
+## Spell Name
+Phantasmal Killer
+
 From Player's Handbook, page 265.
 ## Description
 *4th-level illusion*
@@ -1809,6 +1917,9 @@ The Genie
 The Hexblade
 
 # Polymorph
+## Spell Name
+Polymorph
+
 From Player's Handbook, page 266.
 ## Description
 *4th-level transmutation*
@@ -1861,6 +1972,9 @@ Sculptor of Flesh
 Simic Scientist
 
 # Raulothim's Psychic Lance
+## Spell Name
+Raulothim's Psychic Lance
+
 From Fizban's Treasury of Dragons, page 21.
 ## Description
 *4th-level enchantment*
@@ -1902,6 +2016,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Shadow of Moil
+## Spell Name
+Shadow of Moil
+
 From Xanathar's Guide to Everything, page 164.
 ## Description
 *4th-level necromancy*
@@ -1927,6 +2044,9 @@ Until the spell ends, you have resistance to radiant damage. In addition, whenev
 Warlock
 
 # Sickening Radiance
+## Spell Name
+Sickening Radiance
+
 From Xanathar's Guide to Everything, page 164.
 ## Description
 *4th-level evocation*
@@ -1962,6 +2082,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Staggering Smite
+## Spell Name
+Staggering Smite
+
 From Player's Handbook, page 278.
 ## Description
 *4th-level evocation*
@@ -1995,6 +2118,9 @@ Stone Sorcery
 The Hexblade
 
 # Stone Shape
+## Spell Name
+Stone Shape
+
 From Player's Handbook, page 278.
 ## Description
 *4th-level transmutation*
@@ -2055,6 +2181,9 @@ Mark of Making Human
 Lorehold Student
 
 # Stoneskin
+## Spell Name
+Stoneskin
+
 From Player's Handbook, page 278.
 ## Description
 *4th-level abjuration*
@@ -2110,6 +2239,9 @@ Clockwork Soul
 Gruul Anarch
 
 # Storm Sphere
+## Spell Name
+Storm Sphere
+
 From Xanathar's Guide to Everything, page 166; and Elemental Evil Player's Companion, page 22.
 ## Description
 *4th-level evocation*
@@ -2146,6 +2278,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Summon Aberration
+## Spell Name
+Summon Aberration
+
 From Tasha's Cauldron of Everything, page 109.
 ## Description
 *4th-level conjuration*
@@ -2186,6 +2321,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Summon Construct
+## Spell Name
+Summon Construct
+
 From Tasha's Cauldron of Everything, page 111.
 ## Description
 *4th-level conjuration*
@@ -2224,6 +2362,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Summon Elemental
+## Spell Name
+Summon Elemental
+
 From Tasha's Cauldron of Everything, page 111.
 ## Description
 *4th-level conjuration*
@@ -2263,6 +2404,9 @@ Arcane Trickster
 The Fathomless
 
 # Summon Greater Demon
+## Spell Name
+Summon Greater Demon
+
 From Xanathar's Guide to Everything, page 166.
 ## Description
 *4th-level conjuration*
@@ -2303,6 +2447,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Vitriolic Sphere
+## Spell Name
+Vitriolic Sphere
+
 From Xanathar's Guide to Everything, page 170; and Elemental Evil Player's Companion, page 23.
 ## Description
 *4th-level evocation*
@@ -2338,6 +2485,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Wall of Fire
+## Spell Name
+Wall of Fire
+
 From Player's Handbook, page 285.
 ## Description
 *4th-level evocation*
@@ -2393,6 +2543,9 @@ Prismari Student
 Rakdos Cultist
 
 # Watery Sphere
+## Spell Name
+Watery Sphere
+
 From Xanathar's Guide to Everything, page 170; and Elemental Evil Player's Companion, page 23.
 ## Description
 *4th-level conjuration*

@@ -1,4 +1,7 @@
 # Absorb Elements
+## Spell Name
+Absorb Elements
+
 From Xanathar's Guide to Everything, page 150; and Elemental Evil Player's Companion, page 15.
 ## Description
 *1st-level abjuration*
@@ -44,6 +47,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Alarm
+## Spell Name
+Alarm
+
 From Player's Handbook, page 211.
 ## Description
 *1st-level abjuration (ritual)*
@@ -94,6 +100,9 @@ Quicksmithing
 Ritual Caster
 
 # Animal Friendship
+## Spell Name
+Animal Friendship
+
 From Player's Handbook, page 212.
 ## Description
 *1st-level enchantment*
@@ -142,6 +151,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Armor of Agathys
+## Spell Name
+Armor of Agathys
+
 From Player's Handbook, page 215.
 ## Description
 *1st-level abjuration*
@@ -186,6 +198,9 @@ Mark of Warding Dwarf
 Magic Initiate
 
 # Arms of Hadar
+## Spell Name
+Arms of Hadar
+
 From Player's Handbook, page 215.
 ## Description
 *1st-level conjuration*
@@ -221,6 +236,9 @@ Aberrant Mind
 Magic Initiate
 
 # Bane
+## Spell Name
+Bane
+
 From Player's Handbook, page 216.
 ## Description
 *1st-level enchantment*
@@ -275,6 +293,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Beast Bond
+## Spell Name
+Beast Bond
+
 From Xanathar's Guide to Everything, page 150; and Elemental Evil Player's Companion, page 15.
 ## Description
 *1st-level divination*
@@ -306,6 +327,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Bless
+## Spell Name
+Bless
+
 From Player's Handbook, page 219.
 ## Description
 *1st-level enchantment*
@@ -352,6 +376,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Burning Hands
+## Spell Name
+Burning Hands
+
 From Player's Handbook, page 220.
 ## Description
 *1st-level evocation*
@@ -417,6 +444,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Catapult
+## Spell Name
+Catapult
+
 From Xanathar's Guide to Everything, page 150; and Elemental Evil Player's Companion, page 15.
 ## Description
 *1st-level transmutation*
@@ -460,6 +490,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Cause Fear
+## Spell Name
+Cause Fear
+
 From Xanathar's Guide to Everything, page 151.
 ## Description
 *1st-level necromancy*
@@ -500,6 +533,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Ceremony
+## Spell Name
+Ceremony
+
 From Xanathar's Guide to Everything, page 151.
 ## Description
 *1st-level abjuration (ritual)*
@@ -558,6 +594,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Chaos Bolt
+## Spell Name
+Chaos Bolt
+
 From Xanathar's Guide to Everything, page 151; and Guildmasters' Guide to Ravnica, page 67.
 ## Description
 *1st-level evocation*
@@ -659,6 +698,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Charm Person
+## Spell Name
+Charm Person
+
 From Player's Handbook, page 221.
 ## Description
 *1st-level enchantment*
@@ -720,6 +762,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Chromatic Orb
+## Spell Name
+Chromatic Orb
+
 From Player's Handbook, page 221.
 ## Description
 *1st-level evocation*
@@ -763,6 +808,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Color Spray
+## Spell Name
+Color Spray
+
 From Player's Handbook, page 222.
 ## Description
 *1st-level illusion*
@@ -805,6 +853,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Command
+## Spell Name
+Command
+
 From Player's Handbook, page 223.
 ## Description
 *1st-level enchantment*
@@ -879,6 +930,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Compelled Duel
+## Spell Name
+Compelled Duel
+
 From Player's Handbook, page 224.
 ## Description
 *1st-level enchantment*
@@ -926,6 +980,9 @@ Fey Touched
 Greater Dragonmark
 
 # Comprehend Languages
+## Spell Name
+Comprehend Languages
+
 From Player's Handbook, page 224.
 ## Description
 *1st-level divination (ritual)*
@@ -987,6 +1044,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Create or Destroy Water
+## Spell Name
+Create or Destroy Water
+
 From Player's Handbook, page 229.
 ## Description
 *1st-level transmutation*
@@ -1042,6 +1102,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Cure Wounds
+## Spell Name
+Cure Wounds
+
 From Player's Handbook, page 230.
 ## Description
 *1st-level evocation*
@@ -1105,6 +1168,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Detect Evil and Good
+## Spell Name
+Detect Evil and Good
+
 From Player's Handbook, page 231.
 ## Description
 *1st-level divination*
@@ -1150,6 +1216,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Detect Magic
+## Spell Name
+Detect Magic
+
 From Player's Handbook, page 231.
 ## Description
 *1st-level divination (ritual)*
@@ -1221,6 +1290,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Detect Poison and Disease
+## Spell Name
+Detect Poison and Disease
+
 From Player's Handbook, page 231.
 ## Description
 *1st-level divination (ritual)*
@@ -1272,6 +1344,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Disguise Self
+## Spell Name
+Disguise Self
+
 From Player's Handbook, page 233.
 ## Description
 *1st-level illusion*
@@ -1338,6 +1413,9 @@ Strixhaven Initiate
 Svirfneblin Magic
 
 # Dissonant Whispers
+## Spell Name
+Dissonant Whispers
+
 From Player's Handbook, page 234.
 ## Description
 *1st-level enchantment*
@@ -1382,6 +1460,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Distort Value
+## Spell Name
+Distort Value
+
 From Acquisitions Incorporated, page 75.
 ## Description
 *1st-level illusion*
@@ -1425,6 +1506,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Divine Favor
+## Spell Name
+Divine Favor
+
 From Player's Handbook, page 234.
 ## Description
 *1st-level evocation*
@@ -1456,6 +1540,9 @@ Strength Domain
 War Domain
 
 # Earth Tremor
+## Spell Name
+Earth Tremor
+
 From Xanathar's Guide to Everything, page 155; and Elemental Evil Player's Companion, page 17.
 ## Description
 *1st-level evocation*
@@ -1497,6 +1584,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Ensnaring Strike
+## Spell Name
+Ensnaring Strike
+
 From Player's Handbook, page 237.
 ## Description
 *1st-level conjuration*
@@ -1534,6 +1624,9 @@ Oath of the Ancients
 Azorius Functionary
 
 # Entangle
+## Spell Name
+Entangle
+
 From Player's Handbook, page 237.
 ## Description
 *1st-level conjuration*
@@ -1583,6 +1676,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Expeditious Retreat
+## Spell Name
+Expeditious Retreat
+
 From Player's Handbook, page 238.
 ## Description
 *1st-level transmutation*
@@ -1635,6 +1731,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Faerie Fire
+## Spell Name
+Faerie Fire
+
 From Player's Handbook, page 239.
 ## Description
 *1st-level evocation*
@@ -1687,6 +1786,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # False Life
+## Spell Name
+False Life
+
 From Player's Handbook, page 239.
 ## Description
 *1st-level necromancy*
@@ -1743,6 +1845,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Feather Fall
+## Spell Name
+Feather Fall
+
 From Player's Handbook, page 239.
 ## Description
 *1st-level transmutation*
@@ -1792,6 +1897,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Find Familiar
+## Spell Name
+Find Familiar
+
 From Player's Handbook, page 240.
 ## Description
 *1st-level conjuration (ritual)*
@@ -1859,6 +1967,9 @@ Strixhaven Initiate
 Strixhaven Mascot
 
 # Fog Cloud
+## Spell Name
+Fog Cloud
+
 From Player's Handbook, page 243.
 ## Description
 *1st-level conjuration*
@@ -1911,6 +2022,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Frost Fingers
+## Spell Name
+Frost Fingers
+
 From Icewind Dale: Rime of the Frost Maiden, page 318.
 ## Description
 *1st-level evocation*
@@ -1950,6 +2064,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Gift of Alacrity
+## Spell Name
+Gift of Alacrity
+
 From Explorer's Guide to Wildemount, page 186.
 ## Description
 *1st-level divination*
@@ -1979,6 +2096,9 @@ Chronurgy Magic
 Fey Touched
 
 # Goodberry
+## Spell Name
+Goodberry
+
 From Player's Handbook, page 246.
 ## Description
 *1st-level transmutation*
@@ -2014,6 +2134,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Grease
+## Spell Name
+Grease
+
 From Player's Handbook, page 246.
 ## Description
 *1st-level conjuration*
@@ -2055,6 +2178,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Guiding Bolt
+## Spell Name
+Guiding Bolt
+
 From Player's Handbook, page 248.
 ## Description
 *1st-level evocation*
@@ -2109,6 +2235,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Hail of Thorns
+## Spell Name
+Hail of Thorns
+
 From Player's Handbook, page 249.
 ## Description
 *1st-level conjuration*
@@ -2135,6 +2264,9 @@ The next time you hit a creature with a ranged weapon attack before the spell en
 Ranger
 
 # Healing Word
+## Spell Name
+Healing Word
+
 From Player's Handbook, page 249.
 ## Description
 *1st-level evocation*
@@ -2181,6 +2313,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Hellish Rebuke
+## Spell Name
+Hellish Rebuke
+
 From Player's Handbook, page 250.
 ## Description
 *1st-level evocation*
@@ -2224,6 +2359,9 @@ Rakdos Cultist
 Magic Initiate
 
 # Heroism
+## Spell Name
+Heroism
+
 From Player's Handbook, page 250.
 ## Description
 *1st-level enchantment*
@@ -2275,6 +2413,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Hex
+## Spell Name
+Hex
+
 From Player's Handbook, page 251.
 ## Description
 *1st-level enchantment*
@@ -2319,6 +2460,9 @@ Fey Touched
 Magic Initiate
 
 # Hunter's Mark
+## Spell Name
+Hunter's Mark
+
 From Player's Handbook, page 251.
 ## Description
 *1st-level divination*
@@ -2359,6 +2503,9 @@ Human
 Fey Touched
 
 # Ice Knife
+## Spell Name
+Ice Knife
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/a7/Ice_Knife.png/revision/latest/scale-to-width-down/222?cb=20221129104906)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/a7/Ice_Knife.png/revision/latest/scale-to-width-down/222?cb=20221129104906)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/a7/Ice_Knife.png/revision/latest/scale-to-width-down/222?cb=20221129104906)
@@ -2403,6 +2550,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Identify
+## Spell Name
+Identify
+
 From Player's Handbook, page 252.
 ## Description
 *1st-level divination (ritual)*
@@ -2460,6 +2610,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Illusory Script
+## Spell Name
+Illusory Script
+
 From Player's Handbook, page 252.
 ## Description
 *1st-level illusion (ritual)*
@@ -2512,6 +2665,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Inflict Wounds
+## Spell Name
+Inflict Wounds
+
 From Player's Handbook, page 253.
 ## Description
 *1st-level necromancy*
@@ -2560,6 +2716,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Jim's Magic Missile
+## Spell Name
+Jim's Magic Missile
+
 From Acquisitions Incorporated, page 76.
 ## Description
 *1st-level evocation*
@@ -2602,6 +2761,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Jump
+## Spell Name
+Jump
+
 From Player's Handbook, page 254.
 ## Description
 *1st-level transmutation*
@@ -2660,6 +2822,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Longstrider
+## Spell Name
+Longstrider
+
 From Player's Handbook, page 256.
 ## Description
 *1st-level transmutation*
@@ -2711,6 +2876,9 @@ Strixhaven Initiate
 Wood Elf Magic
 
 # Mage Armor
+## Spell Name
+Mage Armor
+
 From Player's Handbook, page 256.
 ## Description
 *1st-level abjuration*
@@ -2758,6 +2926,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Magic Missile
+## Spell Name
+Magic Missile
+
 From Player's Handbook, page 257.
 ## Description
 *1st-level evocation*
@@ -2806,6 +2977,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Magnify Gravity
+## Spell Name
+Magnify Gravity
+
 From Explorer's Guide to Wildemount, page 188.
 ## Description
 *1st-level transmutation*
@@ -2834,6 +3008,9 @@ Until the start of your next turn, any object that isn't being worn or carried i
 Graviturgy Magic
 
 # Protection From Evil and Good
+## Spell Name
+Protection From Evil and Good
+
 From Player's Handbook, page 270.
 ## Description
 *1st-level abjuration*
@@ -2891,6 +3068,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Purify Food and Drink
+## Spell Name
+Purify Food and Drink
+
 From Player's Handbook, page 270.
 ## Description
 *1st-level transmutation (ritual)*
@@ -2937,6 +3117,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Ray of Sickness
+## Spell Name
+Ray of Sickness
+
 From Player's Handbook, page 271.
 ## Description
 *1st-level necromancy*
@@ -2992,6 +3175,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Sanctuary
+## Spell Name
+Sanctuary
+
 From Player's Handbook, page 272.
 ## Description
 *1st-level abjuration*
@@ -3045,6 +3231,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Searing Smite
+## Spell Name
+Searing Smite
+
 From Player's Handbook, page 274.
 ## Description
 *1st-level evocation*
@@ -3085,6 +3274,9 @@ Stone Sorcery
 Zariel Tiefling
 
 # Shield
+## Spell Name
+Shield
+
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/ad/Spells.jpg/revision/latest/scale-to-width-down/289?cb=20221129085220)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/ad/Spells.jpg/revision/latest/scale-to-width-down/289?cb=20221129085220)
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/ad/Spells.jpg/revision/latest/scale-to-width-down/289?cb=20221129085220)
@@ -3139,6 +3331,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Shield of Faith
+## Spell Name
+Shield of Faith
+
 From Player's Handbook, page 275.
 ## Description
 *1st-level abjuration*
@@ -3184,6 +3379,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Silent Image
+## Spell Name
+Silent Image
+
 From Player's Handbook, page 276.
 ## Description
 *1st-level illusion*
@@ -3233,6 +3431,9 @@ Shadow Touched
 Strixhaven Initiate
 
 # Sleep
+## Spell Name
+Sleep
+
 From Player's Handbook, page 276.
 ## Description
 *1st-level enchantment*
@@ -3293,6 +3494,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Silvery Barbs
+## Spell Name
+Silvery Barbs
+
 From Strixhaven: A Curriculum of Chaos, page 38.
 ## Description
 *1st-level enchantment*
@@ -3339,6 +3543,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Snare
+## Spell Name
+Snare
+
 From Xanathar's Guide to Everything, page 165.
 ## Description
 *1st-level abjuration*
@@ -3385,6 +3592,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Speak With Animals
+## Spell Name
+Speak With Animals
+
 From Player's Handbook, page 277.
 ## Description
 *1st-level divination (ritual)*
@@ -3440,6 +3650,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Tasha's Caustic Brew
+## Spell Name
+Tasha's Caustic Brew
+
 From Tasha's Cauldron of Everything, page 115.
 ## Description
 *1st-level evocation*
@@ -3482,6 +3695,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Tasha's Hideous Laughter
+## Spell Name
+Tasha's Hideous Laughter
+
 From Player's Handbook, page 280.
 ## Description
 *1st-level enchantment*
@@ -3529,6 +3745,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Tenser's Floating Disk
+## Spell Name
+Tenser's Floating Disk
+
 From Player's Handbook, page 282.
 ## Description
 *1st-level conjuration (ritual)*
@@ -3574,6 +3793,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Thunderous Smite
+## Spell Name
+Thunderous Smite
+
 From Player's Handbook, page 282.
 ## Description
 *1st-level evocation*
@@ -3605,6 +3827,9 @@ Zeal Domain
 Stone Sorcery
 
 # Thunderwave
+## Spell Name
+Thunderwave
+
 From Player's Handbook, page 282.
 ## Description
 *1st-level evocation*
@@ -3670,6 +3895,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Unseen Servant
+## Spell Name
+Unseen Servant
+
 From Player's Handbook, page 284.
 ## Description
 *1st-level conjuration (ritual)*
@@ -3720,6 +3948,9 @@ Ritual Caster
 Strixhaven Initiate
 
 # Witch Bolt
+## Spell Name
+Witch Bolt
+
 From Player's Handbook, page 289.
 ## Description
 *1st-level evocation*
@@ -3760,6 +3991,9 @@ Magic Initiate
 Strixhaven Initiate
 
 # Wrathful Smite
+## Spell Name
+Wrathful Smite
+
 From Player's Handbook, page 289.
 ## Description
 *1st-level evocation*
@@ -3791,6 +4025,9 @@ Stone Sorcery
 The Hexblade
 
 # Zephyr Strike
+## Spell Name
+Zephyr Strike
+
 From Xanathar's Guide to Everything, page 171.
 ## Description
 *1st-level transmutation*

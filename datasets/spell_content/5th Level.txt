@@ -1,4 +1,7 @@
 # Animate Objects
+## Spell Name
+Animate Objects
+
 From Player's Handbook, page 213.
 ## Description
 *5th-level transmutation*
@@ -109,6 +112,9 @@ Clockwork Soul
 Izzet Engineer
 
 # Antilife Shell
+## Spell Name
+Antilife Shell
+
 From Player's Handbook, page 213.
 ## Description
 *5th-level abjuration*
@@ -157,6 +163,9 @@ Mark of Warding Dwarf
 Witherbloom Student
 
 # Awaken
+## Spell Name
+Awaken
+
 From Player's Handbook, page 216.
 ## Description
 *5th-level transmutation*
@@ -191,6 +200,9 @@ Mark of Handling Human
 Selesnya Initiate
 
 # Banishing Smite
+## Spell Name
+Banishing Smite
+
 From Player's Handbook, page 216.
 ## Description
 *5th-level abjuration*
@@ -222,6 +234,9 @@ Battle Smith
 The Hexblade
 
 # Bigby's Hand
+## Spell Name
+Bigby's Hand
+
 From Player's Handbook, page 218.
 ## Description
 *5th-level evocation*
@@ -273,6 +288,9 @@ The Fathomless
 Mark of Sentinel Human
 
 # Circle of Power
+## Spell Name
+Circle of Power
+
 From Player's Handbook, page 221.
 ## Description
 *5th-level abjuration*
@@ -313,6 +331,9 @@ Wizard
 Quandrix Student
 
 # Cloudkill
+## Spell Name
+Cloudkill
+
 From Player's Handbook, page 222.
 ## Description
 *5th-level conjuration*
@@ -361,6 +382,9 @@ The Undead
 Golgari Agent
 
 # Commune
+## Spell Name
+Commune
+
 From Player's Handbook, page 223.
 ## Description
 *5th-level divination (ritual)*
@@ -402,6 +426,9 @@ The Raven Queen
 Theurgy
 
 # Commune With Nature
+## Spell Name
+Commune With Nature
+
 From Player's Handbook, page 224.
 ## Description
 *5th-level divination (ritual)*
@@ -459,6 +486,9 @@ Human
 Selesnya Initiate
 
 # Cone of Cold
+## Spell Name
+Cone of Cold
+
 From Player's Handbook, page 224.
 ## Description
 *5th-level evocation*
@@ -509,6 +539,9 @@ The Raven Queen
 Prismari Student
 
 # Conjure Elemental
+## Spell Name
+Conjure Elemental
+
 From Player's Handbook, page 225.
 ## Description
 *5th-level conjuration*
@@ -557,6 +590,9 @@ Izzet Engineer
 Prismari Student
 
 # Conjure Volley
+## Spell Name
+Conjure Volley
+
 From Player's Handbook, page 226.
 ## Description
 *5th-level conjuration*
@@ -581,6 +617,9 @@ You fire a piece of nonmagical ammunition from a ranged weapon or throw a nonmag
 Ranger
 
 # Contact Other Plane
+## Spell Name
+Contact Other Plane
+
 From Player's Handbook, page 226.
 ## Description
 *5th-level divination (ritual)*
@@ -613,6 +652,9 @@ Wizard
 Aberrant Mind
 
 # Contagion
+## Spell Name
+Contagion
+
 From Player's Handbook, page 227.
 ## Description
 *5th-level necromancy*
@@ -675,6 +717,9 @@ The Undying
 Theurgy
 
 # Control Winds
+## Spell Name
+Control Winds
+
 From Xanathar's Guide to Everything, page 152; and Elemental Evil Player's Companion, page 16.
 ## Description
 *5th-level transmutation*
@@ -719,6 +764,9 @@ Clockwork Soul
 Greater Dragonmark
 
 # Creation
+## Spell Name
+Creation
+
 From Player's Handbook, page 229.
 ## Description
 *5th-level illusion*
@@ -811,6 +859,9 @@ Simic Scientist
 Greater Dragonmark
 
 # Danse Macabre
+## Spell Name
+Danse Macabre
+
 From Xanathar's Guide to Everything, page 153.
 ## Description
 *5th-level necromancy*
@@ -842,6 +893,9 @@ Warlock
 Wizard
 
 # Dawn
+## Spell Name
+Dawn
+
 From Xanathar's Guide to Everything, page 153.
 ## Description
 *5th-level evocation*
@@ -876,6 +930,9 @@ Divine Soul
 Theurgy
 
 # Destructive Wave
+## Spell Name
+Destructive Wave
+
 From Player's Handbook, page 231.
 ## Description
 *5th-level evocation*
@@ -919,6 +976,9 @@ Wizard
 Gruul Anarch
 
 # Dispel Evil and Good
+## Spell Name
+Dispel Evil and Good
+
 From Player's Handbook, page 233.
 ## Description
 *5th-level abjuration*
@@ -958,6 +1018,9 @@ Divine Soul
 Theurgy
 
 # Dominate Person
+## Spell Name
+Dominate Person
+
 From Player's Handbook, page 235.
 ## Description
 *5th-level enchantment*
@@ -1018,6 +1081,9 @@ Rakdos Cultist
 Silverquill Student
 
 # Dream
+## Spell Name
+Dream
+
 From Player's Handbook, page 236.
 ## Description
 *5th-level illusion*
@@ -1058,6 +1124,9 @@ Circle of the Land (Grassland)
 Mark of Scribing Gnome
 
 # Enervation
+## Spell Name
+Enervation
+
 From Xanathar's Guide to Everything, page 155.
 ## Description
 *5th-level necromancy*
@@ -1087,6 +1156,9 @@ Warlock
 Wizard
 
 # Far Step
+## Spell Name
+Far Step
+
 From Xanathar's Guide to Everything, page 155.
 ## Description
 *5th-level conjuration*
@@ -1113,6 +1185,9 @@ Warlock
 Wizard
 
 # Flame Strike
+## Spell Name
+Flame Strike
+
 From Player's Handbook, page 242.
 ## Description
 *5th-level evocation*
@@ -1169,6 +1244,9 @@ Boros Legionnaire
 Lorehold Student
 
 # Geas
+## Spell Name
+Geas
+
 From Player's Handbook, page 244.
 Geas is a Scottish Gaelic word pronounced as *gesh*.
 *gesh*
@@ -1221,6 +1299,9 @@ Theurgy
 Orzhov Representative
 
 # Greater Restoration
+## Spell Name
+Greater Restoration
+
 From Player's Handbook, page 246.
 ## Description
 *5th-level abjuration*
@@ -1287,6 +1368,9 @@ Witherbloom Student
 Greater Dragonmark
 
 # Hallow
+## Spell Name
+Hallow
+
 From Player's Handbook, page 249.
 ## Description
 *5th-level evocation*
@@ -1356,6 +1440,9 @@ Theurgy
 Mark of Hospitality Halfling
 
 # Hold Monster
+## Spell Name
+Hold Monster
+
 From Player's Handbook, page 251.
 ## Description
 *5th-level enchantment*
@@ -1405,6 +1492,9 @@ Aberrant Mind
 Chains of Carceri
 
 # Holy Weapon
+## Spell Name
+Holy Weapon
+
 From Xanathar's Guide to Everything, page 157.
 ## Description
 *5th-level evocation*
@@ -1438,6 +1528,9 @@ Divine Soul
 Theurgy
 
 # Immolation
+## Spell Name
+Immolation
+
 From Xanathar's Guide to Everything, page 158; and Elemental Evil Player's Companion, page 19.
 ## Description
 *5th-level evocation*
@@ -1464,6 +1557,9 @@ Sorcerer
 Wizard
 
 # Infernal Calling
+## Spell Name
+Infernal Calling
+
 From Xanathar's Guide to Everything, page 158.
 ## Description
 *5th-level conjuration*
@@ -1495,6 +1591,9 @@ Warlock
 Wizard
 
 # Insect Plague
+## Spell Name
+Insect Plague
+
 From Player's Handbook, page 254.
 ## Description
 *5th-level conjuration*
@@ -1553,6 +1652,9 @@ Theurgy
 Golgari Agent
 
 # Legend Lore
+## Spell Name
+Legend Lore
+
 From Player's Handbook, page 254.
 ## Description
 *5th-level divination*
@@ -1609,6 +1711,9 @@ Mark of Detection Half-elf
 Lorehold Student
 
 # Maelstrom
+## Spell Name
+Maelstrom
+
 From Xanathar's Guide to Everything, page 160; and Elemental Evil Player's Companion, page 20.
 ## Description
 *5th-level evocation*
@@ -1633,6 +1738,9 @@ A swirling mass of 5-foot-deep water appears in a 30-foot radius centered on a p
 Druid
 
 # Mass Cure Wounds
+## Spell Name
+Mass Cure Wounds
+
 From Player's Handbook, page 258.
 ## Description
 *5th-level evocation*
@@ -1679,6 +1787,9 @@ Druid
 Warlock
 
 # Mislead
+## Spell Name
+Mislead
+
 From Player's Handbook, page 260.
 ## Description
 *5th-level illusion*
@@ -1724,6 +1835,9 @@ Mark of Shadow Elf
 Greater Dragonmark
 
 # Modify Memory
+## Spell Name
+Modify Memory
+
 From Player's Handbook, page 261.
 ## Description
 *5th-level enchantment*
@@ -1770,6 +1884,9 @@ Aberrant Mind
 Dimir Operative
 
 # Negative Energy Flood
+## Spell Name
+Negative Energy Flood
+
 From Xanathar's Guide to Everything, page 163.
 ## Description
 *5th-level necromancy*
@@ -1797,6 +1914,9 @@ Warlock
 Wizard
 
 # Passwall
+## Spell Name
+Passwall
+
 From Player's Handbook, page 264.
 ## Description
 *5th-level transmutation*
@@ -1842,6 +1962,9 @@ Wizard
 Quandrix Student
 
 # Planar Binding
+## Spell Name
+Planar Binding
+
 From Player's Handbook, page 265.
 ## Description
 *5th-level abjuration*
@@ -1886,6 +2009,9 @@ Divine Soul
 Theurgy
 
 # Raise Dead
+## Spell Name
+Raise Dead
+
 From Player's Handbook, page 270.
 ## Description
 *5th-level necromancy*
@@ -1928,6 +2054,9 @@ Divine Soul
 Theurgy
 
 # Rary's Telepathic Bond
+## Spell Name
+Rary's Telepathic Bond
+
 From Player's Handbook, page 270.
 ## Description
 *5th-level divination (ritual)*
@@ -1965,6 +2094,9 @@ Aberrant Mind
 Silverquill Student
 
 # Reincarnate
+## Spell Name
+Reincarnate
+
 From Player's Handbook, page 271.
 ## Description
 *5th-level transmutation*
@@ -2111,6 +2243,9 @@ The reincarnated creature recalls its former life and experiences. It retains th
 Druid
 
 # Scrying
+## Spell Name
+Scrying
+
 From Player's Handbook, page 273.
 ## Description
 *5th-level divination*
@@ -2225,6 +2360,9 @@ Psionics
 Theurgy
 
 # Seeming
+## Spell Name
+Seeming
+
 From Player's Handbook, page 274.
 ## Description
 *5th-level illusion*
@@ -2263,6 +2401,9 @@ The Archfey
 The Genie (Djinni)
 
 # Skill Empowerment
+## Spell Name
+Skill Empowerment
+
 From Xanathar's Guide to Everything, page 165.
 ## Description
 *5th-level transmutation*
@@ -2296,6 +2437,9 @@ Wizard
 Clockwork Soul
 
 # Steel Wind Strike
+## Spell Name
+Steel Wind Strike
+
 From Xanathar's Guide to Everything, page 166.
 ## Description
 *5th-level conjuration*
@@ -2322,6 +2466,9 @@ Ranger
 Wizard
 
 # Summon Celestial
+## Spell Name
+Summon Celestial
+
 From Tasha's Cauldron of Everything, page 110.
 ## Description
 *5th-level conjuration*
@@ -2358,6 +2505,9 @@ Divine Soul
 Theurgy
 
 # Summon Draconic Spirit
+## Spell Name
+Summon Draconic Spirit
+
 From Fizban's Treasury of Dragons, page 21.
 ## Description
 *5th-level conjuration*
@@ -2389,6 +2539,9 @@ Sorcerer
 Wizard
 
 # Swift Quiver
+## Spell Name
+Swift Quiver
+
 From Player's Handbook, page 279.
 ## Description
 *5th-level transmutation*
@@ -2414,6 +2567,9 @@ On each of your turns until the spell ends, you can use a bonus action to make t
 Ranger
 
 # Synaptic Static
+## Spell Name
+Synaptic Static
+
 From Xanathar's Guide to Everything, page 167.
 ## Description
 *5th-level enchantment*
@@ -2447,6 +2603,9 @@ Wizard
 Aberrant Mind
 
 # Telekinesis
+## Spell Name
+Telekinesis
+
 From Player's Handbook, page 280.
 ## Description
 *5th-level transmutation*
@@ -2497,6 +2656,9 @@ The Great Old One
 Psionics
 
 # Teleportation Circle
+## Spell Name
+Teleportation Circle
+
 From Player's Handbook, page 282.
 ## Description
 *5th-level conjuration*
@@ -2543,6 +2705,9 @@ Mark of Passage Human
 Greater Dragonmark
 
 # Temporal Shunt
+## Spell Name
+Temporal Shunt
+
 From Explorer's Guide to Wildemount, page 189.
 ## Description
 *5th-level transmutation*
@@ -2570,6 +2735,9 @@ You target the triggering creature, which must succeed on a Wisdom saving throw 
 Chronurgy Magic
 
 # Transmute Rock
+## Spell Name
+Transmute Rock
+
 From Xanathar's Guide to Everything, page 169; and Elemental Evil Player's Companion, page 22.
 ## Description
 *5th-level transmutation*
@@ -2611,6 +2779,9 @@ Wizard
 Clockwork Soul
 
 # Tree Stride
+## Spell Name
+Tree Stride
+
 From Player's Handbook, page 283.
 ## Description
 *5th-level conjuration*
@@ -2646,6 +2817,9 @@ Circle of the Land (Forest)
 Oath of the Ancients
 
 # Wall of Force
+## Spell Name
+Wall of Force
+
 From Player's Handbook, page 285.
 ## Description
 *5th-level evocation*
@@ -2686,6 +2860,9 @@ Oath of Redemption
 Clockwork Soul
 
 # Wall of Light
+## Spell Name
+Wall of Light
+
 From Xanathar's Guide to Everything, page 170.
 ## Description
 *5th-level evocation*
@@ -2717,6 +2894,9 @@ Warlock
 Wizard
 
 # Wall of Stone
+## Spell Name
+Wall of Stone
+
 From Player's Handbook, page 287.
 ## Description
 *5th-level evocation*
@@ -2760,6 +2940,9 @@ Way of the Four Elements
 The Genie (Dao)
 
 # Wrath of Nature
+## Spell Name
+Wrath of Nature
+
 From Xanathar's Guide to Everything, page 171.
 ## Description
 *5th-level evocation*

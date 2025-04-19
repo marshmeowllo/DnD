@@ -1,4 +1,7 @@
 # Aganazzar's Scorcher
+## Spell Name
+Aganazzar's Scorcher
+
 From Xanathar's Guide to Everything, page 150; and Elemental Evil Player's Companion, page 15.
 ## Description
 *2nd-level evocation*
@@ -33,6 +36,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Aid
+## Spell Name
+Aid
+
 From Player's Handbook, page 211.
 ## Description
 *2nd-level abjuration*
@@ -87,6 +93,9 @@ Boros Legionnaire
 Selesnya Initiate
 
 # Alter Self
+## Spell Name
+Alter Self
+
 From Player's Handbook, page 211.
 ## Description
 *2nd-level transmutation*
@@ -145,6 +154,9 @@ Abyssal Tiefling
 Simic Scientist
 
 # Animal Messenger
+## Spell Name
+Animal Messenger
+
 From Player's Handbook, page 212.
 ## Description
 *2nd-level enchantment (ritual)*
@@ -182,6 +194,9 @@ Mark of Scribing Gnome
 Selesnya Initiate
 
 # Arcane Lock
+## Spell Name
+Arcane Lock
+
 From Player's Handbook, page 215.
 ## Description
 *2nd-level abjuration*
@@ -227,6 +242,9 @@ Mark of Warding Dwarf
 Azorius Functionary
 
 # Augury
+## Spell Name
+Augury
+
 From Player's Handbook, page 215.
 ## Description
 *2nd-level divination (ritual)*
@@ -280,6 +298,9 @@ Divine Soul
 Theurgy
 
 # Barkskin
+## Spell Name
+Barkskin
+
 From Player's Handbook, page 217.
 ## Description
 *2nd-level transmutation*
@@ -312,6 +333,9 @@ Nature Domain
 Circle of the Land (Forest)
 
 # Beast Sense
+## Spell Name
+Beast Sense
+
 From Player's Handbook, page 217.
 ## Description
 *2nd-level divination (ritual)*
@@ -354,6 +378,9 @@ Gruul Anarch
 Greater Dragonmark
 
 # Blindness/Deafness
+## Spell Name
+Blindness/Deafness
+
 From Player's Handbook, page 219.
 ## Description
 *2nd-level necromancy*
@@ -410,6 +437,9 @@ Theurgy
 Svirfneblin Magic
 
 # Blur
+## Spell Name
+Blur
+
 From Player's Handbook, page 219.
 ## Description
 *2nd-level illusion*
@@ -453,6 +483,9 @@ The Hexblade
 Svirfneblin Magic
 
 # Borrowed Knowledge
+## Spell Name
+Borrowed Knowledge
+
 From Strixhaven: A Curriculum of Chaos, page 37.
 ## Description
 *2nd-level divination*
@@ -498,6 +531,9 @@ Theurgy
 Lorehold Student
 
 # Branding Smite
+## Spell Name
+Branding Smite
+
 From Player's Handbook, page 219.
 ## Description
 *2nd-level evocation*
@@ -537,6 +573,9 @@ The Hexblade
 Zariel Tiefling
 
 # Calm Emotions
+## Spell Name
+Calm Emotions
+
 From Player's Handbook, page 221.
 ## Description
 *2nd-level enchantment*
@@ -590,6 +629,9 @@ Selesnya Initiate
 Silverquill Student
 
 # Cloud of Daggers
+## Spell Name
+Cloud of Daggers
+
 From Player's Handbook, page 222.
 ## Description
 *2nd-level conjuration*
@@ -626,6 +668,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Continual Flame
+## Spell Name
+Continual Flame
+
 From Player's Handbook, page 227.
 ## Description
 *2nd-level evocation*
@@ -668,6 +713,9 @@ Theurgy
 Mark of Making Human
 
 # Cordon of Arrows
+## Spell Name
+Cordon of Arrows
+
 From Player's Handbook, page 288.
 ## Description
 *2nd-level transmutation*
@@ -695,6 +743,9 @@ When you cast this spell, you can designate any creatures you choose, and the sp
 Ranger
 
 # Crown of Madness
+## Spell Name
+Crown of Madness
+
 From Player's Handbook, page 229.
 ## Description
 *2nd-level enchantment*
@@ -744,6 +795,9 @@ Baalzebul Tiefling
 Rakdos Cultist
 
 # Darkness
+## Spell Name
+Darkness
+
 From Player's Handbook, page 230.
 ## Description
 *2nd-level evocation*
@@ -806,6 +860,9 @@ Tiefling (Hellfire)
 Silverquill Student
 
 # Darkvision
+## Spell Name
+Darkvision
+
 From Player's Handbook, page 230.
 ## Description
 *2nd-level transmutation*
@@ -846,6 +903,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Detect Thoughts
+## Spell Name
+Detect Thoughts
+
 From Player's Handbook, page 230.
 ## Description
 *2nd-level divination*
@@ -903,6 +963,9 @@ Dimir Operative
 Telepathic
 
 # Dragon's Breath
+## Spell Name
+Dragon's Breath
+
 From Xanathar's Guide to Everything, page 154.
 ## Description
 *2nd-level transmutation*
@@ -939,6 +1002,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Dust Devil
+## Spell Name
+Dust Devil
+
 From Xanathar's Guide to Everything, page 154; and Elemental Evil Player's Companion, page 17.
 ## Description
 *2nd-level conjuration*
@@ -976,6 +1042,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Earthbind
+## Spell Name
+Earthbind
+
 From Xanathar's Guide to Everything, page 154; and Elemental Evil Player's Companion, page 17.
 ## Description
 *2nd-level transmutation*
@@ -1012,6 +1081,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Enhance Ability
+## Spell Name
+Enhance Ability
+
 From Player's Handbook, page 237.
 ## Description
 *2nd-level transmutation*
@@ -1085,6 +1157,9 @@ Theurgy
 Simic Scientist
 
 # Enlarge/Reduce
+## Spell Name
+Enlarge/Reduce
+
 From Player's Handbook, page 237.
 ## Description
 *2nd-level transmutation*
@@ -1144,6 +1219,9 @@ Quandrix Student
 Simic Scientist
 
 # Enthrall
+## Spell Name
+Enthrall
+
 From Player's Handbook, page 237.
 ## Description
 *2nd-level enchantment*
@@ -1185,6 +1263,9 @@ Orzhov Representative
 Rakdos Cultist
 
 # Find Steed
+## Spell Name
+Find Steed
+
 From Player's Handbook, page 240.
 ## Description
 *2nd-level conjuration*
@@ -1218,6 +1299,9 @@ You can't have more than one steed bonded by this spell at a time. As an action,
 Paladin
 
 # Find Traps
+## Spell Name
+Find Traps
+
 From Player's Handbook, page 241.
 ## Description
 *2nd-level divination*
@@ -1258,6 +1342,9 @@ Theurgy
 Mark of Detection Half-elf
 
 # Fortune's Favor
+## Spell Name
+Fortune's Favor
+
 From Explorer's Guide to Wildemount, page 186.
 ## Description
 *2nd-level divination*
@@ -1288,6 +1375,9 @@ Chronurgy Magic
 Graviturgy Magic
 
 # Flame Blade
+## Spell Name
+Flame Blade
+
 From Player's Handbook, page 242.
 ## Description
 *2nd-level evocation*
@@ -1322,6 +1412,9 @@ Fire Genasi
 Mephistopheles Tiefling
 
 # Flaming Sphere
+## Spell Name
+Flaming Sphere
+
 From Player's Handbook, page 242.
 ## Description
 *2nd-level conjuration*
@@ -1374,6 +1467,9 @@ Prismari Student
 Rakdos Cultist
 
 # Flock of Familiars
+## Spell Name
+Flock of Familiars
+
 From Lost Laboratory of Kwalish, page 57.
 ## Description
 *2nd-level conjuration*
@@ -1411,6 +1507,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Gentle Repose
+## Spell Name
+Gentle Repose
+
 From Player's Handbook, page 245.
 ## Description
 *2nd-level necromancy (ritual)*
@@ -1454,6 +1553,9 @@ Divine Soul
 Theurgy
 
 # Gift of Gab
+## Spell Name
+Gift of Gab
+
 From Acquisitions Incorporated, page 76.
 ## Description
 *2nd-level enchantment*
@@ -1491,6 +1593,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Gust of Wind
+## Spell Name
+Gust of Wind
+
 From Player's Handbook, page 248.
 ## Description
 *2nd-level evocation*
@@ -1543,6 +1648,9 @@ Mark of Storm Half-elf
 Triton
 
 # Healing Spirit
+## Spell Name
+Healing Spirit
+
 From Xanathar's Guide to Everything, page 157.
 ## Description
 *2nd-level conjuration*
@@ -1572,6 +1680,9 @@ Druid
 Ranger
 
 # Heat Metal
+## Spell Name
+Heat Metal
+
 From Player's Handbook, page 250.
 ## Description
 *2nd-level transmutation*
@@ -1612,6 +1723,9 @@ Forge Domain
 Izzet Engineer
 
 # Hold Person
+## Spell Name
+Hold Person
+
 From Player's Handbook, page 251.
 ## Description
 *2nd-level enchantment*
@@ -1675,6 +1789,9 @@ Theurgy
 Azorius Functionary
 
 # Immovable Object
+## Spell Name
+Immovable Object
+
 From Explorer's Guide to Wildemount, page 187.
 ## Description
 *2nd-level transmutation*
@@ -1703,6 +1820,9 @@ If the object is fixed in the air, it can hold up to 4,000 pounds of weight. Mor
 Graviturgy Magic
 
 # Invisibility
+## Spell Name
+Invisibility
+
 From Player's Handbook, page 254.
 ## Description
 *2nd-level illusion*
@@ -1764,6 +1884,9 @@ Pallid Elf
 Shadow Touched
 
 # Jim's Glowing Coin
+## Spell Name
+Jim's Glowing Coin
+
 From Acquisitions Incorporated, page 76.
 ## Description
 *2nd-level enchantment*
@@ -1799,6 +1922,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Kinetic Jaunt
+## Spell Name
+Kinetic Jaunt
+
 From Strixhaven: A Curriculum of Chaos, page 37.
 ## Description
 *2nd-level transmutation*
@@ -1845,6 +1971,9 @@ Clockwork Soul
 Prismari Student
 
 # Knock
+## Spell Name
+Knock
+
 From Player's Handbook, page 254.
 ## Description
 *2nd-level transmutation*
@@ -1898,6 +2027,9 @@ Mark of Warding Dwarf
 Greater Dragonmark
 
 # Lesser Restoration
+## Spell Name
+Lesser Restoration
+
 From Player's Handbook, page 255.
 ## Description
 *2nd-level abjuration*
@@ -1954,6 +2086,9 @@ Mark of Healing Halfling
 Witherbloom Student
 
 # Levitate
+## Spell Name
+Levitate
+
 From Player's Handbook, page 255.
 ## Description
 *2nd-level transmutation*
@@ -2007,6 +2142,9 @@ Mark of Storm Half-elf
 Drow High Magic
 
 # Locate Animals or Plants
+## Spell Name
+Locate Animals or Plants
+
 From Player's Handbook, page 256.
 ## Description
 *2nd-level divination (ritual)*
@@ -2038,6 +2176,9 @@ Half-orc
 Human
 
 # Locate Object
+## Spell Name
+Locate Object
+
 From Player's Handbook, page 256.
 ## Description
 *2nd-level divination*
@@ -2099,6 +2240,9 @@ Human
 Lorehold Student
 
 # Magic Mouth
+## Spell Name
+Magic Mouth
+
 From Player's Handbook, page 256.
 ## Description
 *2nd-level illusion (ritual)*
@@ -2138,6 +2282,9 @@ Arcane Trickster
 Mark of Scribing Gnome
 
 # Magic Weapon
+## Spell Name
+Magic Weapon
+
 From Player's Handbook, page 257.
 ## Description
 *2nd-level transmutation*
@@ -2193,6 +2340,9 @@ Stone Sorcery
 Mark of Making Human
 
 # Maximilian's Earthen Grasp
+## Spell Name
+Maximilian's Earthen Grasp
+
 From Xanathar's Guide to Everything, page 161; and Elemental Evil Player's Companion, page 20.
 ## Description
 *2nd-level transmutation*
@@ -2231,6 +2381,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Melf's Acid Arrow
+## Spell Name
+Melf's Acid Arrow
+
 From Player's Handbook, page 259.
 ## Description
 *2nd-level evocation*
@@ -2268,6 +2421,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Mind Spike
+## Spell Name
+Mind Spike
+
 From Xanathar's Guide to Everything, page 162.
 ## Description
 *2nd-level divination*
@@ -2305,6 +2461,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Mirror Image
+## Spell Name
+Mirror Image
+
 From Player's Handbook, page 260.
 ## Description
 *2nd-level illusion*
@@ -2357,6 +2516,9 @@ Arcane Trickster
 Abyssal Tiefling
 
 # Misty Step
+## Spell Name
+Misty Step
+
 From Player's Handbook, page 260.
 ## Description
 *2nd-level conjuration*
@@ -2411,6 +2573,9 @@ Fey Teleportation
 Fey Touched
 
 # Moonbeam
+## Spell Name
+Moonbeam
+
 From Player's Handbook, page 261.
 ## Description
 *2nd-level evocation*
@@ -2449,6 +2614,9 @@ Oath of the Ancients
 Oath of the Watchers
 
 # Nathair's Mischief
+## Spell Name
+Nathair's Mischief
+
 From Fizban's Treasury of Dragons, page 20.
 ## Description
 *2nd-level illusion*
@@ -2521,6 +2689,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Nystul's Magic Aura
+## Spell Name
+Nystul's Magic Aura
+
 From Player's Handbook, page 263.
 ## Description
 *2nd-level illusion*
@@ -2562,6 +2733,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Pass Without Trace
+## Spell Name
+Pass Without Trace
+
 From Player's Handbook, page 264.
 ## Description
 *2nd-level abjuration*
@@ -2610,6 +2784,9 @@ Dimir Operative
 Wood Elf Magic
 
 # Phantasmal Force
+## Spell Name
+Phantasmal Force
+
 From Player's Handbook, page 264.
 ## Description
 *2nd-level illusion*
@@ -2655,6 +2832,9 @@ The Great Old One
 The Undead
 
 # Prayer of Healing
+## Spell Name
+Prayer of Healing
+
 From Player's Handbook, page 267.
 ## Description
 *2nd-level evocation*
@@ -2693,6 +2873,9 @@ Theurgy
 Mark of Healing Halfling
 
 # Protection From Poison
+## Spell Name
+Protection From Poison
+
 From Player's Handbook, page 270.
 ## Description
 *2nd-level abjuration*
@@ -2738,6 +2921,9 @@ Theurgy
 Golgari Agent
 
 # Pyrotechnics
+## Spell Name
+Pyrotechnics
+
 From Xanathar's Guide to Everything, page 163; and Elemental Evil Player's Companion, page 21.
 ## Description
 *2nd-level transmutation*
@@ -2781,6 +2967,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Ray of Enfeeblement
+## Spell Name
+Ray of Enfeeblement
+
 From Player's Handbook, page 271.
 ## Description
 *2nd-level necromancy*
@@ -2828,6 +3017,9 @@ Golgari Agent
 Orzhov Representative
 
 # Rime's Binding Ice
+## Spell Name
+Rime's Binding Ice
+
 From Fizban's Treasury of Dragons, page 21.
 ## Description
 *2nd-level evocation*
@@ -2863,6 +3055,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Rope Trick
+## Spell Name
+Rope Trick
+
 From Player's Handbook, page 272.
 ## Description
 *2nd-level transmutation*
@@ -2906,6 +3101,9 @@ Clockwork Soul
 Izzet Engineer
 
 # Scorching Ray
+## Spell Name
+Scorching Ray
+
 From Player's Handbook, page 273.
 ## Description
 *2nd-level evocation*
@@ -2955,6 +3153,9 @@ The Genie (Efreeti)
 Boros Legionnaire
 
 # See Invisibility
+## Spell Name
+See Invisibility
+
 From Player's Handbook, page 274.
 ## Description
 *2nd-level divination*
@@ -3003,6 +3204,9 @@ Mark of Detection Half-elf
 Greater Dragonmark
 
 # Shadow Blade
+## Spell Name
+Shadow Blade
+
 From Xanathar's Guide to Everything, page 164.
 ## Description
 *2nd-level illusion*
@@ -3039,6 +3243,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Shatter
+## Spell Name
+Shatter
+
 From Player's Handbook, page 275.
 ## Description
 *2nd-level evocation*
@@ -3090,6 +3297,9 @@ Arcane Trickster
 Gruul Anarch
 
 # Silence
+## Spell Name
+Silence
+
 From Player's Handbook, page 275.
 ## Description
 *2nd-level illusion (ritual)*
@@ -3137,6 +3347,9 @@ Theurgy
 Mark of Scribing Gnome
 
 # Skywrite
+## Spell Name
+Skywrite
+
 From Xanathar's Guide to Everything, page 165; and Elemental Evil Player's Companion, page 22.
 ## Description
 *2nd-level transmutation (ritual)*
@@ -3173,6 +3386,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Snilloc's Snowball Swarm
+## Spell Name
+Snilloc's Snowball Swarm
+
 From Xanathar's Guide to Everything, page 165; and Elemental Evil Player's Companion, page 22.
 ## Description
 *2nd-level evocation*
@@ -3207,6 +3423,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Spider Climb
+## Spell Name
+Spider Climb
+
 From Player's Handbook, page 277.
 ## Description
 *2nd-level transmutation*
@@ -3257,6 +3476,9 @@ Abyssal Tiefling
 Golgari Agent
 
 # Spike Growth
+## Spell Name
+Spike Growth
+
 From Player's Handbook, page 277.
 ## Description
 *2nd-level transmutation*
@@ -3303,6 +3525,9 @@ Wizard
 Lotusden Halfling
 
 # Spiritual Weapon
+## Spell Name
+Spiritual Weapon
+
 From Player's Handbook, page 278.
 ## Description
 *2nd-level evocation*
@@ -3346,6 +3571,9 @@ The Raven Queen
 Theurgy
 
 # Suggestion
+## Spell Name
+Suggestion
+
 From Player's Handbook, page 279.
 ## Description
 *2nd-level enchantment*
@@ -3392,6 +3620,9 @@ Fierna Tiefling
 Yuan-ti Pureblood
 
 # Summon Beast
+## Spell Name
+Summon Beast
+
 From Tasha's Cauldron of Everything, page 109.
 ## Description
 *2nd-level conjuration*
@@ -3421,6 +3652,9 @@ Druid
 Ranger
 
 # Tasha's Mind Whip
+## Spell Name
+Tasha's Mind Whip
+
 From Tasha's Cauldron of Everything, page 115.
 ## Description
 *2nd-level enchantment*
@@ -3458,6 +3692,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Vortex Warp
+## Spell Name
+Vortex Warp
+
 From Strixhaven: A Curriculum of Chaos, page 38.
 ## Description
 *2nd-level conjuration*
@@ -3497,6 +3734,9 @@ Arcane Trickster
 Quandrix Student
 
 # Warding Bond
+## Spell Name
+Warding Bond
+
 From Player's Handbook, page 287.
 ## Description
 *2nd-level abjuration*
@@ -3550,6 +3790,9 @@ Selesnya Initiate
 Greater Dragonmark
 
 # Warding Wind
+## Spell Name
+Warding Wind
+
 From Xanathar's Guide to Everything, page 170; and Elemental Evil Player's Companion, page 23.
 ## Description
 *2nd-level evocation*
@@ -3596,6 +3839,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Web
+## Spell Name
+Web
+
 From Player's Handbook, page 287.
 ## Description
 *2nd-level conjuration*
@@ -3641,6 +3887,9 @@ Arcane Trickster
 Mephistopheles Tiefling (UA)
 
 # Wither and Bloom
+## Spell Name
+Wither and Bloom
+
 From Strixhaven: A Curriculum of Chaos, page 38.
 ## Description
 *2nd-level necromancy*
@@ -3681,6 +3930,9 @@ Arcane Trickster
 Witherbloom Student
 
 # Wristpocket
+## Spell Name
+Wristpocket
+
 From Explorer's Guide to Wildemount, page 190.
 ## Description
 *2nd-level conjuration (ritual)*
@@ -3709,6 +3961,9 @@ Chronurgy Magic
 Graviturgy Magic
 
 # Zone of Truth
+## Spell Name
+Zone of Truth
+
 From Player's Handbook, page 289.
 ## Description
 *2nd-level enchantment*

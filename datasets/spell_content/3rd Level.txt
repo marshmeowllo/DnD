@@ -1,4 +1,7 @@
 # Animate Dead
+## Spell Name
+Animate Dead
+
 From Player's Handbook, page 212.
 ## Description
 *3rd-level necromancy*
@@ -57,6 +60,9 @@ Undying Servitude
 Golgari Agent
 
 # Ashardalon's Stride
+## Spell Name
+Ashardalon's Stride
+
 From Fizban's Treasury of Dragons, page 19.
 ## Description
 *3rd-level transmutation*
@@ -97,6 +103,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Aura of Vitality
+## Spell Name
+Aura of Vitality
+
 From Player's Handbook, page 216.
 ## Description
 *3rd-level evocation*
@@ -147,6 +156,9 @@ Mark of Healing Halfling
 Quandrix Student
 
 # Beacon of Hope
+## Spell Name
+Beacon of Hope
+
 From Player's Handbook, page 217.
 ## Description
 *3rd-level abjuration*
@@ -195,6 +207,9 @@ Boros Legionnaire
 Silverquill Student
 
 # Bestow Curse
+## Spell Name
+Bestow Curse
+
 From Player's Handbook, page 218.
 ## Description
 *3rd-level necromancy*
@@ -258,6 +273,9 @@ Sign of Ill Omen
 Orzhov Representative
 
 # Blinding Smite
+## Spell Name
+Blinding Smite
+
 From Player's Handbook, page 219.
 ## Description
 *3rd-level evocation*
@@ -295,6 +313,9 @@ Stone Sorcery
 Boros Legionnaire
 
 # Blink
+## Spell Name
+Blink
+
 From Player's Handbook, page 219.
 ## Description
 *3rd-level transmutation*
@@ -345,6 +366,9 @@ Mark of Passage Human
 Greater Dragonmark
 
 # Call Lightning
+## Spell Name
+Call Lightning
+
 From Player's Handbook, page 220.
 ## Description
 *3rd-level conjuration*
@@ -384,6 +408,9 @@ Circle of the Land (Forest)
 Izzet Engineer
 
 # Catnap
+## Spell Name
+Catnap
+
 From Xanathar's Guide to Everything, page 151.
 ## Description
 *3rd-level enchantment*
@@ -422,6 +449,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Clairvoyance
+## Spell Name
+Clairvoyance
+
 From Player's Handbook, page 222.
 ## Description
 *3rd-level divination*
@@ -482,6 +512,9 @@ Mark of Shadow Elf
 Azorius Functionary
 
 # Conjure Animals
+## Spell Name
+Conjure Animals
+
 From Player's Handbook, page 225.
 ## Description
 *3rd-level conjuration*
@@ -533,6 +566,9 @@ Mark of Handling Human
 Gruul Anarch
 
 # Conjure Barrage
+## Spell Name
+Conjure Barrage
+
 From Player's Handbook, page 225.
 ## Description
 *3rd-level conjuration*
@@ -570,6 +606,9 @@ Mark of Making Human
 Gruul Anarch
 
 # Counterspell
+## Spell Name
+Counterspell
+
 From Player's Handbook, page 228.
 ## Description
 *3rd-level abjuration*
@@ -619,6 +658,9 @@ Mark of Sentinel Human
 Azorius Functionary
 
 # Create Food and Water
+## Spell Name
+Create Food and Water
+
 From Player's Handbook, page 229.
 ## Description
 *3rd-level conjuration*
@@ -660,6 +702,9 @@ Theurgy
 Mark of Hospitality Halfling
 
 # Crusader's Mantle
+## Spell Name
+Crusader's Mantle
+
 From Player's Handbook, page 230.
 ## Description
 *3rd-level evocation*
@@ -691,6 +736,9 @@ Solidarity Domain
 War Domain
 
 # Daylight
+## Spell Name
+Daylight
+
 From Player's Handbook, page 230.
 ## Description
 *3rd-level evocation*
@@ -742,6 +790,9 @@ Aasimar (DMG)
 Silverquill Student
 
 # Dispel Magic
+## Spell Name
+Dispel Magic
+
 From Player's Handbook, page 234.
 ## Description
 *3rd-level abjuration*
@@ -800,6 +851,9 @@ Theurgy
 Drow High Magic
 
 # Elemental Weapon
+## Spell Name
+Elemental Weapon
+
 From Player's Handbook, page 237.
 ## Description
 *3rd-level transmutation*
@@ -846,6 +900,9 @@ Mark of Making Human
 Izzet Engineer
 
 # Enemies Abound
+## Spell Name
+Enemies Abound
+
 From Xanathar's Guide to Everything, page 155.
 ## Description
 *3rd-level enchantment*
@@ -884,6 +941,9 @@ Arcane Trickster
 Aberrant Mind
 
 # Erupting Earth
+## Spell Name
+Erupting Earth
+
 From Xanathar's Guide to Everything, page 155; and Elemental Evil Player's Companion, page 17.
 ## Description
 *3rd-level transmutation*
@@ -921,6 +981,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Fast Friends
+## Spell Name
+Fast Friends
+
 From Acquisitions Incorporated, page 75.
 ## Description
 *3rd-level enchantment*
@@ -964,6 +1027,9 @@ Divine Soul
 Theurgy
 
 # Fear
+## Spell Name
+Fear
+
 From Player's Handbook, page 239.
 ## Description
 *3rd-level illusion*
@@ -1007,6 +1073,9 @@ Arcane Trickster
 Rakdos Cultist
 
 # Feign Death
+## Spell Name
+Feign Death
+
 From Player's Handbook, page 239.
 ## Description
 *3rd-level necromancy (ritual)*
@@ -1052,6 +1121,9 @@ The Undying
 Theurgy
 
 # Fireball
+## Spell Name
+Fireball
+
 From Player's Handbook, page 241.
 ## Description
 ![](https://static.wikia.nocookie.net/dnd-5e/images/a/ae/Fireball.png/revision/latest/scale-to-width-down/235?cb=20221208110401)
@@ -1107,6 +1179,9 @@ The Genie (Efreeti)
 Kiss of Mephistopheles
 
 # Flame Arrows
+## Spell Name
+Flame Arrows
+
 From Xanathar's Guide to Everything, page 156; and Elemental Evil Player's Companion, page 18.
 ## Description
 *3rd-level transmutation*
@@ -1146,6 +1221,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Fly
+## Spell Name
+Fly
+
 From Player's Handbook, page 243.
 ## Description
 *3rd-level transmutation*
@@ -1186,6 +1264,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Galder's Tower
+## Spell Name
+Galder's Tower
+
 From Lost Laboratory of Kwalish, page 57.
 ## Description
 *3rd-level conjuration*
@@ -1235,6 +1316,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Gaseous Form
+## Spell Name
+Gaseous Form
+
 From Player's Handbook, page 244.
 ## Description
 *3rd-level transmutation*
@@ -1290,6 +1374,9 @@ Dimir Operative
 Simic Scientist
 
 # Glyph of Warding
+## Spell Name
+Glyph of Warding
+
 From Player's Handbook, page 245.
 ## Description
 *3rd-level abjuration*
@@ -1354,6 +1441,9 @@ Izzet Engineer
 Greater Dragonmark
 
 # Haste
+## Spell Name
+Haste
+
 From Player's Handbook, page 250.
 ## Description
 *3rd-level transmutation*
@@ -1413,6 +1503,9 @@ Quandrix Student
 Rakdos Cultist
 
 # Hunger of Hadar
+## Spell Name
+Hunger of Hadar
+
 From Player's Handbook, page 250.
 ## Description
 *3rd-level conjuration*
@@ -1444,6 +1537,9 @@ Warlock
 Aberrant Mind
 
 # Hypnotic Pattern
+## Spell Name
+Hypnotic Pattern
+
 From Player's Handbook, page 252.
 ## Description
 *3rd-level illusion*
@@ -1485,6 +1581,9 @@ Oath of Redemption
 Arcane Trickster
 
 # Incite Greed
+## Spell Name
+Incite Greed
+
 From Acquisitions Incorporated, page 76.
 ## Description
 *3rd-level enchantment*
@@ -1526,6 +1625,9 @@ Divine Soul
 Theurgy
 
 # Intellect Fortress
+## Spell Name
+Intellect Fortress
+
 From Tasha's Cauldron of Everything, page 107.
 ## Description
 *3rd-level abjuration*
@@ -1565,6 +1667,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Leomund's Tiny Hut
+## Spell Name
+Leomund's Tiny Hut
+
 From Player's Handbook, page 255.
 ## Description
 *3rd-level evocation (ritual)*
@@ -1605,6 +1710,9 @@ Arcane Trickster
 Mark of Hospitality Halfling
 
 # Life Transference
+## Spell Name
+Life Transference
+
 From Xanathar's Guide to Everything, page 160.
 ## Description
 *3rd-level necromancy*
@@ -1643,6 +1751,9 @@ Divine Soul
 Theurgy
 
 # Lightning Arrow
+## Spell Name
+Lightning Arrow
+
 From Player's Handbook, page 255.
 ## Description
 *3rd-level transmutation*
@@ -1671,6 +1782,9 @@ The piece of ammunition or weapon then returns to its normal form.
 Ranger
 
 # Lightning Bolt
+## Spell Name
+Lightning Bolt
+
 From Player's Handbook, page 255.
 ## Description
 *3rd-level evocation*
@@ -1714,6 +1828,9 @@ Arcane Trickster
 The Fathomless
 
 # Magic Circle
+## Spell Name
+Magic Circle
+
 From Player's Handbook, page 256.
 ## Description
 *3rd-level abjuration*
@@ -1772,6 +1889,9 @@ Theurgy
 Mark of Warding Dwarf
 
 # Major Image
+## Spell Name
+Major Image
+
 From Player's Handbook, page 258.
 ## Description
 *3rd-level illusion*
@@ -1814,6 +1934,9 @@ Arcane Trickster
 Mark of Shadow Elf
 
 # Mass Healing Word
+## Spell Name
+Mass Healing Word
+
 From Player's Handbook, page 258.
 ## Description
 *3rd-level evocation*
@@ -1860,6 +1983,9 @@ Mark of Healing Halfling
 Greater Dragonmark
 
 # Meld Into Stone
+## Spell Name
+Meld Into Stone
+
 From Player's Handbook, page 259.
 ## Description
 *3rd-level transmutation (ritual)*
@@ -1903,6 +2029,9 @@ Theurgy
 Dimir Operative
 
 # Melf's Minute Meteors
+## Spell Name
+Melf's Minute Meteors
+
 From Xanathar's Guide to Everything, page 161; and Elemental Evil Player's Companion, page 20.
 ## Description
 *3rd-level evocation*
@@ -1937,6 +2066,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Motivational Speech
+## Spell Name
+Motivational Speech
+
 From Acquisitions Incorporated, page 77.
 ## Description
 *3rd-level enchantment*
@@ -1971,6 +2103,9 @@ Divine Soul
 Theurgy
 
 # Nondetection
+## Spell Name
+Nondetection
+
 From Player's Handbook, page 263.
 ## Description
 *3rd-level abjuration*
@@ -2023,6 +2158,9 @@ Greater Dragonmark
 Svirfneblin Magic
 
 # Phantom Steed
+## Spell Name
+Phantom Steed
+
 From Player's Handbook, page 265.
 ## Description
 *3rd-level illusion (ritual)*
@@ -2061,6 +2199,9 @@ The Undead
 Mark of Passage Human
 
 # Plant Growth
+## Spell Name
+Plant Growth
+
 From Player's Handbook, page 266.
 ## Description
 *3rd-level transmutation*
@@ -2108,6 +2249,9 @@ Golgari Agent
 Selesnya Initiate
 
 # Protection From Energy
+## Spell Name
+Protection From Energy
+
 From Player's Handbook, page 270.
 ## Description
 *3rd-level abjuration*
@@ -2168,6 +2312,9 @@ Theurgy
 Mark of Sentinel Human
 
 # Pulse Wave
+## Spell Name
+Pulse Wave
+
 From Explorer's Guide to Wildemount, page 188.
 ## Description
 *3rd-level evocation*
@@ -2198,6 +2345,9 @@ Chronurgy Magic
 Graviturgy Magic
 
 # Remove Curse
+## Spell Name
+Remove Curse
+
 From Player's Handbook, page 271.
 ## Description
 *3rd-level abjuration*
@@ -2238,6 +2388,9 @@ Divine Soul
 Theurgy
 
 # Revivify
+## Spell Name
+Revivify
+
 From Player's Handbook, page 272.
 ## Description
 *3rd-level necromancy*
@@ -2288,6 +2441,9 @@ Warlock
 Witherbloom Student
 
 # Sending
+## Spell Name
+Sending
+
 From Player's Handbook, page 274.
 ## Description
 *3rd-level evocation*
@@ -2346,6 +2502,9 @@ Mark of Scribing Gnome
 Greater Dragonmark
 
 # Sleet Storm
+## Spell Name
+Sleet Storm
+
 From Player's Handbook, page 276.
 ## Description
 *3rd-level conjuration*
@@ -2393,6 +2552,9 @@ The Genie (Marid)
 Mark of Storm Half-elf
 
 # Slow
+## Spell Name
+Slow
+
 From Player's Handbook, page 277.
 ## Description
 *3rd-level transmutation*
@@ -2441,6 +2603,9 @@ Clockwork Soul
 Mire the Mind
 
 # Speak With Dead
+## Spell Name
+Speak With Dead
+
 From Player's Handbook, page 277.
 ## Description
 *3rd-level necromancy*
@@ -2504,6 +2669,9 @@ Lorehold Student
 Orzhov Representative
 
 # Speak With Plants
+## Spell Name
+Speak With Plants
+
 From Player's Handbook, page 277.
 ## Description
 *3rd-level transmutation*
@@ -2544,6 +2712,9 @@ Human
 Selesnya Initiate
 
 # Spirit Guardians
+## Spell Name
+Spirit Guardians
+
 From Player's Handbook, page 278.
 ## Description
 *3rd-level conjuration*
@@ -2593,6 +2764,9 @@ Lorehold Student
 Orzhov Representative
 
 # Spirit Shroud
+## Spell Name
+Spirit Shroud
+
 From Tasha's Cauldron of Everything, page 108.
 ## Description
 *3rd-level necromancy*
@@ -2635,6 +2809,9 @@ Divine Soul
 Theurgy
 
 # Stinking Cloud
+## Spell Name
+Stinking Cloud
+
 From Player's Handbook, page 278.
 ## Description
 *3rd-level conjuration*
@@ -2678,6 +2855,9 @@ Arcane Trickster
 The Fiend
 
 # Summon Fey
+## Spell Name
+Summon Fey
+
 From Tasha's Cauldron of Everything, page 112.
 ## Description
 *3rd-level conjuration*
@@ -2718,6 +2898,9 @@ Fey Wanderer
 Arcane Trickster
 
 # Summon Lesser Demons
+## Spell Name
+Summon Lesser Demons
+
 From Xanathar's Guide to Everything, page 167.
 ## Description
 *3rd-level conjuration*
@@ -2787,6 +2970,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Summon Shadowspawn
+## Spell Name
+Summon Shadowspawn
+
 From Tasha's Cauldron of Everything, page 113.
 ## Description
 *3rd-level conjuration*
@@ -2823,6 +3009,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Summon Undead
+## Spell Name
+Summon Undead
+
 From Tasha's Cauldron of Everything, page 114.
 ## Description
 *3rd-level necromancy*
@@ -2859,6 +3048,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Thunder Step
+## Spell Name
+Thunder Step
+
 From Xanathar's Guide to Everything, page 168.
 ## Description
 *3rd-level conjuration*
@@ -2895,6 +3087,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Tidal Wave
+## Spell Name
+Tidal Wave
+
 From Xanathar's Guide to Everything, page 168; and Elemental Evil Player's Companion, page 22.
 ## Description
 *3rd-level conjuration*
@@ -2928,6 +3123,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Tiny Servant
+## Spell Name
+Tiny Servant
+
 From Xanathar's Guide to Everything, page 168.
 ## Description
 *3rd-level transmutation*
@@ -3050,6 +3248,9 @@ Arcane Trickster
 Clockwork Soul
 
 # Tongues
+## Spell Name
+Tongues
+
 From Player's Handbook, page 283.
 ## Description
 *3rd-level divination*
@@ -3099,6 +3300,9 @@ Mark of Scribing Gnome
 Greater Dragonmark
 
 # Vampiric Touch
+## Spell Name
+Vampiric Touch
+
 From Player's Handbook, page 285.
 ## Description
 *3rd-level necromancy*
@@ -3147,6 +3351,9 @@ Warlock
 Witherbloom Student
 
 # Wall of Sand
+## Spell Name
+Wall of Sand
+
 From Xanathar's Guide to Everything, page 170; and Elemental Evil Player's Companion, page 23.
 ## Description
 *3rd-level evocation*
@@ -3178,6 +3385,9 @@ Eldritch Knight
 Arcane Trickster
 
 # Wall of Water
+## Spell Name
+Wall of Water
+
 From Mythic Odysseys of Theros, page 27; Xanathar's Guide to Everything, page 170; Elemental Evil Player's Companion, page 23; and Volo's Guide to Monsters, page 116.
 ## Description
 *3rd-level evocation*
@@ -3216,6 +3426,9 @@ Arcane Trickster
 Triton
 
 # Water Breathing
+## Spell Name
+Water Breathing
+
 From Player's Handbook, page 287.
 ## Description
 *3rd-level transmutation (ritual)*
@@ -3263,6 +3476,9 @@ Gift of the Depths
 Simic Scientist
 
 # Water Walk
+## Spell Name
+Water Walk
+
 From Player's Handbook, page 287.
 ## Description
 *3rd-level transmutation (ritual)*
@@ -3311,6 +3527,9 @@ Theurgy
 Prismari Student
 
 # Wind Wall
+## Spell Name
+Wind Wall
+
 From Player's Handbook, page 288.
 ## Description
 *3rd-level evocation*

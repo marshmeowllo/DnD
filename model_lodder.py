@@ -36,7 +36,6 @@ for param in student_model.parameters():
 student_model.gradient_checkpointing_enable()
 student_model.enable_input_require_grads()
 
-
 lora_model = get_peft_model(student_model, lora_config)
 
 fabric = Fabric(accelerator="cuda", devices=1, precision="bf16")
