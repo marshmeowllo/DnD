@@ -1,0 +1,86 @@
+Name,School,Casting Time,Comps,Cost,Save,Ritual,Conc.,Source
+Aganazzar's Scorcher,Evocation,1 action,"V, S, M",,Dexterity,,,"XGE 150, EEPC 15"
+Aid,Abjuration,1 action,"V, S, M",,,,,PHB 211
+Alter Self,Transmutation,1 action,"V, S",,,,Yes,PHB 211
+Animal Messenger,Enchantment,1 action,"V, S, M",,,Yes,,PHB 212
+Arcane Lock,Abjuration,1 action,"V, S, M",25gp,,,,PHB 215
+Augury,Divination,1 minute,"V, S, M",25gp,,Yes,,PHB 215
+Barkskin,Transmutation,1 action,"V, S, M",,,,Yes,PHB 217
+Beast Sense,Divination,1 action,S,,,Yes,Yes,PHB 217
+Blindness/Deafness,Necromancy,1 action,V,,Constitution,,,PHB 219
+Blur,Illusion,1 action,V,,,,Yes,PHB 219
+Borrowed Knowledge,Divination,1 action,"V, S, M",25gp,,,,SCC 37
+Branding Smite,Evocation,1 bonus action,V,,,,Yes,PHB 219
+Calm Emotions,Enchantment,1 action,"V, S",,Charisma,,Yes,PHB 221
+Cloud of Daggers,Conjuration,1 action,"V, S, M",,,,Yes,PHB 222
+Continual Flame,Evocation,1 action,"V, S, M",50gp,,,,PHB 227
+Cordon of Arrows,Transmutation,1 action,"V, S, M",,Dexterity,,,PHB 228
+Crown of Madness,Enchantment,1 action,"V, S",,Wisdom,,Yes,PHB 229
+Darkness,Evocation,1 action,"V, M",,,,Yes,PHB 230
+Darkvision,Transmutation,1 action,"V, S, M",,,,,PHB 230
+Detect Thoughts,Divination,1 action,"V, S, M",,Wisdom,,Yes,PHB 231
+Dragon's Breath,Transmutation,1 bonus action,"V, S, M",,Dexterity,,Yes,XGE 154
+Dust Devil,Conjuration,1 action,"V, S, M",,Strength,,Yes,"XGE 154, EEPC 17"
+Earthbind,Transmutation,1 action,V,,Strength,,Yes,"XGE 154, EEPC 17"
+Enhance Ability,Transmutation,1 action,"V, S, M",,,,Yes,PHB 237
+Enlarge/Reduce,Transmutation,1 action,"V, S, M",,Constitution,,Yes,PHB 237
+Enthrall,Enchantment,1 action,"V, S",,Wisdom,,,PHB 238
+Find Steed,Conjuration,10 minutes,"V, S",,,,,PHB 240
+Find Traps,Divination,1 action,"V, S",,,,,PHB 241
+Fortune's Favor,Divination,1 minute,"V, S, M",100gp,,,,EGW 186
+Flame Blade,Evocation,1 bonus action,"V, S, M",,Attack roll,,Yes,PHB 242
+Flaming Sphere,Conjuration,1 action,"V, S, M",,Dexterity,,Yes,PHB 242
+Flock of Familiars,Conjuration,1 minute,"V, S",,,,Yes,LLK 57
+Gentle Repose,Necromancy,1 action,"V, S, M",,,Yes,,PHB 245
+Gift of Gab,Enchantment,1 reaction,"V, S, R",2 gp,,,,AI 76
+Gust of Wind,Evocation,1 action,"V, S, M",,Strength,,Yes,PHB 248
+Healing Spirit,Conjuration,1 bonus action,"V, S",,,,Yes,XGE 157
+Heat Metal,Transmutation,1 action,"V, S, M",,Constitution,,Yes,PHB 250
+Hold Person,Enchantment,1 action,"V, S, M",,Wisdom,,Yes,PHB 251
+Immovable Object,Transmutation,1 action,"V, S, M",25gp,,,,EGW 187
+Invisibility,Illusion,1 action,"V, S, M",,,,Yes,PHB 254
+Jim's Glowing Coin,Enchantment,1 action,"S, M, R",2 gp,Wisdom,,,AI 76
+Kinetic Jaunt,Transmutation,1 bonus action,S,,,,Yes,SCC 37
+Knock,Transmutation,1 action,V,,,,,PHB 254
+Lesser Restoration,Abjuration,1 action,"V, S",,,,,PHB 255
+Levitate,Transmutation,1 action,"V, S, M",,Constitution,,Yes,PHB 255
+Locate Animals or Plants,Divination,1 action,"V, S, M",,,Yes,,PHB 256
+Locate Object,Divination,1 action,"V, S, M",,,,Yes,PHB 256
+Magic Mouth,Illusion,1 minute,"V, S, M",10gp,,Yes,,PHB 257
+Magic Weapon,Transmutation,1 bonus action,"V, S",,,,Yes,PHB 257
+Maximilian's Earthen Grasp,Transmutation,1 action,"V, S, M",,Strength,,Yes,"XGE 161, EEPC 20"
+Melf's Acid Arrow,Evocation,1 action,"V, S, M",,Attack roll,,,PHB 259
+Mind Spike,Divination,1 action,S,,Wisdom,,Yes,XGE 162
+Mirror Image,Illusion,1 action,"V, S",,,,,PHB 260
+Misty Step,Conjuration,1 bonus action,V,,,,,PHB 260
+Moonbeam,Evocation,1 action,"V, S, M",,Constitution,,Yes,PHB 261
+Nathair's Mischief,Illusion,1 action,"S, M",,"Wisdom, Dexterity",,Yes,FTD 20
+Nystul's Magic Aura,Illusion,1 action,"V, S, M",,,,,PHB 263
+Pass Without Trace,Abjuration,1 action,"V, S, M",,,,Yes,PHB 264
+Phantasmal Force,Illusion,1 action,"V, S, M",,Intelligence,,Yes,PHB 264
+Prayer of Healing,Evocation,10 minutes,V,,,,,PHB 267
+Protection From Poison,Abjuration,1 action,"V, S",,,,,PHB 270
+Pyrotechnics,Transmutation,1 action,"V, S",,Constitution,,,"XGE 163, EEPC 21"
+Ray of Enfeeblement,Necromancy,1 action,"V, S",,Constitution,,Yes,PHB 271
+Rime's Binding Ice,Evocation,1 action,"S, M",,Constitution,,,FTD 21
+Rope Trick,Transmutation,1 action,"V, S, M",,,,,PHB 272
+Scorching Ray,Evocation,1 action,"V, S",,Attack roll,,,PHB 273
+See Invisibility,Divination,1 action,"V, S, M",,,,,PHB 274
+Shadow Blade,Illusion,1 bonus action,"V, S",,Attack roll,,Yes,XGE 164
+Shatter,Evocation,1 action,"V, S, M",,Constitution,,,PHB 275
+Silence,Illusion,1 action,"V, S",,,Yes,Yes,PHB 275
+Skywrite,Transmutation,1 action,"V, S",,,Yes,Yes,"XGE 165, EEPC 22"
+Snilloc's Snowball Swarm,Evocation,1 action,"V, S, M",,Dexterity,,,"XGE 165, EEPC 22"
+Spider Climb,Transmutation,1 action,"V, S, M",,,,Yes,PHB 277
+Spike Growth,Transmutation,1 action,"V, S, M",,,,Yes,PHB 277
+Spiritual Weapon,Evocation,1 bonus action,"V, S",,Attack roll,,,PHB 278
+Suggestion,Enchantment,1 action,"V, M",,Wisdom,,Yes,PHB 279
+Summon Beast,Conjuration,1 action,"V, S, M",200gp,,,Yes,TCE 109
+Tasha's Mind Whip,Enchantment,1 action,V,,Intelligence,,,TCE 115
+Vortex Warp,Conjuration,1 action,"V, S",,Constitution,,,SCC 38
+Warding Bond,Abjuration,1 action,"V, S, M",50gp,,,,PHB 287
+Warding Wind,Evocation,1 action,V,,,,Yes,"XGE 170, EEPC 23"
+Web,Conjuration,1 action,"V, S, M",,Dexterity,,Yes,PHB 287
+Wither and Bloom,Necromancy,1 action,"V, S",,Constitution,,,SCC 38
+Wristpocket,Conjuration,1 action,S,,,Yes,Yes,EGW 186
+Zone of Truth,Enchantment,1 action,"V, S",,Charisma,,,PHB 289
