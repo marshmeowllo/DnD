@@ -1,0 +1,25 @@
+Name,School,Casting Time,Comps,Cost,Save,Conc.,Source
+Abi-Dalzim's Horrid Wilting,Necromancy,1 action,"V, S, M",,Constitution,,"XGE 150, EEPC 15"
+Animal Shapes,Transmutation,1 action,"V, S",,,Yes,PHB 212
+Antimagic Field,Abjuration,1 action,"V, S, M",,,Yes,PHB 213
+Antipathy/Sympathy,Enchantment,1 hour,"V, S, M",,Wisdom,,PHB 214
+Clone,Necromancy,1 hour,"V, S, M",3000gp,,,PHB 222
+Control Weather,Transmutation,10 minutes,"V, S, M",,,Yes,PHB 228
+Dark Star,Evocation,1 action,"V, S, M",,Constitution,Yes,EGW 186
+Demiplane,Conjuration,1 action,S,,,,PHB 231
+Dominate Monster,Enchantment,1 action,"V, S",,Wisdom,Yes,PHB 235
+Earthquake,Evocation,1 action,"V, S, M",,"Constitution, Dexterity",Yes,PHB 236
+Feeblemind,Enchantment,1 action,"V, S, M",,Intelligence,,PHB 239
+Glibness,Transmutation,1 action,V,,,,PHB 245
+Holy Aura,Abjuration,1 action,"V, S, M",1000gp,Constitution,Yes,PHB 251
+Illusory Dragon,Illusion,1 action,S,,,Yes,XGE 157
+Incendiary Cloud,Conjuration,1 action,"V, S",,Dexterity,Yes,PHB 253
+Maddening Darkness,Evocation,1 action,"V, M",,Wisdom,Yes,XGE 160
+Maze,Conjuration,1 action,"V, S",,Intelligence,Yes,PHB 258
+Mighty Fortress,Conjuration,1 minute,"V, S, M",500gp,,,XGE 161
+Mind Blank,Abjuration,1 action,"V, S",,,,PHB 259
+Power Word Stun,Enchantment,1 action,V,,Constitution,,PHB 267
+Reality Break,Conjuration,1 action,"V, S, M",,Wisdom,Yes,EGW 189
+Sunburst,Evocation,1 action,"V, S, M",,Constitution,,PHB 279
+Telepathy,Evocation,1 action,"V, S, M",,,,PHB 281
+Tsunami,Conjuration,1 minute,"V, S",,Strength,Yes,PHB 284
