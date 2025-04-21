@@ -20,6 +20,7 @@ streamlit run main.py
 ├── model_loader.py        # Model loading and setup script
 ├── README.md
 └── utils/
+    ├── faiss_spell_index  # vector store save directory
     ├── rag.ipynb          # RAG Code
     └── webscraping.ipynb  # Web scraping code for data collection
 ```
