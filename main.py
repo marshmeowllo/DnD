@@ -65,14 +65,30 @@ if prompt := st.chat_input("Say something"):
         st.write(prompt)
     st.session_state.history.append({"role": "user", "content": prompt})
 
-    with st.chat_message("assistant"):
-        response = st.write_stream(chat_stream(st.session_state.history))
-        st.feedback(
-            "thumbs",
-            key=f"feedback_{len(st.session_state.history)}",
-            on_change=save_feedback,
-            args=[len(st.session_state.history)],
-        )
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("**Vanilla Model**")
+        with st.chat_message("assistant"):
+            response = st.write_stream(chat_stream(st.session_state.history))
+            st.feedback(
+                "thumbs",
+                key=f"feedback_vanilla_{len(st.session_state.history)}",
+                on_change=save_feedback,
+                args=[len(st.session_state.history)],
+            )
+    
+    with col2:
+        st.markdown("**Trained Model**")
+        with st.chat_message("assistant"):
+            response = st.write_stream(chat_stream(st.session_state.history))
+            st.feedback(
+                "thumbs",
+                key=f"feedback_trained_{len(st.session_state.history)}",
+                on_change=save_feedback,
+                args=[len(st.session_state.history)],
+            )
+
     st.session_state.history.append({"role": "assistant", "content": response})
 
 print('------------------------------------------------')
