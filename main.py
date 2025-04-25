@@ -7,9 +7,9 @@ import mock
 
 st.header('Dungeons and Dragons', divider="gray")
 
-def chat_stream(user_input):
-    # response = model_lodder.generate_response_with_role(temperature, top_p, top_k, user_input=user_input)
-    response = mock.mock_generate_response(user_input, temperature, top_p, top_k)
+def chat_stream(user_input, model_name):
+    # response = model_lodder.generate_response_with_role(temperature, top_p, top_k, model_name=model_name, user_input=user_input)
+    response = mock.mock_generate_response(user_input, model_name, temperature, top_p, top_k)
 
     for char in response:
         yield char
@@ -111,12 +111,12 @@ if prompt := st.chat_input("Say something"):
     with col1:
         st.markdown("**Vanilla Model**")
         with st.chat_message("assistant"):
-            res1 = st.write_stream(chat_stream(st.session_state.history_vanilla))
+            res1 = st.write_stream(chat_stream(st.session_state.history_vanilla, "Vanilla"))
         st.session_state.history_vanilla.append({"role": "assistant", "content": "".join(res1)})
     with col2:
         st.markdown("**Trained Model**")
         with st.chat_message("assistant"):
-            res2 = st.write_stream(chat_stream(st.session_state.history_trained))
+            res2 = st.write_stream(chat_stream(st.session_state.history_trained, "Trained"))
         st.session_state.history_trained.append({"role": "assistant", "content": "".join(res2)})
 
     st.rerun()
