@@ -8,8 +8,8 @@ import mock
 st.header('Dungeons and Dragons', divider="gray")
 
 def chat_stream(user_input):
-    # response = model_lodder.generate_response_with_role(user_input=user_input)
-    response = mock.mock_generate_response(user_input)
+    # response = model_lodder.generate_response_with_role(temperature, top_p, top_k, user_input=user_input)
+    response = mock.mock_generate_response(user_input, temperature, top_p, top_k)
 
     for char in response:
         yield char
