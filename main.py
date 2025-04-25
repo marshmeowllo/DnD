@@ -18,19 +18,22 @@ def chat_stream(user_input):
 def save_feedback(index):
     st.session_state.history[index]["feedback"] = st.session_state[f"feedback_{index}"]
 
-if "history" not in st.session_state:
-    st.session_state.history = []
+if "history_vanilla" not in st.session_state:
+    st.session_state.history_vanilla = []
+if "history_trained" not in st.session_state:
+    st.session_state.history_trained = []
 
-for i, message in enumerate(st.session_state.history):
+n = len(st.session_state.history_vanilla)
+for i in range(n):
+    message = st.session_state.history_vanilla[i]
     if message["role"] == "user":
         with st.chat_message("user"):
             st.write(message["content"])
         
-        n = len(st.session_state.history)
-        vanilla_msg = st.session_state.history[i + 1] if i + 1 < n else None
-        trained_msg = st.session_state.history[i + 2] if i + 2 < n else None
+        vanilla_msg = st.session_state.history_vanilla[i + 1] if i + 1 < n else None
+        trained_msg = st.session_state.history_trained[i + 1] if i + 1 < n else None
 
-        if vanilla_msg and trained_msg and vanilla_msg["role"] == "assistant_vanilla" and trained_msg["role"] == "assistant_trained":
+        if vanilla_msg and trained_msg and vanilla_msg["role"] == "assistant" and trained_msg["role"] == "assistant":
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown("**Vanilla Model**")
@@ -67,7 +70,7 @@ st.sidebar.header('Settings')
 with st.sidebar:
     st.download_button(
         label="Download Conversation", 
-        data=json.dumps(st.session_state.history, indent=2),
+        data=json.dumps(st.session_state.history_trained, indent=2),
         file_name="conversation.json",
         mime="application/json",
         icon=":material/download:"
@@ -90,19 +93,20 @@ top_k = st.sidebar.slider(
 if prompt := st.chat_input("Say something"):
     with st.chat_message("user"):
         st.write(prompt)
-    st.session_state.history.append({"role": "user", "content": prompt})
+    st.session_state.history_vanilla.append({"role": "user", "content": prompt})
+    st.session_state.history_trained.append({"role": "user", "content": prompt})
 
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("**Vanilla Model**")
         with st.chat_message("assistant"):
-            res1 = st.write_stream(chat_stream(st.session_state.history))
-        st.session_state.history.append({"role": "assistant_vanilla", "content": "".join(res1)})
+            res1 = st.write_stream(chat_stream(st.session_state.history_vanilla))
+        st.session_state.history_vanilla.append({"role": "assistant", "content": "".join(res1)})
     with col2:
         st.markdown("**Trained Model**")
         with st.chat_message("assistant"):
-            res2 = st.write_stream(chat_stream(st.session_state.history))
-        st.session_state.history.append({"role": "assistant_trained", "content": "".join(res2)})
+            res2 = st.write_stream(chat_stream(st.session_state.history_trained))
+        st.session_state.history_trained.append({"role": "assistant", "content": "".join(res2)})
 
     st.rerun()
 
