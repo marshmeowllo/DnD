@@ -68,9 +68,14 @@ for i in range(n):
 st.sidebar.header('Settings')
 
 with st.sidebar:
+    history = {
+        "vanilla": st.session_state.history_vanilla,
+        "trained": st.session_state.history_trained,
+    }
+
     st.download_button(
         label="Download Conversation", 
-        data=json.dumps(st.session_state.history_trained, indent=2),
+        data=json.dumps(history, indent=2),
         file_name="conversation.json",
         mime="application/json",
         icon=":material/download:"
