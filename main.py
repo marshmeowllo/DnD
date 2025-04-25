@@ -21,6 +21,16 @@ def save_feedback(index, is_trained):
     else:
         st.session_state.history_vanilla[index]["feedback"] = st.session_state[f"feedback_vanilla_{index}"]
 
+def log_edit_response(prompt, original, edited, model):
+    out = {
+        "prompt": prompt,
+        "original": original,
+        "edited": edited,
+        "model": model
+    }
+    with open("chat_edit_response.jsonl", "a") as f:
+        f.write(json.dumps(out) + "\n")
+
 if "history_vanilla" not in st.session_state:
     st.session_state.history_vanilla = []
 if "history_trained" not in st.session_state:
@@ -43,7 +53,7 @@ for i in range(n):
                 with st.chat_message("assistant"):
                     original = vanilla_msg["content"]
                     edited = st.text_area("Edit Response", value=original, key=f"edit_vanilla_{i}")
-                    if st.button("Save Edited Response", key=f"save_vanilla_{i}"):
+                    if st.button("Save Edited Response", key=f"save_vanilla_{i}", on_click=log_edit_response, args=[message["content"], original, edited, "Vanilla"]):
                         st.session_state.history_vanilla[i + 1]["content"] = edited
                         st.success("Response updated")
                     feedback_key = f"feedback_vanilla_{i}"
@@ -62,7 +72,7 @@ for i in range(n):
                 with st.chat_message("assistant"):
                     original = trained_msg["content"]
                     edited = st.text_area("Edit Response", value=original, key=f"edit_trained_{i}")
-                    if st.button("Save Edited Response", key=f"save_trained_{i}"):
+                    if st.button("Save Edited Response", key=f"save_trained_{i}", on_click=log_edit_response, args=[message["content"], original, edited, "Trained"]):
                         st.session_state.history_trained[i + 1]["content"] = edited
                         st.success("Response updated")
                     feedback_key = f"feedback_trained_{i}"
