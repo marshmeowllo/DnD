@@ -39,28 +39,31 @@ for i in range(n):
                 st.markdown("**Vanilla Model**")
                 with st.chat_message("assistant"):
                     st.write(vanilla_msg["content"])
-
-                    feedback = message.get("feedback", None)
-                    st.session_state[f"feedback_{i + 1}"] = feedback
+                    feedback_key = f"feedback_vanilla_{i}"
+                    if feedback_key not in st.session_state:
+                        feedback = vanilla_msg.get("feedback", None)
+                        st.session_state[feedback_key] = feedback
                     st.feedback(
                         "thumbs",
-                        key=f"feedback_{i + 1}",
+                        key=feedback_key,
                         disabled=feedback is not None,
                         on_change=save_feedback,
-                        args=[i + 1],
+                        args=[i],
                     )
             with col2:
                 st.markdown("**Trained Model**")
                 with st.chat_message("assistant"):
                     st.write(trained_msg["content"])
-                    feedback = message.get("feedback", None)
-                    st.session_state[f"feedback_{i + 2}"] = feedback
+                    feedback_key = f"feedback_trained_{i}"
+                    if feedback_key not in st.session_state:
+                        feedback = trained_msg.get("feedback", None)
+                        st.session_state[feedback_key] = feedback
                     st.feedback(
                         "thumbs",
-                        key=f"feedback_{i + 2}",
+                        key=feedback_key,
                         disabled=feedback is not None,
                         on_change=save_feedback,
-                        args=[i + 2],
+                        args=[i],
                     )
 
             continue
