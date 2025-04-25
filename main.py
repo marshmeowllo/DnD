@@ -2,12 +2,14 @@ import streamlit as st
 import time
 import json
 
-import model_lodder
+# import model_lodder
+import mock
 
 st.header('Dungeons and Dragons', divider="gray")
 
 def chat_stream(user_input):
-    response = model_lodder.generate_response_with_role(user_input=user_input)
+    # response = model_lodder.generate_response_with_role(user_input=user_input)
+    response = mock.mock_generate_response(user_input)
 
     for char in response:
         yield char
