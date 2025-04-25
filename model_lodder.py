@@ -45,7 +45,7 @@ torch.set_float32_matmul_precision("medium")
 
 model = PeftModelForCausalLM.from_pretrained(lora_model, "./best")
 
-def generate_response_with_role(model=model, user_input='', max_length=4096):
+def generate_response_with_role(temperature, top_p, top_k, model=model, user_input='', max_length=4096):
     messages = [
       {"role": "system", "content": "in a text-based adventure (Dungeons and Dragons).\nYour job is to narrate the adventure and respond to the player's actions.\nWhen you anwser to player you must answer in proper markdown format. (heading, table, bold, italic, paragraph, blockquotes)"},
     ]
@@ -70,9 +70,9 @@ def generate_response_with_role(model=model, user_input='', max_length=4096):
             max_length=max_length,
             eos_token_id=terminators,
             num_return_sequences=1,
-            temperature=1.0,
-            top_p=0.9,
-            top_k=50,
+            temperature=temperature,
+            top_p=top_p,
+            top_k=top_k,
             do_sample=True,
         )
 
