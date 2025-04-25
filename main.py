@@ -7,7 +7,7 @@ import model_lodder
 st.header('Dungeons and Dragons', divider="gray")
 
 def chat_stream(user_input):
-    response = model_lodder.generate_response_with_role(user_input=user_input)
+    response = model_lodder.generate_response_with_role(role="player1", user_input=user_input)
 
     for char in response:
         yield char
@@ -39,7 +39,9 @@ if prompt := st.chat_input("Say something"):
     st.session_state.history.append({"role": "user", "content": prompt})
 
     with st.chat_message("assistant"):
-        response = st.write_stream(chat_stream(st.session_state.history))
+        user_input = prompt
+        response = st.write_stream(chat_stream(user_input))
+        
         st.feedback(
             "thumbs",
             key=f"feedback_{len(st.session_state.history)}",
@@ -48,9 +50,9 @@ if prompt := st.chat_input("Say something"):
         )
     st.session_state.history.append({"role": "assistant", "content": response})
 
-print('------------------------------------------------')
-print(st.session_state)
-print('------------------------------------------------')
+# print('------------------------------------------------')
+# print(st.session_state)
+# print('------------------------------------------------')
 
 st.sidebar.header('Settings')
 
