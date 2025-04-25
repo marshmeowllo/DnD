@@ -51,11 +51,22 @@ for i in range(n):
             with col1:
                 st.markdown("**Vanilla Model**")
                 with st.chat_message("assistant"):
-                    original = vanilla_msg["content"]
-                    edited = st.text_area("Edit Response", value=original, key=f"edit_vanilla_{i}")
-                    if st.button("Save Edited Response", key=f"save_vanilla_{i}", on_click=log_edit_response, args=[message["content"], original, edited, "Vanilla"]):
-                        st.session_state.history_vanilla[i + 1]["content"] = edited
-                        st.success("Response updated")
+                    edit_key = f"edit_enable_vanilla_{i}"
+                    if edit_key not in st.session_state:
+                        st.session_state[edit_key] = False
+                    
+                    if not st.session_state[edit_key]:
+                        st.write(vanilla_msg["content"])
+                        if st.button("Edit", key=f"enable_edit_vanilla_{i}"):
+                            st.session_state[edit_key] = True
+                            st.rerun()
+                    else:
+                        edited = st.text_area("Edit Response", value=vanilla_msg["content"], key=f"edit_vanilla_{i}")
+                        if st.button("Save", key=f"save_vanilla_{i}", on_click=log_edit_response, args=[message["content"], vanilla_msg["content"], edited, "Vanilla"]):
+                            st.session_state.history_vanilla[i + 1]["content"] = edited
+                            st.session_state[edit_key] = False
+                            st.rerun()
+
                     feedback_key = f"feedback_vanilla_{i}"
                     if feedback_key not in st.session_state:
                         feedback = vanilla_msg.get("feedback", None)
@@ -70,11 +81,22 @@ for i in range(n):
             with col2:
                 st.markdown("**Trained Model**")
                 with st.chat_message("assistant"):
-                    original = trained_msg["content"]
-                    edited = st.text_area("Edit Response", value=original, key=f"edit_trained_{i}")
-                    if st.button("Save Edited Response", key=f"save_trained_{i}", on_click=log_edit_response, args=[message["content"], original, edited, "Trained"]):
-                        st.session_state.history_trained[i + 1]["content"] = edited
-                        st.success("Response updated")
+                    edit_key = f"edit_enable_trained_{i}"
+                    if edit_key not in st.session_state:
+                        st.session_state[edit_key] = False
+                    
+                    if not st.session_state[edit_key]:
+                        st.write(trained_msg["content"])
+                        if st.button("Edit", key=f"enable_edit_trained_{i}"):
+                            st.session_state[edit_key] = True
+                            st.rerun()
+                    else:
+                        edited = st.text_area("Edit Response", value=trained_msg["content"], key=f"edit_trained_{i}")
+                        if st.button("Save", key=f"save_trained_{i}", on_click=log_edit_response, args=[message["content"], trained_msg["content"], edited, "Trained"]):
+                            st.session_state.history_trained[i + 1]["content"] = edited
+                            st.session_state[edit_key] = False
+                            st.rerun()
+
                     feedback_key = f"feedback_trained_{i}"
                     if feedback_key not in st.session_state:
                         feedback = trained_msg.get("feedback", None)
