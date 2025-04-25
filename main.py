@@ -15,8 +15,11 @@ def chat_stream(user_input):
         yield char
         time.sleep(0.005)
 
-def save_feedback(index):
-    st.session_state.history[index]["feedback"] = st.session_state[f"feedback_{index}"]
+def save_feedback(index, is_trained):
+    if is_trained:
+        st.session_state.history_trained[index]["feedback"] = st.session_state[f"feedback_trained_{index}"]
+    else:
+        st.session_state.history_vanilla[index]["feedback"] = st.session_state[f"feedback_vanilla_{index}"]
 
 if "history_vanilla" not in st.session_state:
     st.session_state.history_vanilla = []
@@ -46,9 +49,9 @@ for i in range(n):
                     st.feedback(
                         "thumbs",
                         key=feedback_key,
-                        disabled=feedback is not None,
+                        disabled=st.session_state[feedback_key] is not None,
                         on_change=save_feedback,
-                        args=[i],
+                        args=[i, False],
                     )
             with col2:
                 st.markdown("**Trained Model**")
@@ -61,9 +64,9 @@ for i in range(n):
                     st.feedback(
                         "thumbs",
                         key=feedback_key,
-                        disabled=feedback is not None,
+                        disabled=st.session_state[feedback_key] is not None,
                         on_change=save_feedback,
-                        args=[i],
+                        args=[i, True],
                     )
 
             continue
