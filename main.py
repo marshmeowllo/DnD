@@ -35,25 +35,6 @@ for i, message in enumerate(st.session_state.history):
                 args=[i],
             )
 
-if prompt := st.chat_input("Say something"):
-    with st.chat_message("user"):
-        st.write(prompt)
-    st.session_state.history.append({"role": "user", "content": prompt})
-
-    with st.chat_message("assistant"):
-        response = st.write_stream(chat_stream(st.session_state.history))
-        st.feedback(
-            "thumbs",
-            key=f"feedback_{len(st.session_state.history)}",
-            on_change=save_feedback,
-            args=[len(st.session_state.history)],
-        )
-    st.session_state.history.append({"role": "assistant", "content": response})
-
-print('------------------------------------------------')
-print(st.session_state)
-print('------------------------------------------------')
-
 st.sidebar.header('Settings')
 
 with st.sidebar:
@@ -78,3 +59,22 @@ top_p = st.sidebar.slider(
 top_k = st.sidebar.slider(
     "Top-k", min_value=1, max_value=100, value=50
 )
+
+if prompt := st.chat_input("Say something"):
+    with st.chat_message("user"):
+        st.write(prompt)
+    st.session_state.history.append({"role": "user", "content": prompt})
+
+    with st.chat_message("assistant"):
+        response = st.write_stream(chat_stream(st.session_state.history))
+        st.feedback(
+            "thumbs",
+            key=f"feedback_{len(st.session_state.history)}",
+            on_change=save_feedback,
+            args=[len(st.session_state.history)],
+        )
+    st.session_state.history.append({"role": "assistant", "content": response})
+
+print('------------------------------------------------')
+print(st.session_state)
+print('------------------------------------------------')
