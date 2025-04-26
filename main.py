@@ -7,40 +7,121 @@ import mock
 
 st.header('Dungeons and Dragons', divider="gray")
 
-def chat_stream(user_input):
-    # response = model_lodder.generate_response_with_role(temperature, top_p, top_k, user_input=user_input)
-    response = mock.mock_generate_response(user_input, temperature, top_p, top_k)
+def chat_stream(user_input, model_name):
+    # response = model_lodder.generate_response_with_role(temperature, top_p, top_k, model_name=model_name, user_input=user_input)
+    response = mock.mock_generate_response(user_input, model_name, temperature, top_p, top_k)
 
     for char in response:
         yield char
         time.sleep(0.005)
 
-def save_feedback(index):
-    st.session_state.history[index]["feedback"] = st.session_state[f"feedback_{index}"]
+def save_feedback(index, is_trained):
+    if is_trained:
+        st.session_state.history_trained[index]["feedback"] = st.session_state[f"feedback_trained_{index}"]
+    else:
+        st.session_state.history_vanilla[index]["feedback"] = st.session_state[f"feedback_vanilla_{index}"]
 
-if "history" not in st.session_state:
-    st.session_state.history = []
+def log_edit_response(prompt, original, edited, model):
+    out = {
+        "prompt": prompt,
+        "original": original,
+        "edited": edited,
+        "model": model
+    }
+    with open("chat_edit_response.jsonl", "a") as f:
+        f.write(json.dumps(out) + "\n")
 
-for i, message in enumerate(st.session_state.history):
-    with st.chat_message(message["role"]):
-        st.write(message["content"])
-        if message["role"] == "assistant":
-            feedback = message.get("feedback", None)
-            st.session_state[f"feedback_{i}"] = feedback
-            st.feedback(
-                "thumbs",
-                key=f"feedback_{i}",
-                disabled=feedback is not None,
-                on_change=save_feedback,
-                args=[i],
-            )
+if "history_vanilla" not in st.session_state:
+    st.session_state.history_vanilla = []
+if "history_trained" not in st.session_state:
+    st.session_state.history_trained = []
+
+n = len(st.session_state.history_vanilla)
+for i in range(n):
+    message = st.session_state.history_vanilla[i]
+    if message["role"] == "user":
+        with st.chat_message("user"):
+            st.write(message["content"])
+        
+        vanilla_msg = st.session_state.history_vanilla[i + 1] if i + 1 < n else None
+        trained_msg = st.session_state.history_trained[i + 1] if i + 1 < n else None
+
+        if vanilla_msg and trained_msg and vanilla_msg["role"] == "assistant" and trained_msg["role"] == "assistant":
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**Vanilla Model**")
+                with st.chat_message("assistant"):
+                    edit_key = f"edit_enable_vanilla_{i}"
+                    if edit_key not in st.session_state:
+                        st.session_state[edit_key] = False
+                    
+                    if not st.session_state[edit_key]:
+                        st.write(vanilla_msg["content"])
+                        if st.button("Edit", key=f"enable_edit_vanilla_{i}"):
+                            st.session_state[edit_key] = True
+                            st.rerun()
+                    else:
+                        edited = st.text_area("Edit Response", value=vanilla_msg["content"], key=f"edit_vanilla_{i}")
+                        if st.button("Save", key=f"save_vanilla_{i}", on_click=log_edit_response, args=[message["content"], vanilla_msg["content"], edited, "Vanilla"]):
+                            st.session_state.history_vanilla[i + 1]["content"] = edited
+                            st.session_state[edit_key] = False
+                            st.rerun()
+
+                    feedback_key = f"feedback_vanilla_{i}"
+                    if feedback_key not in st.session_state:
+                        feedback = vanilla_msg.get("feedback", None)
+                        st.session_state[feedback_key] = feedback
+                    st.feedback(
+                        "thumbs",
+                        key=feedback_key,
+                        disabled=st.session_state[feedback_key] is not None,
+                        on_change=save_feedback,
+                        args=[i, False],
+                    )
+            with col2:
+                st.markdown("**Trained Model**")
+                with st.chat_message("assistant"):
+                    edit_key = f"edit_enable_trained_{i}"
+                    if edit_key not in st.session_state:
+                        st.session_state[edit_key] = False
+                    
+                    if not st.session_state[edit_key]:
+                        st.write(trained_msg["content"])
+                        if st.button("Edit", key=f"enable_edit_trained_{i}"):
+                            st.session_state[edit_key] = True
+                            st.rerun()
+                    else:
+                        edited = st.text_area("Edit Response", value=trained_msg["content"], key=f"edit_trained_{i}")
+                        if st.button("Save", key=f"save_trained_{i}", on_click=log_edit_response, args=[message["content"], trained_msg["content"], edited, "Trained"]):
+                            st.session_state.history_trained[i + 1]["content"] = edited
+                            st.session_state[edit_key] = False
+                            st.rerun()
+
+                    feedback_key = f"feedback_trained_{i}"
+                    if feedback_key not in st.session_state:
+                        feedback = trained_msg.get("feedback", None)
+                        st.session_state[feedback_key] = feedback
+                    st.feedback(
+                        "thumbs",
+                        key=feedback_key,
+                        disabled=st.session_state[feedback_key] is not None,
+                        on_change=save_feedback,
+                        args=[i, True],
+                    )
+
+            continue
 
 st.sidebar.header('Settings')
 
 with st.sidebar:
+    history = {
+        "vanilla": st.session_state.history_vanilla,
+        "trained": st.session_state.history_trained,
+    }
+
     st.download_button(
         label="Download Conversation", 
-        data=json.dumps(st.session_state.history, indent=2),
+        data=json.dumps(history, indent=2),
         file_name="conversation.json",
         mime="application/json",
         icon=":material/download:"
@@ -63,17 +144,22 @@ top_k = st.sidebar.slider(
 if prompt := st.chat_input("Say something"):
     with st.chat_message("user"):
         st.write(prompt)
-    st.session_state.history.append({"role": "user", "content": prompt})
+    st.session_state.history_vanilla.append({"role": "user", "content": prompt})
+    st.session_state.history_trained.append({"role": "user", "content": prompt})
 
-    with st.chat_message("assistant"):
-        response = st.write_stream(chat_stream(st.session_state.history))
-        st.feedback(
-            "thumbs",
-            key=f"feedback_{len(st.session_state.history)}",
-            on_change=save_feedback,
-            args=[len(st.session_state.history)],
-        )
-    st.session_state.history.append({"role": "assistant", "content": response})
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("**Vanilla Model**")
+        with st.chat_message("assistant"):
+            res1 = st.write_stream(chat_stream(st.session_state.history_vanilla, "Vanilla"))
+        st.session_state.history_vanilla.append({"role": "assistant", "content": "".join(res1)})
+    with col2:
+        st.markdown("**Trained Model**")
+        with st.chat_message("assistant"):
+            res2 = st.write_stream(chat_stream(st.session_state.history_trained, "Trained"))
+        st.session_state.history_trained.append({"role": "assistant", "content": "".join(res2)})
+
+    st.rerun()
 
 print('------------------------------------------------')
 print(st.session_state)
