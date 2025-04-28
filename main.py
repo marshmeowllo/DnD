@@ -5,6 +5,7 @@ import json
 # import model_lodder
 import mock
 from feedback_utils import save_feedback, log_edit_response
+from sidebar import render_sidebar
 
 CHAT_STREAM_DELAY = 0.005
 
@@ -54,25 +55,6 @@ def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained)
             args=[model_name, index, st.session_state],
         )
 
-def render_sidebar():
-    st.sidebar.header('Settings')
-    history = {
-        "vanilla": st.session_state.history_vanilla,
-        "trained": st.session_state.history_trained,
-    }
-    st.sidebar.download_button(
-        label="Download Conversation", 
-        data=json.dumps(history, indent=2),
-        file_name="conversation.json",
-        mime="application/json",
-        icon=":material/download:"
-    )
-    st.sidebar.header("Model Parameters")
-    temperature = st.sidebar.slider("Temperature", min_value=0.1, max_value=2.0, value=1.0)
-    top_p = st.sidebar.slider("Top-p", min_value=0.1, max_value=1.0, value=0.9)
-    top_k = st.sidebar.slider("Top-k", min_value=1, max_value=100, value=50)
-    return temperature, top_p, top_k
-
 n = len(st.session_state.history_vanilla)
 for i in range(n):
     message = st.session_state.history_vanilla[i]
@@ -92,7 +74,7 @@ for i in range(n):
 
             continue
 
-temperature, top_p, top_k = render_sidebar()
+temperature, top_p, top_k = render_sidebar(st.session_state)
 
 if prompt := st.chat_input("Say something"):
     with st.chat_message("user"):
