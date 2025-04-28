@@ -5,6 +5,8 @@ import json
 # import model_lodder
 import mock
 
+CHAT_STREAM_DELAY = 0.005
+
 st.header('Dungeons and Dragons', divider="gray")
 
 def chat_stream(user_input, model_name):
@@ -13,7 +15,7 @@ def chat_stream(user_input, model_name):
 
     for char in response:
         yield char
-        time.sleep(0.005)
+        time.sleep(CHAT_STREAM_DELAY)
 
 def save_feedback(index, is_trained):
     if is_trained:
