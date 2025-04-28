@@ -7,6 +7,11 @@ import mock
 
 CHAT_STREAM_DELAY = 0.005
 
+# Initialize session state
+for key in ["history_vanilla", "history_trained"]:
+    if key not in st.session_state:
+        st.session_state[key] = []
+
 st.header('Dungeons and Dragons', divider="gray")
 
 def chat_stream(user_input, model_name):
@@ -58,7 +63,7 @@ def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained)
             key=feedback_key,
             disabled=st.session_state[feedback_key] is not None,
             on_change=save_feedback,
-            args=[index, is_trained],
+            args=[model_name, index],
         )
 
 def render_sidebar():
@@ -79,10 +84,6 @@ def render_sidebar():
     top_p = st.sidebar.slider("Top-p", min_value=0.1, max_value=1.0, value=0.9)
     top_k = st.sidebar.slider("Top-k", min_value=1, max_value=100, value=50)
     return temperature, top_p, top_k
-
-for key in ["history_vanilla", "history_trained"]:
-    if key not in st.session_state:
-        st.session_state[key] = []
 
 n = len(st.session_state.history_vanilla)
 for i in range(n):
