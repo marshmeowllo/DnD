@@ -4,6 +4,7 @@ import json
 
 # import model_lodder
 import mock
+from feedback_utils import save_feedback, log_edit_response
 
 CHAT_STREAM_DELAY = 0.005
 
@@ -21,19 +22,6 @@ def chat_stream(user_input, model_name):
     for char in response:
         yield char
         time.sleep(CHAT_STREAM_DELAY)
-
-def save_feedback(model_name, index):
-    st.session_state[f"history_{model_name}"][index]["feedback"] = st.session_state[f"feedback_{model_name}_{index}"]
-
-def log_edit_response(prompt, original, edited, model):
-    out = {
-        "prompt": prompt,
-        "original": original,
-        "edited": edited,
-        "model": model
-    }
-    with open("chat_edit_response.jsonl", "a") as f:
-        f.write(json.dumps(out) + "\n")
 
 def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained):
     st.markdown(f"**{model_name}**")
@@ -63,7 +51,7 @@ def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained)
             key=feedback_key,
             disabled=st.session_state[feedback_key] is not None,
             on_change=save_feedback,
-            args=[model_name, index],
+            args=[model_name, index, st.session_state],
         )
 
 def render_sidebar():
