@@ -62,10 +62,9 @@ def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained)
             args=[index, is_trained],
         )
 
-if "history_vanilla" not in st.session_state:
-    st.session_state.history_vanilla = []
-if "history_trained" not in st.session_state:
-    st.session_state.history_trained = []
+for key in ["history_vanilla", "history_trained"]:
+    if key not in st.session_state:
+        st.session_state[key] = []
 
 n = len(st.session_state.history_vanilla)
 for i in range(n):
