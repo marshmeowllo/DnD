@@ -2,10 +2,10 @@ import streamlit as st
 import time
 import json
 
-# import model_lodder
-import mock
-from feedback_utils import save_feedback, log_edit_response
-from sidebar import render_sidebar
+# import src.models.model_loader as model_loader
+import src.utils.mock as mock
+from src.utils.feedback_utils import save_feedback, log_edit_response
+from src.components.sidebar import render_sidebar
 
 CHAT_STREAM_DELAY = 0.005
 
@@ -17,7 +17,7 @@ for key in ["history_vanilla", "history_trained"]:
 st.header('Dungeons and Dragons', divider="gray")
 
 def chat_stream(user_input, model_name):
-    # response = model_lodder.generate_response_with_role(temperature, top_p, top_k, model_name=model_name, user_input=user_input)
+    # response = model_loader.generate_response_with_role(temperature, top_p, top_k, model_name=model_name, user_input=user_input)
     response = mock.mock_generate_response(user_input, model_name, temperature, top_p, top_k)
 
     for char in response:
