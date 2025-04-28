@@ -17,11 +17,8 @@ def chat_stream(user_input, model_name):
         yield char
         time.sleep(CHAT_STREAM_DELAY)
 
-def save_feedback(index, is_trained):
-    if is_trained:
-        st.session_state.history_trained[index]["feedback"] = st.session_state[f"feedback_trained_{index}"]
-    else:
-        st.session_state.history_vanilla[index]["feedback"] = st.session_state[f"feedback_vanilla_{index}"]
+def save_feedback(model_name, index):
+    st.session_state[f"history_{model_name}"][index]["feedback"] = st.session_state[f"feedback_{model_name}_{index}"]
 
 def log_edit_response(prompt, original, edited, model):
     out = {
