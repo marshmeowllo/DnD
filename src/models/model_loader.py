@@ -1,9 +1,12 @@
 import torch
+import os
 
 from lightning import Fabric
 from huggingface_hub import login
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import get_peft_model, LoraConfig, PeftModelForCausalLM
+
+MODEL_DIR = os.path.join(os.path.dirname(__file__), "best")
 
 model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
 
@@ -43,7 +46,7 @@ lora_model = get_peft_model(base_model, lora_config)
 
 model = PeftModelForCausalLM.from_pretrained(
     lora_model, 
-    "./best",
+    MODEL_DIR,
     torch_dtype=torch.bfloat16,
     is_trainable=False
     )
@@ -73,7 +76,7 @@ def generate_response_with_role(temperature, top_p, top_k, model_name="Trained",
     if model_name == "Trained":
        assistant = model
     else:
-       assistant = student_model
+       assistant = base_model
 
     with torch.no_grad():
         outputs = assistant.generate(
