@@ -12,13 +12,15 @@ streamlit run main.py
 
 ```bash
 .
-├── datasets/
-│   ├── classes             
-│   ├── items
-│   ├── monsters
-│   ├── races
+├── database/               # Database for storing D&D data for RAG
+│   ├── classes/             
+│   ├── items/
+│   ├── monsters/
+│   ├── races/
 │   ├── spell/              # D&D spells list
 │   └── spell_content/      # Detailed D&D spell information
+├── datasets/               # Datasets for training and testing
+├── examples/               # Example code
 ├── src/
 │   ├── components          # Reusable parts    
 │   │   └── sidebar.py     
@@ -29,9 +31,5 @@ streamlit run main.py
 │       ├── feedback_utils.py
 │       └── mock.py
 ├── main.py                 # Streamlit app entry point
-├── README.md
-└── utils/
-    ├── faiss_spell_index   # Vector store save directory
-    ├── rag.ipynb           # RAG Code
-    └── webscraping.ipynb   # Web scraping code for data collection
+└── README.md
 ```
