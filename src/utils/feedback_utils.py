@@ -10,7 +10,7 @@ def save_feedback(prompt, res_a, res_b, vote):
     except FileNotFoundError:
         file_exists = False
 
-    entry = {"prompt": prompt, "res_a": res_a, "res_b": res_b, "vote": vote}
+    entry = {"prompt": prompt, "res_vanilla": res_a, "res_trained": res_b, "vote": "vanilla" if vote=='Model A' else "trained"}
     with open(file_name, 'a', newline='', encoding='utf-8') as f:
         fields = list(entry.keys())
         writer = csv.DictWriter(f, fieldnames=fields)
