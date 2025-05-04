@@ -13,6 +13,8 @@ CHAT_STREAM_DELAY = 0.005
 for key in ["history_vanilla", "history_trained"]:
     if key not in st.session_state:
         st.session_state[key] = []
+if "last_vote_submitted" not in st.session_state:
+    st.session_state["last_vote_submitted"] = True
 
 st.header('Dungeons and Dragons', divider="gray")
 
@@ -24,7 +26,7 @@ def chat_stream(user_input, model_name):
         yield char
         time.sleep(CHAT_STREAM_DELAY)
 
-def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained):
+def handle_model_history(model_name, user_msg, assistant_msg, index):
     st.markdown(f"**{model_name}**")
     with st.chat_message("assistant"):
         edit_key = f"edit_enable_{model_name}_{index}"
@@ -43,18 +45,6 @@ def handle_model_history(model_name, user_msg, assistant_msg, index, is_trained)
                 st.session_state[edit_key] = False
                 st.rerun()
 
-        feedback_key = f"feedback_{model_name}_{index}"
-        if feedback_key not in st.session_state:
-            feedback = assistant_msg.get("feedback", None)
-            st.session_state[feedback_key] = feedback
-        st.feedback(
-            "thumbs",
-            key=feedback_key,
-            disabled=st.session_state[feedback_key] is not None,
-            on_change=save_feedback,
-            args=[model_name, index, st.session_state],
-        )
-
 n = len(st.session_state.history_vanilla)
 for i in range(n):
     message = st.session_state.history_vanilla[i]
@@ -68,15 +58,26 @@ for i in range(n):
         if vanilla_msg and trained_msg and vanilla_msg["role"] == "assistant" and trained_msg["role"] == "assistant":
             col1, col2 = st.columns(2)
             with col1:
-                handle_model_history("vanilla", message, vanilla_msg, i + 1, False)
+                handle_model_history("vanilla", message, vanilla_msg, i + 1)
             with col2:
-                handle_model_history("trained", message, trained_msg, i + 1, True)
+                handle_model_history("trained", message, trained_msg, i + 1)
+
+            if i + 1 == n - 1 and not st.session_state["last_vote_submitted"]:
+                vote = st.radio("Which response do you prefer?", ["Model A", "Model B"])
+                if vote and st.button("Submit Vote"):
+                    save_feedback(message['content'], vanilla_msg['content'], trained_msg['content'], vote)
+                    st.success(f"Vote for {vote} recorded")
+                    st.session_state['last_vote_submitted'] = True
 
             continue
 
 temperature, top_p, top_k = render_sidebar(st.session_state)
 
-if prompt := st.chat_input("Say something"):
+if not st.session_state['last_vote_submitted']:
+    st.info("Please vote on the last response before continuing")
+elif prompt := st.chat_input("Say something"):
+    st.session_state['last_vote_submitted'] = False
+
     with st.chat_message("user"):
         st.write(prompt)
     st.session_state.history_vanilla.append({"role": "user", "content": prompt})
