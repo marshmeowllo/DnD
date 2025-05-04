@@ -1,6 +1,5 @@
 import streamlit as st
 import time
-import json
 
 # import src.models.model_loader as model_loader
 import src.utils.mock as mock
@@ -45,6 +44,13 @@ def handle_model_history(model_name, user_msg, assistant_msg, index):
                 st.session_state[edit_key] = False
                 st.rerun()
 
+def show_vote_ui(user_prompt, vanilla_res, trained_res):
+    vote = st.radio("Which response do you prefer?", ["Model A", "Model B"])
+    if vote and st.button("Submit Vote"):
+        save_feedback(user_prompt, vanilla_res, trained_res, vote)
+        st.success(f"Vote for {vote} recorded")
+        st.session_state['last_vote_submitted'] = True
+
 n = len(st.session_state.history_vanilla)
 for i in range(n):
     message = st.session_state.history_vanilla[i]
@@ -63,11 +69,7 @@ for i in range(n):
                 handle_model_history("trained", message, trained_msg, i + 1)
 
             if i + 1 == n - 1 and not st.session_state["last_vote_submitted"]:
-                vote = st.radio("Which response do you prefer?", ["Model A", "Model B"])
-                if vote and st.button("Submit Vote"):
-                    save_feedback(message['content'], vanilla_msg['content'], trained_msg['content'], vote)
-                    st.success(f"Vote for {vote} recorded")
-                    st.session_state['last_vote_submitted'] = True
+                show_vote_ui(message['content'], vanilla_msg['content'], trained_msg['content'])
 
             continue
 
