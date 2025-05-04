@@ -27,7 +27,7 @@ def chat_stream(user_input, model_name):
         time.sleep(CHAT_STREAM_DELAY)
 
 def handle_model_history(model_name, user_msg, assistant_msg, index):
-    st.markdown(f"**{model_name}**")
+    st.markdown("**Model A**" if model_name=='vanilla' else "**Model B**")
     with st.chat_message("assistant"):
         edit_key = f"edit_enable_{model_name}_{index}"
         if edit_key not in st.session_state:
@@ -85,12 +85,12 @@ elif prompt := st.chat_input("Say something"):
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("**Vanilla Model**")
+        st.markdown("**Model A**")
         with st.chat_message("assistant"):
             res1 = st.write_stream(chat_stream(st.session_state.history_vanilla, "Vanilla"))
         st.session_state.history_vanilla.append({"role": "assistant", "content": "".join(res1)})
     with col2:
-        st.markdown("**Trained Model**")
+        st.markdown("**Model B**")
         with st.chat_message("assistant"):
             res2 = st.write_stream(chat_stream(st.session_state.history_trained, "Trained"))
         st.session_state.history_trained.append({"role": "assistant", "content": "".join(res2)})
