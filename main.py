@@ -74,7 +74,8 @@ for i in range(n):
 temperature, top_p, top_k = render_sidebar(st.session_state)
 
 if not st.session_state['last_vote_submitted']:
-    st.info("Please vote on the last response before continuing")
+    st.warning("Please vote on the last response before continuing")
+    st.chat_input("Say something", disabled=True)
 elif prompt := st.chat_input("Say something"):
     st.session_state['last_vote_submitted'] = False
 
