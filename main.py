@@ -14,11 +14,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import RetrievalQA
 
 # import src.models.model_loader as model_loader
+from config import CHAT_STREAM_DELAY, CHARACTER_BACKGROUND, CHARACTER_CLASSES, CHARACTER_RACES
 from src.components.chat import handle_model_history, show_vote_ui
 import src.utils.mock as mock
 from src.components.sidebar import render_sidebar
-
-CHAT_STREAM_DELAY = 0.005
 
 # Initialize session state
 for key in ["history_vanilla", "history_trained"]:
@@ -79,9 +78,9 @@ if page == 'Character Creator':
     with st.form("new_character_form"):
         player_name = st.text_input("Player Name")
         char_name = st.text_input("Character Name")
-        char_race = st.selectbox("Race", ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"])
-        char_class = st.selectbox("Class", ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"])
-        background = st.selectbox("Background", ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin"])
+        char_race = st.selectbox("Race", CHARACTER_RACES)
+        char_class = st.selectbox("Class", CHARACTER_CLASSES)
+        background = st.selectbox("Background", CHARACTER_BACKGROUND)
         stats = st.text_area("Stats", f"STR {d6(4)}, DEX {d6(4)}, CON {d6(4)}, INT {d6(4)}, WIS {d6(4)}, CHA {d6(4)}")
         submitted = st.form_submit_button("Add character")
 
