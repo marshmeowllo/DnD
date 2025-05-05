@@ -13,7 +13,7 @@ from langchain.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import RetrievalQA
 
-# import src.models.model_loader as model_loader
+import src.models.model_loader_new as model_loader
 from config import CHAT_STREAM_DELAY, CHARACTER_BACKGROUND, CHARACTER_CLASSES, CHARACTER_RACES
 from src.components.chat import handle_model_history, show_vote_ui
 from src.components.sidebar import render_sidebar
@@ -41,30 +41,30 @@ page = st.sidebar.radio("Go to", ["Character Creator", "DM Chat"])
 cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
 
 def chat_stream(user_input, model_name):
-    temp_prompt = PromptTemplate(
-        input_variables=["context", "question"],
-        template="""
-    You are a Dungeon Master AI. Use the following character information to help answer the player's question.
+    # temp_prompt = PromptTemplate(
+    #     input_variables=["context", "question"],
+    #     template="""
+    # You are a Dungeon Master AI. Use the following character information to help answer the player's question.
 
-    Character Info:
-    {context}
+    # Character Info:
+    # {context}
 
-    Question: {question}
-    Answer:"""
-    )
-    retriever = st.session_state['vectorstore'].as_retriever()
-    temp_qa_chain = RetrievalQA.from_chain_type(
-        llm=temp_llm,
-        retriever=retriever,
-        chain_type_kwargs={"prompt": temp_prompt}
-    )
+    # Question: {question}
+    # Answer:"""
+    # )
+    # retriever = st.session_state['vectorstore'].as_retriever()
+    # temp_qa_chain = RetrievalQA.from_chain_type(
+    #     llm=temp_llm,
+    #     retriever=retriever,
+    #     chain_type_kwargs={"prompt": temp_prompt}
+    # )
 
-    # response = model_loader.generate_response_with_role(temperature, top_p, top_k, model_name=model_name, user_input=user_input)
+    response = model_loader.generate_response(cur_player, user_input[-1]['content'])
     # Temporarily generate from same model
-    if model_name == 'vanilla':
-        response = temp_qa_chain.run(user_input[-1]['content'])
-    else:
-        response = temp_qa_chain.run(user_input[-1]['content'])
+    # if model_name == 'vanilla':
+    #     response = temp_qa_chain.run(user_input[-1]['content'])
+    # else:
+    #     response = temp_qa_chain.run(user_input[-1]['content'])
 
     for char in response:
         yield char
@@ -140,16 +140,18 @@ elif page == 'DM Chat':
                 st.write(prompt)
             st.session_state['history'].append({"role": "user", "content": prompt})
 
+            res = chat_stream(st.session_state['history'], "vanilla")
+
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown("**Model A**")
                 with st.chat_message("assistant"):
-                    res_a = st.write_stream(chat_stream(st.session_state['history'], "vanilla"))
+                    res_a = st.write_stream(res)
                 
             with col2:
                 st.markdown("**Model B**")
                 with st.chat_message("assistant"):
-                    res_b = st.write_stream(chat_stream(st.session_state['history'], "trained"))
+                    res_b = st.write_stream(res)
             
             st.session_state['last_interaction'] = (prompt, res_a, res_b)
             
@@ -161,6 +163,6 @@ elif page == 'DM Chat':
         st.warning("Please vote on the last response before continuing")
         st.chat_input("Say something", disabled=True)
 
-print('------------------------------------------------')
-print(st.session_state)
-print('------------------------------------------------')
+# print('------------------------------------------------')
+# print(st.session_state)
+# print('------------------------------------------------')
