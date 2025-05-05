@@ -2,6 +2,7 @@ import streamlit as st
 import time
 import os
 import faiss
+import random
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from langchain_community.docstore.in_memory import InMemoryDocstore
@@ -68,21 +69,29 @@ def chat_stream(user_input, model_name):
         yield char
         time.sleep(CHAT_STREAM_DELAY)
 
+def d6(count):
+    return random.randint(count, count*6)
+
 if page == 'Character Creator':
     st.header('Create a New Character', divider='gray')
 
     with st.form("new_character_form"):
         player_name = st.text_input("Player Name")
         char_name = st.text_input("Character Name")
-        char_race = st.text_input("Race")
-        char_class = st.text_input("Class")
+        char_race = st.selectbox("Race", ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling"])
+        char_class = st.selectbox("Class", ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"])
+        background = st.selectbox("Background", ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin"])
+        stats = st.text_area("Stats", f"STR {d6(4)}, DEX {d6(4)}, CON {d6(4)}, INT {d6(4)}, WIS {d6(4)}, CHA {d6(4)}")
         submitted = st.form_submit_button("Add character")
 
         if submitted:
-            content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\n"
-            doc = Document(page_content=content, metadata={"player": player_name, "name": char_name})
-            st.session_state['vectorstore'].add_documents([doc])
-            st.success(f"Character {char_name} of {player_name} added to memory")
+            if not all([player_name, char_name, char_race, char_class]):
+                st.warning("Please fill in all the fields before submitting.")
+            else:
+                content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}"
+                doc = Document(page_content=content, metadata={"player": player_name, "name": char_name})
+                st.session_state['vectorstore'].add_documents([doc])
+                st.success(f"Character {char_name} of {player_name} added to memory")
     
     st.subheader("Characters")
     if st.session_state['vectorstore'].index.ntotal > 0:
