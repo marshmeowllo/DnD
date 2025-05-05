@@ -25,5 +25,5 @@ def show_vote_ui(user_prompt, vanilla_res, trained_res):
     vote = st.radio("Which response do you prefer?", ["Model A", "Model B"])
     if vote and st.button("Submit Vote"):
         save_feedback(user_prompt, vanilla_res, trained_res, vote)
-        st.success(f"Vote for {vote} recorded")
         st.session_state['last_vote_submitted'] = True
+        st.rerun()
