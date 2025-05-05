@@ -3,10 +3,7 @@ import streamlit as st
 
 def render_sidebar(session_state):
     st.sidebar.header('Settings')
-    history = {
-        "vanilla": session_state.history_vanilla,
-        "trained": session_state.history_trained,
-    }
+    history = session_state['history']
     st.sidebar.download_button(
         label="Download Conversation", 
         data=json.dumps(history, indent=2),

@@ -21,9 +21,19 @@ def handle_model_history(model_name, user_msg, assistant_msg, index):
                 st.session_state[edit_key] = False
                 st.rerun()
 
+def _finalize_vote(chosen_res):
+    if len(st.session_state['history']) >= 2 and st.session_state['history'][-1]['role'] == 'assistant' and st.session_state['history'][-1]['role'] == 'assistant':
+        st.session_state['history'] = st.session_state['history'][:-2]
+    st.session_state['history'].append({"role": "assistant", "content": chosen_res})
+    st.session_state['last_vote_submitted'] = True
+    st.session_state['last_interaction'] = None
+    st.rerun()
+
 def show_vote_ui(user_prompt, vanilla_res, trained_res):
     vote = st.radio("Which response do you prefer?", ["Model A", "Model B"])
     if vote and st.button("Submit Vote"):
         save_feedback(user_prompt, vanilla_res, trained_res, vote)
-        st.session_state['last_vote_submitted'] = True
-        st.rerun()
+        if vote == 'Model A':
+            _finalize_vote(vanilla_res)
+        else:
+            _finalize_vote(trained_res)

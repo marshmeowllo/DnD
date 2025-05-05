@@ -19,11 +19,12 @@ from src.components.chat import handle_model_history, show_vote_ui
 from src.components.sidebar import render_sidebar
 
 # Initialize session state
-for key in ["history_vanilla", "history_trained"]:
-    if key not in st.session_state:
-        st.session_state[key] = []
+if "history" not in st.session_state:
+    st.session_state["history"] = []
 if "last_vote_submitted" not in st.session_state:
     st.session_state["last_vote_submitted"] = True
+if "last_interaction" not in st.session_state:
+    st.session_state["last_interaction"] = None
 if "vectorstore" not in st.session_state:
     # embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     embedding = HuggingFaceEmbeddings(model_name="Alibaba-NLP/gte-modernbert-base",model_kwargs={'trust_remote_code': True})
@@ -107,58 +108,58 @@ if page == 'Character Creator':
 elif page == 'DM Chat':
     st.header('Dungeons and Dragons', divider="gray")
 
-    n = len(st.session_state.history_vanilla)
-    for i in range(n):
-        message = st.session_state.history_vanilla[i]
-        if message["role"] == "user":
-            with st.chat_message("user"):
-                st.write(message["content"])
-            
-            vanilla_msg = st.session_state.history_vanilla[i + 1] if i + 1 < n else None
-            trained_msg = st.session_state.history_trained[i + 1] if i + 1 < n else None
-
-            if vanilla_msg and trained_msg and vanilla_msg["role"] == "assistant" and trained_msg["role"] == "assistant":
-                if not st.session_state["last_vote_submitted"]:
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        handle_model_history("vanilla", message, vanilla_msg, i + 1)
-                    with col2:
-                        handle_model_history("trained", message, trained_msg, i + 1)
-
-                    if i + 1 == n - 1:
-                        show_vote_ui(message['content'], vanilla_msg['content'], trained_msg['content'])
-                else:
-                    with st.chat_message("assistant"):
-                        st.write(vanilla_msg["content"])
-
-                continue
+    n = len(st.session_state['history'])
+    for i, msg in enumerate(st.session_state['history']):
+        if not st.session_state['last_vote_submitted'] and i == n -2:
+            break
+        with st.chat_message(msg['role']):
+            st.write(msg['content'])
 
     temperature, top_p, top_k = render_sidebar(st.session_state)
 
-    if not st.session_state['last_vote_submitted']:
-        st.warning("Please vote on the last response before continuing")
-        st.chat_input("Say something", disabled=True)
-    elif prompt := st.chat_input("Say something"):
-        st.session_state['last_vote_submitted'] = False
-
-        with st.chat_message("user"):
-            st.write(prompt)
-        st.session_state.history_vanilla.append({"role": "user", "content": prompt})
-        st.session_state.history_trained.append({"role": "user", "content": prompt})
-
+    if not st.session_state['last_vote_submitted'] and st.session_state['last_interaction']:
+        prompt, res_a, res_b = st.session_state['last_interaction']
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("**Model A**")
             with st.chat_message("assistant"):
-                res1 = st.write_stream(chat_stream(st.session_state.history_vanilla, "vanilla"))
-            st.session_state.history_vanilla.append({"role": "assistant", "content": f"{cur_player}: " + "".join(res1)})
+                st.write(res_a)
+            
         with col2:
             st.markdown("**Model B**")
             with st.chat_message("assistant"):
-                res2 = st.write_stream(chat_stream(st.session_state.history_trained, "trained"))
-            st.session_state.history_trained.append({"role": "assistant", "content": f"{cur_player}: " + "".join(res2)})
+                st.write(res_b)
+        show_vote_ui(prompt, res_a, res_b)
+        st.chat_input("Say something", disabled=True)
+    elif st.session_state['last_vote_submitted']:
+        if prompt := st.chat_input("Say something"):
+            st.session_state['last_vote_submitted'] = False
+            prompt = f"{cur_player}: " + prompt
 
-        st.rerun()
+            with st.chat_message("user"):
+                st.write(prompt)
+            st.session_state['history'].append({"role": "user", "content": prompt})
+
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("**Model A**")
+                with st.chat_message("assistant"):
+                    res_a = st.write_stream(chat_stream(st.session_state['history'], "vanilla"))
+                
+            with col2:
+                st.markdown("**Model B**")
+                with st.chat_message("assistant"):
+                    res_b = st.write_stream(chat_stream(st.session_state['history'], "trained"))
+            
+            st.session_state['last_interaction'] = (prompt, res_a, res_b)
+            
+            st.session_state['history'].append({"role": "assistant", "content": "".join(res_a)})
+            st.session_state['history'].append({"role": "assistant", "content": "".join(res_b)})
+
+            st.rerun()
+    else:
+        st.warning("Please vote on the last response before continuing")
+        st.chat_input("Say something", disabled=True)
 
 print('------------------------------------------------')
 print(st.session_state)
