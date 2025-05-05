@@ -10,7 +10,6 @@ from langchain_community.docstore.in_memory import InMemoryDocstore
 # Mock
 from langchain.schema import Document
 from langchain.prompts import PromptTemplate
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import RetrievalQA
 
 import src.models.model_loader_new as model_loader
@@ -32,9 +31,6 @@ if "vectorstore" not in st.session_state:
     st.session_state['vectorstore'] = FAISS(embedding_function=embedding, index=index, docstore=InMemoryDocstore(), index_to_docstore_id={})
 if "players" not in st.session_state:
     st.session_state['players'] = []
-
-
-temp_llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
 
 st.sidebar.title("D&D Dungeon Master")
 page = st.sidebar.radio("Go to", ["Character Creator", "DM Chat"])

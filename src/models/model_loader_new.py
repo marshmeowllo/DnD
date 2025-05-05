@@ -3,7 +3,7 @@ import uuid
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-from langchain_community.vectorstores import FAISS
+from langchain.vectorstores import FAISS
 from langchain_huggingface import HuggingFacePipeline, HuggingFaceEmbeddings, ChatHuggingFace
 from langchain.tools import tool
 
@@ -35,7 +35,7 @@ embed_model_name = "sentence-transformers/all-mpnet-base-v2"
 embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
 
 vector_store = FAISS.load_local(
-    "./faiss_spell_index",
+    "./examples/faiss_spell_index",
     embeddings=embeddings,
     allow_dangerous_deserialization=True
 )
@@ -277,10 +277,8 @@ def generate_response(player_name, prompt):
         "context": ""
     }
     out = ""
-    for step in graph.stream(
-        input_state,
-        config=config,
-        stream_mode="values",
-    ):
-        out += step["messages"][-1]
-    return out
+    response = graph.invoke(input_state, config=config)
+
+    print("Response:", response)
+
+    return response['messages'][-1].content
