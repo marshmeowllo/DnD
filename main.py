@@ -16,7 +16,6 @@ from langchain.chains import RetrievalQA
 # import src.models.model_loader as model_loader
 from config import CHAT_STREAM_DELAY, CHARACTER_BACKGROUND, CHARACTER_CLASSES, CHARACTER_RACES
 from src.components.chat import handle_model_history, show_vote_ui
-import src.utils.mock as mock
 from src.components.sidebar import render_sidebar
 
 # Initialize session state
@@ -60,6 +59,7 @@ def chat_stream(user_input, model_name):
     )
 
     # response = model_loader.generate_response_with_role(temperature, top_p, top_k, model_name=model_name, user_input=user_input)
+    # Temporarily generate from same model
     if model_name == 'vanilla':
         response = temp_qa_chain.run(user_input[-1]['content'])
     else:
@@ -81,14 +81,16 @@ if page == 'Character Creator':
         char_race = st.selectbox("Race", CHARACTER_RACES)
         char_class = st.selectbox("Class", CHARACTER_CLASSES)
         background = st.selectbox("Background", CHARACTER_BACKGROUND)
-        stats = st.text_area("Stats", f"STR {d6(4)}, DEX {d6(4)}, CON {d6(4)}, INT {d6(4)}, WIS {d6(4)}, CHA {d6(4)}")
+        stat_list = [15, 14, 13, 12, 10, 8]
+        random.shuffle(stat_list)
+        stats = f"STR {stat_list[0]}, DEX {stat_list[1]}, CON {stat_list[2]}, INT {stat_list[3]}, WIS {stat_list[4]}, CHA {stat_list[5]}"
         submitted = st.form_submit_button("Add character")
 
         if submitted:
             if not all([player_name, char_name, char_race, char_class]):
                 st.warning("Please fill in all the fields before submitting.")
             else:
-                content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}"
+                content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}\nLevel: 1"
                 doc = Document(page_content=content, metadata={"player": player_name, "name": char_name})
                 st.session_state['vectorstore'].add_documents([doc])
                 st.session_state['players'].append(player_name)
@@ -116,14 +118,18 @@ elif page == 'DM Chat':
             trained_msg = st.session_state.history_trained[i + 1] if i + 1 < n else None
 
             if vanilla_msg and trained_msg and vanilla_msg["role"] == "assistant" and trained_msg["role"] == "assistant":
-                col1, col2 = st.columns(2)
-                with col1:
-                    handle_model_history("vanilla", message, vanilla_msg, i + 1)
-                with col2:
-                    handle_model_history("trained", message, trained_msg, i + 1)
+                if not st.session_state["last_vote_submitted"]:
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        handle_model_history("vanilla", message, vanilla_msg, i + 1)
+                    with col2:
+                        handle_model_history("trained", message, trained_msg, i + 1)
 
-                if i + 1 == n - 1 and not st.session_state["last_vote_submitted"]:
-                    show_vote_ui(message['content'], vanilla_msg['content'], trained_msg['content'])
+                    if i + 1 == n - 1:
+                        show_vote_ui(message['content'], vanilla_msg['content'], trained_msg['content'])
+                else:
+                    with st.chat_message("assistant"):
+                        st.write(vanilla_msg["content"])
 
                 continue
 
