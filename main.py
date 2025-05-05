@@ -31,14 +31,15 @@ if "vectorstore" not in st.session_state:
     embedding = HuggingFaceEmbeddings(model_name="Alibaba-NLP/gte-modernbert-base",model_kwargs={'trust_remote_code': True})
     index = faiss.IndexFlatL2(len(embedding.embed_query("test")))
     st.session_state['vectorstore'] = FAISS(embedding_function=embedding, index=index, docstore=InMemoryDocstore(), index_to_docstore_id={})
-if "player_data" not in st.session_state:
-    st.session_state['player_data'] = {}
+if "players" not in st.session_state:
+    st.session_state['players'] = []
 
 
 temp_llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
 
 st.sidebar.title("D&D Dungeon Master")
 page = st.sidebar.radio("Go to", ["Character Creator", "DM Chat"])
+cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
 
 def chat_stream(user_input, model_name):
     temp_prompt = PromptTemplate(
@@ -91,6 +92,7 @@ if page == 'Character Creator':
                 content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}"
                 doc = Document(page_content=content, metadata={"player": player_name, "name": char_name})
                 st.session_state['vectorstore'].add_documents([doc])
+                st.session_state['players'].append(player_name)
                 st.success(f"Character {char_name} of {player_name} added to memory")
     
     st.subheader("Characters")
@@ -144,12 +146,12 @@ elif page == 'DM Chat':
             st.markdown("**Model A**")
             with st.chat_message("assistant"):
                 res1 = st.write_stream(chat_stream(st.session_state.history_vanilla, "vanilla"))
-            st.session_state.history_vanilla.append({"role": "assistant", "content": "".join(res1)})
+            st.session_state.history_vanilla.append({"role": "assistant", "content": f"{cur_player}: " + "".join(res1)})
         with col2:
             st.markdown("**Model B**")
             with st.chat_message("assistant"):
                 res2 = st.write_stream(chat_stream(st.session_state.history_trained, "trained"))
-            st.session_state.history_trained.append({"role": "assistant", "content": "".join(res2)})
+            st.session_state.history_trained.append({"role": "assistant", "content": f"{cur_player}: " + "".join(res2)})
 
         st.rerun()
 
