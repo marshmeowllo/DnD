@@ -1,5 +1,6 @@
 import torch
 import uuid
+import os
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
@@ -24,15 +25,16 @@ from lightning import Fabric
 from IPython.display import display, Image
 from langchain_core.tools import tool
 import streamlit as st
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-torch.set_float32_matmul_precision("medium")
-fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
-device = fabric.device
-fabric.launch()
+# torch.set_float32_matmul_precision("medium")
+# fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
+# device = fabric.device
+# fabric.launch()
 
-embed_model_name = "sentence-transformers/all-mpnet-base-v2"
-
-embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
+# embed_model_name = "sentence-transformers/all-mpnet-base-v2"
+embeddings = HuggingFaceEmbeddings(model_name="Alibaba-NLP/gte-modernbert-base",model_kwargs={'trust_remote_code': True})
+# embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
 
 vector_store = FAISS.load_local(
     "./examples/faiss_spell_index",
@@ -88,6 +90,9 @@ class State(TypedDict):
     name: str
     messages: Annotated[list[AnyMessage], add_messages]
     context: str
+    temperature: float
+    top_p: float
+    top_k: int
 
 class ToolCallRequest(TypedDict):
     """A typed dict that shows the inputs into the invoke_tool function."""
@@ -97,20 +102,22 @@ class ToolCallRequest(TypedDict):
 
 class ToolCalling():
     def __init__(self, model_name: str, tools: list[BaseTool]):
-        self.model_name = model_name
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
-        self.pipe = pipeline(
-            task="text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            return_full_text=False,
-            max_new_tokens=512,
-            top_k=10,
-            device_map="auto"
-        )
-        self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        # self.model_name = model_name
+        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        # self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
+        # self.pipe = pipeline(
+        #     task="text-generation",
+        #     model=self.model,
+        #     tokenizer=self.tokenizer,
+        #     return_full_text=False,
+        #     max_new_tokens=512,
+        #     top_k=10,
+        #     device_map="auto"
+        # )
+        # self._llm = HuggingFacePipeline(pipeline=self.pipe)
+        # self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        self.chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
+
         self.rendered_tools = [convert_to_openai_tool(f) for f in tools]
 
     def invoke_tool(
@@ -188,20 +195,20 @@ tool_calling = ToolCalling(
 
 class LlamaChat():
     def __init__(self, model_name: str):
-        self.model_name = model_name
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, load_in_4bit=True)
-        self.pipe = pipeline(
-            task="text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            return_full_text=False,
-            max_new_tokens=2048,
-            top_k=10,
-            device_map="auto"
-        )
-        self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        # self.model_name = model_name
+        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        # self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, load_in_4bit=True)
+        # self.pipe = pipeline(
+        #     task="text-generation",
+        #     model=self.model,
+        #     tokenizer=self.tokenizer,
+        #     return_full_text=False,
+        #     max_new_tokens=2048,
+        #     top_k=10,
+        #     device_map="auto"
+        # )
+        # self._llm = HuggingFacePipeline(pipeline=self.pipe)
+        self.chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
 
     def generate(self, state: State) -> Dict[str, Any]:
         system_message_content = (
@@ -230,6 +237,10 @@ class LlamaChat():
 
         prompt = [SystemMessage(system_message_content)] + conversation_messages
 
+        # chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer, pipeline_kwargs={ "temperature": state['temperature'], "top_k": state['top_k'], "top_p": state['top_p']})
+        # chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
+
+        # response = chat.invoke(prompt)
         response = self.chat.invoke(prompt)
         
         return {"messages": [response]}
@@ -258,15 +269,24 @@ graph.add_edge("chatbot", END)
 
 graph = graph.compile(checkpointer=memory)
 
-try:
-    display(Image(graph.get_graph().draw_mermaid_png()))
-except Exception:
-    pass
+memory2 = MemorySaver()
+
+graph2 = StateGraph(State)
+
+graph2.add_edge(START, "tool call2")
+graph2.add_node("tool call2", tool)
+
+graph2.add_edge("tool call2", "chatbot2")
+
+graph2.add_node("chatbot2", chatbot)
+graph2.add_edge("chatbot2", END)
+
+graph2 = graph2.compile(checkpointer=memory)
 
 thread_id = uuid.uuid4()
 config = {"configurable": {"thread_id": "123"}}
 
-def generate_response(player_name, prompt):
+def generate_response(player_name, prompt, temperature, top_p, top_k, model_name):
     text = f"<|start_header_id|>{player_name}<|end_header_id|>\n{prompt}<|eot_id|>"
 
     input_state = {
@@ -274,10 +294,16 @@ def generate_response(player_name, prompt):
         "messages": [
             HumanMessage(content=text)
         ],
-        "context": ""
+        "context": "",
+        "temperature": temperature,
+        "top_p": top_p,
+        "top_k": top_k
     }
-    out = ""
-    response = graph.invoke(input_state, config=config)
+
+    if model_name == 'vanilla':
+        response = graph.invoke(input_state, config=config)
+    else:
+        response = graph2.invoke(input_state, config=config)
 
     print("Response:", response)
 
