@@ -36,7 +36,7 @@ st.sidebar.title("D&D Dungeon Master")
 page = st.sidebar.radio("Go to", ["Character Creator", "DM Chat"])
 cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
 
-def chat_stream(user_input, model_name):
+def chat_stream(user_input, model_name, temperature, top_k, top_p):
     # temp_prompt = PromptTemplate(
     #     input_variables=["context", "question"],
     #     template="""
@@ -55,7 +55,7 @@ def chat_stream(user_input, model_name):
     #     chain_type_kwargs={"prompt": temp_prompt}
     # )
 
-    response = model_loader.generate_response(cur_player, user_input[-1]['content'])
+    response = model_loader.generate_response(cur_player, user_input[-1]['content'], temperature, top_p, top_k, model_name)
     # Temporarily generate from same model
     # if model_name == 'vanilla':
     #     response = temp_qa_chain.run(user_input[-1]['content'])
@@ -136,18 +136,16 @@ elif page == 'DM Chat':
                 st.write(prompt)
             st.session_state['history'].append({"role": "user", "content": prompt})
 
-            res = chat_stream(st.session_state['history'], "vanilla")
-
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown("**Model A**")
                 with st.chat_message("assistant"):
-                    res_a = st.write_stream(res)
+                    res_a = st.write_stream(chat_stream(st.session_state['history'], "vanilla", temperature, top_k, top_p))
                 
             with col2:
                 st.markdown("**Model B**")
                 with st.chat_message("assistant"):
-                    res_b = st.write_stream(res)
+                    res_b = st.write_stream(chat_stream(st.session_state['history'], "trained", temperature, top_k, top_p))
             
             st.session_state['last_interaction'] = (prompt, res_a, res_b)
             
