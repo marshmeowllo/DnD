@@ -224,9 +224,9 @@ class LlamaChat():
             "When you answer the player, you must respond in proper markdown format: heading, table, bold, italic, paragraph, blockquotes.\n"
         )
 
-        print('State:', state)
-        print('Context:', state["context"])
-        print('Generating response ...')
+        # print('State:', state)
+        # print('Context:', state["context"])
+        # print('Generating response ...')
 
         conversation_messages = [
             message
@@ -269,23 +269,6 @@ graph.add_edge("chatbot", END)
 
 graph = graph.compile(checkpointer=memory)
 
-memory2 = MemorySaver()
-
-graph2 = StateGraph(State)
-
-graph2.add_edge(START, "tool call2")
-graph2.add_node("tool call2", tool)
-
-graph2.add_edge("tool call2", "chatbot2")
-
-graph2.add_node("chatbot2", chatbot)
-graph2.add_edge("chatbot2", END)
-
-graph2 = graph2.compile(checkpointer=memory)
-
-thread_id = uuid.uuid4()
-config = {"configurable": {"thread_id": "123"}}
-
 def generate_response(player_name, prompt, temperature, top_p, top_k, model_name):
     text = f"<|start_header_id|>{player_name}<|end_header_id|>\n{prompt}<|eot_id|>"
 
@@ -301,10 +284,10 @@ def generate_response(player_name, prompt, temperature, top_p, top_k, model_name
     }
 
     if model_name == 'vanilla':
-        response = graph.invoke(input_state, config=config)
+        response = graph.invoke(input_state, config={"configurable": {"thread_id": uuid.uuid4()}})
     else:
-        response = graph2.invoke(input_state, config=config)
+        response = graph.invoke(input_state, config={"configurable": {"thread_id": uuid.uuid4()}})
 
-    print("Response:", response)
+    # print("Response:", response)
 
     return response['messages'][-1].content
