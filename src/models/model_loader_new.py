@@ -25,16 +25,16 @@ from lightning import Fabric
 from IPython.display import display, Image
 from langchain_core.tools import tool
 import streamlit as st
-from langchain_google_genai import ChatGoogleGenerativeAI
+
+from src.utils.initialization import load_llm
 
 # torch.set_float32_matmul_precision("medium")
 # fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
 # device = fabric.device
 # fabric.launch()
 
-# embed_model_name = "sentence-transformers/all-mpnet-base-v2"
-embeddings = HuggingFaceEmbeddings(model_name="Alibaba-NLP/gte-modernbert-base",model_kwargs={'trust_remote_code': True})
-# embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
+embed_model_name = "sentence-transformers/all-mpnet-base-v2"
+embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
 
 vector_store = FAISS.load_local(
     "./examples/faiss_spell_index",
@@ -116,7 +116,7 @@ class ToolCalling():
         # )
         # self._llm = HuggingFacePipeline(pipeline=self.pipe)
         # self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
-        self.chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
+        self.chat = load_llm()
 
         self.rendered_tools = [convert_to_openai_tool(f) for f in tools]
 
@@ -208,7 +208,7 @@ class LlamaChat():
         #     device_map="auto"
         # )
         # self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
+        self.chat = load_llm()
 
     def generate(self, state: State) -> Dict[str, Any]:
         system_message_content = (
