@@ -25,3 +25,10 @@ def load_llm():
         google_api_keys=os.getenv('GOOGLE_API_KEY'),
         temperature=0.7
     )
+
+@st.cache_data
+def load_players():
+    temp = []
+    for doc in st.session_state['vectorstore'].docstore._dict.values():
+        temp.append(doc.metadata['player'])
+    return temp
