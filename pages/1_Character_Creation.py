@@ -23,7 +23,8 @@ with st.form("new_character_form"):
             content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}\nLevel: 1"
             doc = Document(page_content=content, metadata={"player": player_name, "name": char_name})
             st.session_state['vectorstore'].add_documents([doc])
-            st.session_state['players'].append(player_name)
+            if player_name not in st.session_state['players']:
+                st.session_state['players'].append(player_name)
             st.success(f"Character {char_name} of {player_name} added to memory")
 
 st.subheader("Characters")
