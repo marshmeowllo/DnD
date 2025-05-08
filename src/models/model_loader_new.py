@@ -1,6 +1,7 @@
 import torch
 import uuid
 import streamlit as st
+import os
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
@@ -27,13 +28,14 @@ from langchain_core.tools import tool
 
 from tools import *
 
-torch.set_float32_matmul_precision("medium")
-fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
-device = fabric.device
-fabric.launch()
+from src.utils.initialization import load_llm
+
+# torch.set_float32_matmul_precision("medium")
+# fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
+# device = fabric.device
+# fabric.launch()
 
 embed_model_name = "sentence-transformers/all-mpnet-base-v2"
-
 embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
 
 vector_store = FAISS.load_local(
@@ -90,6 +92,9 @@ class State(TypedDict):
     name: str
     messages: Annotated[list[AnyMessage], add_messages]
     context: str
+    temperature: float
+    top_p: float
+    top_k: int
 
 class ToolCallRequest(TypedDict):
     """A typed dict that shows the inputs into the invoke_tool function."""
@@ -99,20 +104,22 @@ class ToolCallRequest(TypedDict):
 
 class ToolCalling():
     def __init__(self, model_name: str, tools: list[BaseTool]):
-        self.model_name = model_name
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
-        self.pipe = pipeline(
-            task="text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            return_full_text=False,
-            max_new_tokens=512,
-            top_k=10,
-            device_map="auto"
-        )
-        self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        # self.model_name = model_name
+        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        # self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
+        # self.pipe = pipeline(
+        #     task="text-generation",
+        #     model=self.model,
+        #     tokenizer=self.tokenizer,
+        #     return_full_text=False,
+        #     max_new_tokens=512,
+        #     top_k=10,
+        #     device_map="auto"
+        # )
+        # self._llm = HuggingFacePipeline(pipeline=self.pipe)
+        # self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        self.chat = load_llm()
+
         self.rendered_tools = [convert_to_openai_tool(f) for f in tools]
 
     def invoke_tool(
@@ -190,20 +197,20 @@ tool_calling = ToolCalling(
 
 class LlamaChat():
     def __init__(self, model_name: str):
-        self.model_name = model_name
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, load_in_4bit=True)
-        self.pipe = pipeline(
-            task="text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            return_full_text=False,
-            max_new_tokens=2048,
-            top_k=10,
-            device_map="auto"
-        )
-        self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        # self.model_name = model_name
+        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        # self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, load_in_4bit=True)
+        # self.pipe = pipeline(
+        #     task="text-generation",
+        #     model=self.model,
+        #     tokenizer=self.tokenizer,
+        #     return_full_text=False,
+        #     max_new_tokens=2048,
+        #     top_k=10,
+        #     device_map="auto"
+        # )
+        # self._llm = HuggingFacePipeline(pipeline=self.pipe)
+        self.chat = load_llm()
 
     def generate(self, state: State) -> Dict[str, Any]:
         system_message_content = (
@@ -219,9 +226,9 @@ class LlamaChat():
             "When you answer the player, you must respond in proper markdown format: heading, table, bold, italic, paragraph, blockquotes.\n"
         )
 
-        print('State:', state)
-        print('Context:', state["context"])
-        print('Generating response ...')
+        # print('State:', state)
+        # print('Context:', state["context"])
+        # print('Generating response ...')
 
         conversation_messages = [
             message
@@ -232,6 +239,10 @@ class LlamaChat():
 
         prompt = [SystemMessage(system_message_content)] + conversation_messages
 
+        # chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer, pipeline_kwargs={ "temperature": state['temperature'], "top_k": state['top_k'], "top_p": state['top_p']})
+        # chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
+
+        # response = chat.invoke(prompt)
         response = self.chat.invoke(prompt)
         
         return {"messages": [response]}
@@ -260,15 +271,7 @@ graph.add_edge("chatbot", END)
 
 graph = graph.compile(checkpointer=memory)
 
-try:
-    display(Image(graph.get_graph().draw_mermaid_png()))
-except Exception:
-    pass
-
-thread_id = uuid.uuid4()
-config = {"configurable": {"thread_id": "123"}}
-
-def generate_response(player_name, prompt):
+def generate_response(player_name, prompt, temperature, top_p, top_k, model_name):
     text = f"<|start_header_id|>{player_name}<|end_header_id|>\n{prompt}<|eot_id|>"
 
     input_state = {
@@ -276,11 +279,17 @@ def generate_response(player_name, prompt):
         "messages": [
             HumanMessage(content=text)
         ],
-        "context": ""
+        "context": "",
+        "temperature": temperature,
+        "top_p": top_p,
+        "top_k": top_k
     }
-    out = ""
-    response = graph.invoke(input_state, config=config)
 
-    print("Response:", response)
+    if model_name == 'vanilla':
+        response = graph.invoke(input_state, config={"configurable": {"thread_id": uuid.uuid4()}})
+    else:
+        response = graph.invoke(input_state, config={"configurable": {"thread_id": uuid.uuid4()}})
+
+    # print("Response:", response)
 
     return response['messages'][-1].content
