@@ -1,11 +1,9 @@
 import torch
-import uuid
-import os
+import streamlit as st
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-from langchain.vectorstores import FAISS
-from langchain_huggingface import HuggingFacePipeline, HuggingFaceEmbeddings, ChatHuggingFace
+from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
 from langchain.tools import tool
 
 from langchain.schema import AIMessage, HumanMessage
@@ -15,76 +13,18 @@ from langchain_core.runnables import RunnableConfig
 from langchain_core.tools import BaseTool
 from langchain_core.utils.function_calling import convert_to_openai_tool
 
-from langgraph.graph import START, END, StateGraph
 from langgraph.graph.message import add_messages
-from langgraph.checkpoint.memory import MemorySaver
 
 from typing import Annotated, Any, Dict, Optional, TypedDict, Union, List
 from lightning import Fabric
 
-from IPython.display import display, Image
-from langchain_core.tools import tool
-import streamlit as st
-
+from src.tools.tools import spell_retrieve, user
 from src.utils.initialization import load_llm
 
 # torch.set_float32_matmul_precision("medium")
 # fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
 # device = fabric.device
 # fabric.launch()
-
-embed_model_name = "sentence-transformers/all-mpnet-base-v2"
-embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
-
-vector_store = FAISS.load_local(
-    "./examples/faiss_spell_index",
-    embeddings=embeddings,
-    allow_dangerous_deserialization=True
-)
-
-@tool
-def spell_retrieve(query: str) -> str:
-    """Retrieve information about dungeons and dragons spell.
-    
-    Args:
-        query (str): The spell name to search for.
-
-    Returns:
-        str: The spell information.
-    """
-    retrieved_docs = vector_store.similarity_search(query, k=3)
-
-    contents = "\n\n".join(
-        (f"{doc.page_content}")
-        for doc in retrieved_docs
-    )
-    
-    return contents
-
-@tool
-def user(name: str) -> str:
-    """
-    User infomation retreiver
-
-    Args:
-        name (str): The name of user.
-
-    Returns:
-        str: The user information.
-    """
-    retrieved_docs = st.session_state['vectorstore'].similarity_search(name, k=3)
-
-    contents = "\n\n".join(
-        (f"{doc.page_content}")
-        for doc in retrieved_docs
-    )
-    
-    return contents
-
-tools = [
-    spell_retrieve,
-    user
-]
 
 class State(TypedDict):
     name: str
@@ -99,6 +39,8 @@ class ToolCallRequest(TypedDict):
 
     name: str
     arguments: Dict[str, Any]
+
+tools=[spell_retrieve, user]
 
 class ToolCalling():
     def __init__(self, model_name: str, tools: list[BaseTool]):
@@ -186,13 +128,6 @@ class ToolCalling():
         
         return {"context": AIMessage(response)}
 
-tool_calling_model_name = "Salesforce/Llama-xLAM-2-8b-fc-r"
-
-tool_calling = ToolCalling(
-    model_name=tool_calling_model_name,
-    tools=tools
-)
-
 class LlamaChat():
     def __init__(self, model_name: str):
         # self.model_name = model_name
@@ -238,36 +173,17 @@ class LlamaChat():
         prompt = [SystemMessage(system_message_content)] + conversation_messages
 
         # chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer, pipeline_kwargs={ "temperature": state['temperature'], "top_k": state['top_k'], "top_p": state['top_p']})
-        # chat = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001", google_api_keys=os.getenv('GOOGLE_API_KEY'),  temperature=0.7)
 
         # response = chat.invoke(prompt)
         response = self.chat.invoke(prompt)
         
         return {"messages": [response]}
-    
-llama_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
-
-llama = LlamaChat(model_name=llama_model_name)
 
 def tool(state: State):
-    return tool_calling.invoke(state)
+    return st.session_state['tool_calling'].invoke(state)
 
 def chatbot(state: State) -> str:
-    return llama.generate(state=state)
-
-memory = MemorySaver()
-
-graph = StateGraph(State)
-
-graph.add_edge(START, "tool call")
-graph.add_node("tool call", tool)
-
-graph.add_edge("tool call", "chatbot")
-
-graph.add_node("chatbot", chatbot)
-graph.add_edge("chatbot", END)
-
-graph = graph.compile(checkpointer=memory)
+    return st.session_state['llama'].generate(state=state)
 
 def generate_response(player_name, prompt, temperature, top_p, top_k, model_name):
     text = f"<|start_header_id|>{player_name}<|end_header_id|>\n{prompt}<|eot_id|>"
@@ -283,11 +199,6 @@ def generate_response(player_name, prompt, temperature, top_p, top_k, model_name
         "top_k": top_k
     }
 
-    if model_name == 'vanilla':
-        response = graph.invoke(input_state, config={"configurable": {"thread_id": uuid.uuid4()}})
-    else:
-        response = graph.invoke(input_state, config={"configurable": {"thread_id": uuid.uuid4()}})
-
-    # print("Response:", response)
+    response = st.session_state['graph'].invoke(input_state, config={"configurable": {"thread_id": model_name}})
 
     return response['messages'][-1].content

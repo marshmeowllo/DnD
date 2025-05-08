@@ -32,3 +32,13 @@ def load_players():
     for doc in st.session_state['vectorstore'].docstore._dict.values():
         temp.append(doc.metadata['player'])
     return temp
+
+@st.cache_resource
+def init_spellstore():
+    embed_model_name = "sentence-transformers/all-mpnet-base-v2"
+    embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
+    return FAISS.load_local(
+        "./examples/faiss_spell_index",
+        embeddings=embeddings,
+        allow_dangerous_deserialization=True
+    )
