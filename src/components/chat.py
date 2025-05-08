@@ -30,6 +30,7 @@ def _finalize_vote(chosen_res):
     st.session_state['history'].append({"role": "assistant", "content": chosen_res})
     st.session_state['last_vote_submitted'] = True
     st.session_state['last_interaction'] = None
+    # st.session_state['memory'].get()
     st.rerun()
 
 def show_vote_ui():
