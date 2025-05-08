@@ -1,5 +1,6 @@
 import torch
 import uuid
+import streamlit as st
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
@@ -23,7 +24,8 @@ from lightning import Fabric
 
 from IPython.display import display, Image
 from langchain_core.tools import tool
-import streamlit as st
+
+from tools import *
 
 torch.set_float32_matmul_precision("medium")
 fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
@@ -234,7 +236,7 @@ class LlamaChat():
         
         return {"messages": [response]}
     
-llama_model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
+llama_model_name = "meta-llama/Llama-3.1-8B-Instruct"
 
 llama = LlamaChat(model_name=llama_model_name)
 
