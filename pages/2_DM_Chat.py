@@ -1,9 +1,10 @@
 import streamlit as st
 from src.components.chat import handle_model_history, show_vote_ui
 from src.components.sidebar import render_sidebar
-import src.models.model_loader_new as model_loader
 from config import CHAT_STREAM_DELAY
 import time
+
+from src.models.model import generate_response
 
 st.header('Dungeons and Dragons', divider="gray")
 
@@ -19,7 +20,7 @@ cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
 temperature, top_p, top_k = render_sidebar(st.session_state)
 
 def chat_stream(user_input, model_name, temperature, top_k, top_p):
-    response = model_loader.generate_response(cur_player, user_input[-1]['content'], temperature, top_p, top_k, model_name)
+    response = generate_response(cur_player, user_input[-1]['content'], temperature, top_p, top_k, model_name)
 
     for char in response:
         yield char
