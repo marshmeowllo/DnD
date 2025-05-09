@@ -1,8 +1,9 @@
 import torch
+import os
 import streamlit as st
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-from peft import PeftModelForCausalLM
+from peft import PeftModelForCausalLM, PeftModel
 
 from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
 from langchain.tools import tool
@@ -131,13 +132,28 @@ class ToolCalling():
 
 class LlamaChat():
     def __init__(self, model_name: str):
-        if model_name == 'bestRL':
-            self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3-8B-Instruct')
-            model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
-            self.model = PeftModelForCausalLM.from_pretrained(model, 'weights/'+"bestRL")
-        elif model_name == 'vanilla':
-            self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3-8B-Instruct')
-            self.model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
+        # print("================================================")
+        # print(os.getcwd())
+        # print(os.listdir('src/models/weights/bestRL'))
+        # print("================================================")
+        match model_name:
+            case 'SFT_Yuaylong':
+                self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.1-8B-Instruct')
+                model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3.1-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
+                self.model = PeftModel.from_pretrained(self.model, './src/models/weights/SFT_Yuaylong')
+                self.model = self.model.merge_and_unload()
+            case 'bestRL':
+                self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct')
+                model = AutoModelForCausalLM.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
+                self.model = PeftModelForCausalLM.from_pretrained(model, './src/models/weights/bestRL')
+            case 'vanilla':
+                self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct')
+                self.model = AutoModelForCausalLM.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
+            case 'SFT_RL_V1_Son':
+                self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.1-8B-Instruct')
+                self.model = AutoModelForCausalLM.from_pretrained('./src/models/weights/SFT_RL_V1_Son', torch_dtype=torch.bfloat16, load_in_4bit=True)
+            case _:
+                raise ValueError(f"Model name {model_name} not recognized. Please use 'SFT_Yuaylong', 'bestRL', or 'vanilla'.")
 
         self.pipe = pipeline(
             task="text-generation",
@@ -149,7 +165,6 @@ class LlamaChat():
             device_map="auto"
         )
         self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        # self.chat = load_llm(model_name)
 
     def generate(self, state: State) -> Dict[str, Any]:
         system_message_content = (
@@ -160,21 +175,37 @@ class LlamaChat():
             "\n"
             "Advice for the DM:\n"
             "  - Describe scenes with vivid sensory details and atmosphere.\n"
-            "  - Always offer meaningful choices; respect player agency and avoid railroading.\n"
+            "  - Offer meaningful choices if players ask for choices; respect player agency and avoid railroading.\n"
             "  - Keep secret die rolls hidden; reveal only the results and their effects.\n"
             "  - Use rules faithfully but prioritize fun and pacing over strict book-keeping.\n"
             "  - Improvise when players surprise you, but maintain internal consistency.\n"
             "  - Avoid technical jargon in your narration—stay in character and tone.\n"
             "\n"
             "Basic D&D 5e Rules Summary:\n"
-            "  - Initiative: roll a d20 + Dexterity modifier to determine turn order. :contentReference[oaicite:0]{index=0}\n"
-            "  - Actions: on your turn you can take one Action, one Bonus Action (if available), and move up to your speed. :contentReference[oaicite:1]{index=1}\n"
-            "  - Reactions: special actions triggered outside your turn, such as Opportunity Attacks. :contentReference[oaicite:2]{index=2}\n"
-            "  - Advantage & Disadvantage: roll two d20s; take the higher roll for advantage or the lower for disadvantage. :contentReference[oaicite:3]{index=3}\n"
-            "  - Spellcasting: consumes spell slots; cantrips are cast at will; concentration holds one spell at a time. :contentReference[oaicite:4]{index=4}\n"
-            "\n"
+            "  - Initiative: roll a d20 + Dexterity modifier to determine turn order.\n"
+            "  - Actions: on your turn you can take one Action, one Bonus Action (if available), and move up to your speed.\n"
+            "  - Reactions: special actions triggered outside your turn, such as Opportunity Attacks.\n"
+            "  - Advantage & Disadvantage: roll two d20s; take the higher roll for advantage or the lower for disadvantage.\n"
+            "  - Spellcasting: consumes spell slots; cantrips are cast at will; concentration holds one spell at a time.\n\n"
+            "Campaign detail:\n"
+            "At the heart of Barovia, a land shrouded in perpetual mist and the oppressive gloom of Castle Ravenloft looming above, the adventurers find themselves trapped within the cursed domain of Strahd.\n"
+            "The infamous vampire lord Strahd von Zarovich rules with iron and blood, his tragic past entwined with dark magic and unrequited love.\n"
+            "The party’s destiny is guided by a cryptic Tarokka deck reading from Madam Eva, randomizing the locations of three powerful artifacts—the Sunsword, the Tome of Strahd, and the Holy Symbol of Ravenkind—to set the stakes for their final confrontation.\n"
+            "Early survival often hinges on navigating the deathly Svalich Woods, where sentient trees and wendigos prowl, and entering the perilous Death House to learn that not all horrors are undead.\n"
+            "In the Village of Barovia, the PCs meet Ismark and Ireena Kolyana—siblings haunted by Strahd’s obsession—and may face a night assault in the graveyard by the vampire himself.\n"
+            "As they pursue their quest, they reach Vallaki’s forced festivals of joy, unmasking Baron Vallakovich’s dark secrets beneath the town’s brittle gaiety. :\n"
+            "The modular nature of the land allows for side trips to Argynvostholt’s haunted halls, Van Richten’s Tower of mad experimentation, and the haunted Ruins of Berez—each offering unique encounters like the Abbot’s twisted deva or Baba Lysaga’s creeping hut. :\n"
+            "A crucial detour to the Wizard of Wines winery leads through Yester Hill, where twig blights and corrupted druids guard a dark gem needed to lift the vineyard’s curse. :\n"
+            "At their journey’s culmination, the PCs storm Castle Ravenloft’s shadowed halls, confront Strahd amid gothic spires, and challenge his vampire spawn and brides in a climactic battle for Barovia’s freedom. :\n"
+            "The module’s gothic ambiance is enriched by haunting music cues, Tarokka card handouts, and richly illustrated maps that deepen immersion in Barovia’s despair. :\n"
             "This is the retrieved context:\n\n"
             f"{state['context']}\n\n"
+            "You must follow the these rules strictly\n\n "
+            "1. DO NOT simulate the result of player\'s actions.\n\n"
+            "2.Do not include <CHARACTER>.\n\n"
+            "3.Use the context provided.\n\n"
+            "YOU MUST ALSO USE these current game state data :"
+            "Current location: Vallaki’s forced festivals of joy"
             "When you answer the player, you must respond in proper markdown format: heading, table, bold, italic, paragraph, blockquotes.\n"
         )
 
@@ -198,9 +229,6 @@ class LlamaChat():
         
         return {"messages": [response]}
     
-llama_model_name = "meta-llama/Llama-3.1-8B-Instruct"
-llama = LlamaChat(model_name=llama_model_name)
-
 def tool(state: State):
     return st.session_state['tool_calling'].invoke(state)
 
