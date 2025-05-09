@@ -21,6 +21,9 @@ from lightning import Fabric
 from src.tools.tools import spell_retrieve, user
 from src.utils.initialization import load_llm
 
+from langgraph.checkpoint.memory import MemorySaver
+from langgraph.graph import START, END, StateGraph
+
 # torch.set_float32_matmul_precision("medium")
 # fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
 # device = fabric.device
@@ -197,6 +200,18 @@ def tool(state: State):
 
 def chatbot(state: State) -> str:
     return st.session_state['llama'].generate(state=state)
+
+def change_model():
+    st.session_state['history'] = []
+    
+    st.session_state['memory'] = MemorySaver()
+    graph = StateGraph(State)
+    graph.add_edge(START, "tool call")
+    graph.add_node("tool call", tool)
+    graph.add_edge("tool call", "chatbot")
+    graph.add_node("chatbot", chatbot)
+    graph.add_edge("chatbot", END)
+    st.session_state['graph'] = graph.compile(checkpointer=st.session_state['memory'])
 
 def generate_response(player_name, prompt, temperature, top_p, top_k, model_name):
     text = f"<|start_header_id|>{player_name}<|end_header_id|>\n{prompt}<|eot_id|>"
