@@ -5,6 +5,13 @@ from src.utils.character import create_character_doc, roll_ability_scores
 
 st.header('Create a New Character', divider='gray')
 
+if 'vectorstore' not in st.session_state:
+    st.error("Session state not initialized. Please return to the main page.")
+    st.stop()
+
+if 'players' not in st.session_state:
+    st.session_state['players'] = []
+
 with st.form("new_character_form"):
     player_name = st.text_input("Player Name")
     char_name = st.text_input("Character Name")
