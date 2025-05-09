@@ -29,7 +29,7 @@ def load_llm(model_name):
 def load_players():
     temp = []
     for doc in st.session_state['vectorstore'].docstore._dict.values():
-        temp.append(doc.metadata['player'])
+        temp.append(doc.metadata['name'])
     return temp
 
 @st.cache_resource
