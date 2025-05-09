@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_huggingface import HuggingFaceEmbeddings
 import faiss
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_community.docstore.in_memory import InMemoryDocstore
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
@@ -18,7 +18,7 @@ def init_vectorstore(_embedding):
 @st.cache_resource
 def init_dndstore(_embedding):
     return FAISS.load_local(
-        "./examples/faiss_dnd_index",
+        "examples/faiss_dnd_index",
         embeddings=_embedding,
         allow_dangerous_deserialization=True
     )
