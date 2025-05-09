@@ -3,9 +3,10 @@ from src.components.sidebar import render_sidebar
 from config import CHAT_STREAM_DELAY
 import time
 
-from src.models.model import change_model, generate_response
+from src.models.model import generate_response
 from src.models.model import LlamaChat, ToolCalling
 from src.tools.tools import spell_retrieve, user
+from src.utils.graph_builder import change_model
 
 MODEL_MAP = {"Model A": "gemini-2.0-flash-001", "Model B": "gemini-1.5-flash", "Model C": "gemini-1.5-flash-8b"}
 
