@@ -10,13 +10,6 @@ MODEL_MAP = {"Model A": "trained", "Model B": "trained", "Model C": "vanilla"}
 
 st.header('Dungeons and Dragons', divider="gray")
 
-n = len(st.session_state['history'])
-for i, msg in enumerate(st.session_state['history']):
-    if not st.session_state['last_vote_submitted'] and i == n -2:
-        break
-    with st.chat_message(msg['role']):
-        st.write(msg['content'])
-
 st.sidebar.title("D&D Dungeon Master")
 cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
 model_choice = st.sidebar.selectbox("Choose a model", ["Model A", "Model B", "Model C"])
@@ -41,7 +34,7 @@ else:
     if prompt := st.chat_input("Say something"):
         with st.chat_message("user"):
             st.write(f"{cur_player}: " + prompt)
-            
+
         st.session_state['history'].append({"role": "user", "content": prompt})
 
         with st.chat_message("assistant"):

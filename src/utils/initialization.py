@@ -26,7 +26,6 @@ def load_llm():
         temperature=0.7
     )
 
-@st.cache_data
 def load_players():
     temp = []
     for doc in st.session_state['vectorstore'].docstore._dict.values():
