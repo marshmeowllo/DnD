@@ -4,8 +4,7 @@ from langgraph.graph import START, END, StateGraph
 from langgraph.checkpoint.memory import MemorySaver
 
 from config import MODEL_MAP
-from src.models.model import LlamaChat, ToolCalling, State, tool, chatbot
-from src.tools.tools import spell_retrieve, user
+from src.models.model import LlamaChat, State, tool, chatbot
 
 def build_graph(memory):
     graph = StateGraph(State)
@@ -19,7 +18,6 @@ def build_graph(memory):
 def init_models(model_choice: str):
     model_name = MODEL_MAP[model_choice]
     st.session_state['history'] = []
-    st.session_state['tool_calling'] = ToolCalling(model_name=model_name, tools=[spell_retrieve, user])
     st.session_state['llama'] = LlamaChat(model_name=model_name)
     st.session_state['memory'] = MemorySaver()
     st.session_state['graph'] = build_graph(st.session_state['memory'])

@@ -2,6 +2,8 @@ import streamlit as st
 
 from langgraph.checkpoint.memory import MemorySaver
 
+from src.models.model import ToolCalling
+from src.tools.tools import spell_retrieve, user
 from src.utils.graph_builder import build_graph
 from src.utils.initialization import init_vectorstore, load_embeddings, load_players
 
@@ -22,3 +24,6 @@ def init_session_state():
     if "graph" not in st.session_state:
         st.session_state['memory'] = MemorySaver()
         st.session_state['graph'] = build_graph(st.session_state['memory'])
+
+    if "tool_calling" not in st.session_state:
+        st.session_state['tool_calling'] = ToolCalling(model_name="Salesforce/Llama-xLAM-2-8b-fc-r", tools=[spell_retrieve, user])

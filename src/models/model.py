@@ -1,20 +1,17 @@
 import torch
-import uuid
 import streamlit as st
-import os
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+from peft import PeftModelForCausalLM
 
 from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
 from langchain.tools import tool
-
 from langchain.schema import AIMessage, HumanMessage
 from langchain_core.messages import SystemMessage, AnyMessage
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import RunnableConfig
 from langchain_core.tools import BaseTool
 from langchain_core.utils.function_calling import convert_to_openai_tool
-
 from langgraph.graph.message import add_messages
 
 from typing import Annotated, Any, Dict, Optional, TypedDict, Union, List
@@ -26,10 +23,10 @@ from langchain_core.tools import tool
 from src.tools.tools import spell_retrieve, user
 from src.utils.initialization import load_llm
 
-# torch.set_float32_matmul_precision("medium")
-# fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
-# device = fabric.device
-# fabric.launch()
+torch.set_float32_matmul_precision("medium")
+fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
+device = fabric.device
+fabric.launch()
 
 class State(TypedDict):
     name: str
@@ -49,21 +46,20 @@ tools=[spell_retrieve, user]
 
 class ToolCalling():
     def __init__(self, model_name: str, tools: list[BaseTool]):
-        # self.model_name = model_name
-        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        # self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
-        # self.pipe = pipeline(
-        #     task="text-generation",
-        #     model=self.model,
-        #     tokenizer=self.tokenizer,
-        #     return_full_text=False,
-        #     max_new_tokens=512,
-        #     top_k=10,
-        #     device_map="auto"
-        # )
-        # self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        # self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
-        self.chat = load_llm(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
+        self.pipe = pipeline(
+            task="text-generation",
+            model=self.model,
+            tokenizer=self.tokenizer,
+            return_full_text=False,
+            max_new_tokens=512,
+            top_k=10,
+            device_map="auto"
+        )
+        self._llm = HuggingFacePipeline(pipeline=self.pipe)
+        self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
+        # self.chat = load_llm(model_name)
 
         self.rendered_tools = [convert_to_openai_tool(f) for f in tools]
 
@@ -135,20 +131,25 @@ class ToolCalling():
 
 class LlamaChat():
     def __init__(self, model_name: str):
-        # self.model_name = model_name
-        # self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        # self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, load_in_4bit=True)
-        # self.pipe = pipeline(
-        #     task="text-generation",
-        #     model=self.model,
-        #     tokenizer=self.tokenizer,
-        #     return_full_text=False,
-        #     max_new_tokens=2048,
-        #     top_k=10,
-        #     device_map="auto"
-        # )
-        # self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = load_llm(model_name)
+        if model_name == 'bestRL':
+            self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3-8B-Instruct')
+            model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
+            self.model = PeftModelForCausalLM.from_pretrained(model, 'weights/'+"bestRL")
+        elif model_name == 'vanilla':
+            self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3-8B-Instruct')
+            self.model = AutoModelForCausalLM.from_pretrained('meta-llama/Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
+
+        self.pipe = pipeline(
+            task="text-generation",
+            model=self.model,
+            tokenizer=self.tokenizer,
+            return_full_text=False,
+            max_new_tokens=2048,
+            top_k=10,
+            device_map="auto"
+        )
+        self._llm = HuggingFacePipeline(pipeline=self.pipe)
+        # self.chat = load_llm(model_name)
 
     def generate(self, state: State) -> Dict[str, Any]:
         system_message_content = (
@@ -190,10 +191,10 @@ class LlamaChat():
 
         prompt = [SystemMessage(system_message_content)] + conversation_messages
 
-        # chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer, pipeline_kwargs={ "temperature": state['temperature'], "top_k": state['top_k'], "top_p": state['top_p']})
+        chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer, pipeline_kwargs={ "temperature": state['temperature'], "top_k": state['top_k'], "top_p": state['top_p']})
 
-        # response = chat.invoke(prompt)
-        response = self.chat.invoke(prompt)
+        response = chat.invoke(prompt)
+        # response = self.chat.invoke(prompt)
         
         return {"messages": [response]}
     
