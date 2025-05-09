@@ -19,9 +19,9 @@ def init_vectorstore(_embedding):
     return FAISS(embedding_function=_embedding, index=index, docstore=InMemoryDocstore(), index_to_docstore_id={})
 
 @st.cache_resource
-def load_llm():
+def load_llm(model_name):
     return ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash-001",
+        model=model_name,
         google_api_keys=os.getenv('GOOGLE_API_KEY'),
         temperature=0.7
     )

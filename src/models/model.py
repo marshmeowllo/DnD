@@ -58,7 +58,7 @@ class ToolCalling():
         # )
         # self._llm = HuggingFacePipeline(pipeline=self.pipe)
         # self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
-        self.chat = load_llm()
+        self.chat = load_llm(model_name)
 
         self.rendered_tools = [convert_to_openai_tool(f) for f in tools]
 
@@ -143,7 +143,7 @@ class LlamaChat():
         #     device_map="auto"
         # )
         # self._llm = HuggingFacePipeline(pipeline=self.pipe)
-        self.chat = load_llm()
+        self.chat = load_llm(model_name)
 
     def generate(self, state: State) -> Dict[str, Any]:
         system_message_content = (
