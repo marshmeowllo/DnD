@@ -18,7 +18,7 @@ def init_vectorstore(_embedding):
 @st.cache_resource
 def init_dndstore(_embedding):
     return FAISS.load_local(
-        "examples/faiss_dnd_index",
+        "~/DnD/examples/faiss_dnd_index",
         embeddings=_embedding,
         allow_dangerous_deserialization=True
     )
