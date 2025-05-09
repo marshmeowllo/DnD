@@ -4,3 +4,4 @@ CHARACTER_RACES = ["Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "
 CHARACTER_BACKGROUND = ["Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin"]
 CHARACTER_STARTING_STATS = [15, 14, 13, 12, 10, 8]
 DEFAULT_LEVEL = 1
+MODEL_MAP = {"Model A": "gemini-2.0-flash-001", "Model B": "gemini-1.5-flash", "Model C": "gemini-1.5-flash-8b"}

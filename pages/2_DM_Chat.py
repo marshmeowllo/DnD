@@ -1,28 +1,25 @@
 import streamlit as st
-from src.components.sidebar import render_sidebar
-from config import CHAT_STREAM_DELAY
 import time
 
+from config import CHAT_STREAM_DELAY, MODEL_MAP
+from src.components.sidebar import render_sidebar
 from src.models.model import generate_response
-from src.models.model import LlamaChat, ToolCalling
-from src.tools.tools import spell_retrieve, user
-from src.utils.graph_builder import change_model
-
-MODEL_MAP = {"Model A": "gemini-2.0-flash-001", "Model B": "gemini-1.5-flash", "Model C": "gemini-1.5-flash-8b"}
+from src.utils.model_utils import init_models
 
 st.header('Dungeons and Dragons', divider="gray")
 
-if 'players' not in st.session_state or 'history' not in st.session_state:
+if 'players' not in st.session_state:
     st.error("Session state not initialized. Please go back to the home page.")
     st.stop()
 
 st.sidebar.title("D&D Dungeon Master")
 cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
-model_choice = st.sidebar.selectbox("Choose a model", ["Model A", "Model B", "Model C"], on_change=change_model)
+model_choice = st.sidebar.selectbox("Choose a model", ["Model A", "Model B", "Model C"])
 temperature, top_p, top_k = render_sidebar(st.session_state)
 
-st.session_state['tool_calling'] = ToolCalling(model_name=MODEL_MAP[model_choice], tools=[spell_retrieve, user])
-st.session_state['llama'] = LlamaChat(model_name=MODEL_MAP[model_choice])
+if 'model_choice' not in st.session_state or st.session_state['model_choice'] != model_choice:
+    st.session_state['model_choice'] = model_choice
+    init_models(model_choice)
     
 def chat_stream(user_input, model_name, temperature, top_k, top_p):
     response = generate_response(cur_player, user_input, temperature, top_p, top_k, model_name)
