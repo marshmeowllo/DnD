@@ -8,15 +8,20 @@ import os
 
 @st.cache_resource
 def load_embeddings():
-    return HuggingFaceEmbeddings(
-        model_name="Alibaba-NLP/gte-modernbert-base",
-        model_kwargs={'trust_remote_code': True}
-    )
+    return HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 
 @st.cache_resource
 def init_vectorstore(_embedding):
     index = faiss.IndexFlatL2(len(_embedding.embed_query("test")))
     return FAISS(embedding_function=_embedding, index=index, docstore=InMemoryDocstore(), index_to_docstore_id={})
+
+@st.cache_resource
+def init_dndstore(_embedding):
+    return FAISS.load_local(
+        "./examples/faiss_dnd_index",
+        embeddings=_embedding,
+        allow_dangerous_deserialization=True
+    )
 
 @st.cache_resource
 def load_llm(model_name):
@@ -31,13 +36,3 @@ def load_players():
     for doc in st.session_state['vectorstore'].docstore._dict.values():
         temp.append(doc.metadata['name'])
     return temp
-
-@st.cache_resource
-def init_spellstore():
-    embed_model_name = "sentence-transformers/all-mpnet-base-v2"
-    embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
-    return FAISS.load_local(
-        "./examples/faiss_spell_index",
-        embeddings=embeddings,
-        allow_dangerous_deserialization=True
-    )
