@@ -12,6 +12,10 @@ MODEL_MAP = {"Model A": "gemini-2.0-flash-001", "Model B": "gemini-1.5-flash", "
 
 st.header('Dungeons and Dragons', divider="gray")
 
+if 'players' not in st.session_state or 'history' not in st.session_state:
+    st.error("Session state not initialized. Please go back to the home page.")
+    st.stop()
+
 st.sidebar.title("D&D Dungeon Master")
 cur_player = st.sidebar.selectbox("Player name", st.session_state['players'])
 model_choice = st.sidebar.selectbox("Choose a model", ["Model A", "Model B", "Model C"], on_change=change_model)

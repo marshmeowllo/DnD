@@ -23,8 +23,6 @@ from lightning import Fabric
 from IPython.display import display, Image
 from langchain_core.tools import tool
 
-from tools import *
-
 from src.tools.tools import spell_retrieve, user
 from src.utils.initialization import load_llm
 
