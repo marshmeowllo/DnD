@@ -9,15 +9,11 @@ from langgraph.graph import START, END, StateGraph
 # Initialize session state
 if "history" not in st.session_state:
     st.session_state["history"] = []
-if "last_vote_submitted" not in st.session_state:
-    st.session_state["last_vote_submitted"] = True
-if "last_interaction" not in st.session_state:
-    st.session_state["last_interaction"] = None
 if "vectorstore" not in st.session_state:
     embedding = load_embeddings()
     st.session_state['vectorstore'] = init_vectorstore(embedding)
-if "spellstore" not in st.session_state:
-    st.session_state['spellstore'] = init_spellstore()
+# if "spellstore" not in st.session_state:
+#     st.session_state['spellstore'] = init_spellstore()
 if "players" not in st.session_state:
     st.session_state['players'] = load_players()
 if "llama" not in st.session_state:
