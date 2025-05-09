@@ -1,11 +1,7 @@
 import torch
-<<<<<<< HEAD:src/models/model_loader_new.py
 import uuid
 import streamlit as st
 import os
-=======
-import streamlit as st
->>>>>>> cc8911f44f43c92fd22450454f302d71d2c89db9:src/models/model.py
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
@@ -24,15 +20,11 @@ from langgraph.graph.message import add_messages
 from typing import Annotated, Any, Dict, Optional, TypedDict, Union, List
 from lightning import Fabric
 
-<<<<<<< HEAD:src/models/model_loader_new.py
 from IPython.display import display, Image
 from langchain_core.tools import tool
 
 from tools import *
-
-=======
 from src.tools.tools import spell_retrieve, user
->>>>>>> cc8911f44f43c92fd22450454f302d71d2c89db9:src/models/model.py
 from src.utils.initialization import load_llm
 
 # torch.set_float32_matmul_precision("medium")
@@ -192,13 +184,10 @@ class LlamaChat():
         response = self.chat.invoke(prompt)
         
         return {"messages": [response]}
-<<<<<<< HEAD:src/models/model_loader_new.py
     
 llama_model_name = "meta-llama/Llama-3.1-8B-Instruct"
 
 llama = LlamaChat(model_name=llama_model_name)
-=======
->>>>>>> cc8911f44f43c92fd22450454f302d71d2c89db9:src/models/model.py
 
 def tool(state: State):
     return st.session_state['tool_calling'].invoke(state)
