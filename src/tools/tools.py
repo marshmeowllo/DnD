@@ -1,17 +1,20 @@
-from langchain_core.tools import tool
 import streamlit as st
+from typing import List
+
+from langchain_core.tools import tool
+from langchain_core.utils.function_calling import convert_to_openai_tool
 
 @tool
-def spell_retrieve(query: str) -> str:
-    """Retrieve information about dungeons and dragons spell.
+def retrieve(query: str) -> str:
+    """Retrieve information about dungeons and dragons: classes, item, monsters, races, and spells.
     
     Args:
-        query (str): The spell name to search for.
+        query (str): name or thing to search for.
 
     Returns:
-        str: The spell information.
+        str: The retrieve information.
     """
-    retrieved_docs = st.session_state['spellstore'].similarity_search(query, k=3)
+    retrieved_docs = st.session_state['dnd'].similarity_search(query, k=3)
 
     contents = "\n\n".join(
         (f"{doc.page_content}")
@@ -23,7 +26,7 @@ def spell_retrieve(query: str) -> str:
 @tool
 def user(name: str) -> str:
     """
-    User infomation retreiver
+    User information retreiver
 
     Args:
         name (str): The name of user.
@@ -39,3 +42,9 @@ def user(name: str) -> str:
     )
     
     return contents
+
+def get_openai_tools() -> List[dict]:
+    functions = [retrieve, user]
+
+    tools = [convert_to_openai_tool(f) for f in functions]
+    return tools

@@ -1,28 +1,20 @@
 import torch
-import os
 import streamlit as st
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from peft import PeftModelForCausalLM, PeftModel
 
 from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
-from langchain.tools import tool
 from langchain.schema import AIMessage, HumanMessage
 from langchain_core.messages import SystemMessage, AnyMessage
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.runnables import RunnableConfig
-from langchain_core.tools import BaseTool
-from langchain_core.utils.function_calling import convert_to_openai_tool
 from langgraph.graph.message import add_messages
 
 from typing import Annotated, Any, Dict, Optional, TypedDict, Union, List
 from lightning import Fabric
 
-from IPython.display import display, Image
-from langchain_core.tools import tool
-
-from src.tools.tools import spell_retrieve, user
-from src.utils.initialization import load_llm
+from src.tools.tools import get_openai_tools, retrieve, user
 
 torch.set_float32_matmul_precision("medium")
 fabric = Fabric(accelerator="cuda", devices=1, precision="bf16-mixed")
@@ -43,10 +35,10 @@ class ToolCallRequest(TypedDict):
     name: str
     arguments: Dict[str, Any]
 
-tools=[spell_retrieve, user]
+tools = [retrieve, user]
 
 class ToolCalling():
-    def __init__(self, model_name: str, tools: list[BaseTool]):
+    def __init__(self, model_name: str):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="cpu")
         self.pipe = pipeline(
@@ -62,8 +54,8 @@ class ToolCalling():
         self.chat = ChatHuggingFace(llm=self._llm, tokenizer=self.tokenizer)
         # self.chat = load_llm(model_name)
 
-        self.rendered_tools = [convert_to_openai_tool(f) for f in tools]
-
+        self.rendered_tools = get_openai_tools()
+        
     def invoke_tool(
             self,
             tool_call_request: Union[ToolCallRequest, List[ToolCallRequest]], 
@@ -132,10 +124,6 @@ class ToolCalling():
 
 class LlamaChat():
     def __init__(self, model_name: str):
-        # print("================================================")
-        # print(os.getcwd())
-        # print(os.listdir('src/models/weights/bestRL'))
-        # print("================================================")
         match model_name:
             case 'SFT_Yuaylong':
                 self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.1-8B-Instruct')
@@ -151,7 +139,7 @@ class LlamaChat():
                 self.model = AutoModelForCausalLM.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct', torch_dtype=torch.bfloat16, load_in_4bit=True)
             case 'SFT_RL_V1_Son':
                 self.tokenizer = AutoTokenizer.from_pretrained('meta-llama/Llama-3.1-8B-Instruct')
-                self.model = AutoModelForCausalLM.from_pretrained('./src/models/weights/SFT_RL_V1_Son', torch_dtype=torch.bfloat16, load_in_4bit=True)
+                self.model = AutoModelForCausalLM.from_pretrained('./src/models/weights/SFT_RL_V1_Son', torch_dtype=torch.bfloat16, load_in_4bit=True)                
             case _:
                 raise ValueError(f"Model name {model_name} not recognized. Please use 'SFT_Yuaylong', 'bestRL', or 'vanilla'.")
 

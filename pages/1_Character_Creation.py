@@ -13,7 +13,6 @@ if 'players' not in st.session_state:
     st.session_state['players'] = []
 
 with st.form("new_character_form"):
-    player_name = st.text_input("Player Name")
     char_name = st.text_input("Character Name")
     char_race = st.selectbox("Race", CHARACTER_RACES)
     char_class = st.selectbox("Class", CHARACTER_CLASSES)
@@ -23,15 +22,15 @@ with st.form("new_character_form"):
     submitted = st.form_submit_button("Add character")
 
     if submitted:
-        if not all([player_name, char_name, char_race, char_class]):
+        if not all([char_name, char_race, char_class]):
             st.warning("Please fill in all the fields before submitting.")
         else:
-            content = f"Player: {player_name}\nName: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}\nLevel: 1"
-            doc = create_character_doc(player_name,char_name,char_race,char_class,background,stats)
+            content = f"Name: {char_name}\nRace: {char_race}\nClass: {char_class}\nBackground: {background}\nStats: {stats}\nLevel: 1"
+            doc = create_character_doc(char_name,char_race,char_class,background,stats)
             st.session_state['vectorstore'].add_documents([doc])
-            if player_name not in st.session_state['players']:
-                st.session_state['players'].append(player_name)
-            st.success(f"Character {char_name} of {player_name} added to memory")
+            if char_name not in st.session_state['players']:
+                st.session_state['players'].append(char_name)
+            st.success(f"Character {char_name} added to memory")
 
 st.subheader("Characters")
 if st.session_state['vectorstore'].index.ntotal > 0:
