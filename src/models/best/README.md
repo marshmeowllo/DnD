@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
+base_model: meta-llama/Llama-3.1-8B-Instruct
+=======
 base_model: meta-llama/Meta-Llama-3-8B-Instruct
+>>>>>>> cc8911f44f43c92fd22450454f302d71d2c89db9
 library_name: peft
 ---
 

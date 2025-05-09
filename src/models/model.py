@@ -1,5 +1,7 @@
 import torch
+import uuid
 import streamlit as st
+import os
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
@@ -17,6 +19,11 @@ from langgraph.graph.message import add_messages
 
 from typing import Annotated, Any, Dict, Optional, TypedDict, Union, List
 from lightning import Fabric
+
+from IPython.display import display, Image
+from langchain_core.tools import tool
+
+from tools import *
 
 from src.tools.tools import spell_retrieve, user
 from src.utils.initialization import load_llm
@@ -191,6 +198,9 @@ class LlamaChat():
         response = self.chat.invoke(prompt)
         
         return {"messages": [response]}
+    
+llama_model_name = "meta-llama/Llama-3.1-8B-Instruct"
+llama = LlamaChat(model_name=llama_model_name)
 
 def tool(state: State):
     return st.session_state['tool_calling'].invoke(state)
