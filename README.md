@@ -1,6 +1,6 @@
 # Dungeons and Dragons LLM as a Dungeons Master
 
-A web-based, interactive Dungeons & Dragons experience with large language model (LLM). This project allows players to engage with a virtual Dungeon Master in a dynamic, story-driven environment—accessible.
+A web-based, interactive Dungeons & Dragons experience with large language model (LLM). This project allows players to engage with a virtual Dungeon Master in a dynamic.
 
 ## Getting Started
 
