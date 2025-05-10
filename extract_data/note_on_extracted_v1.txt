@@ -1,0 +1,10 @@
+extracted_v1 notes (14/4/25)
+
+- 'in_combat' is really bad for now , please consider not the use
+
+- 'IC_OOC' is okay but not 100% correct , but it is usable
+
+- other casters columns are implemented according to the fandom website.
+
+### please use only the campaign_1 ( the fileID of C1XXX ) as the casts and role for the second campaign may vary. ###
+
