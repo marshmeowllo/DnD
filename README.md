@@ -1,4 +1,4 @@
-# DnD
+# Dungeons and Dragons LLM as a Dungeons Master
 
 ## Getting Started
 
